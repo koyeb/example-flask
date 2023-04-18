@@ -12,5 +12,5 @@ jobs:
        - name: Cleanup Koyeb application
          uses: koyeb/action-git-deploy/cleanup@v1
          with:
-           app-name: flask-${{ github.ref_name }}
+           app-name: flask-${{ github.event.ref }}
            api-token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
