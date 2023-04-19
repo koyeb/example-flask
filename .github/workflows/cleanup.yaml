@@ -9,8 +9,12 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - name: Install and configure the Koyeb CLI
+        uses: koyeb-community/install-koyeb-cli@v2
+        with:
+          api_token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
+
        - name: Cleanup Koyeb application
          uses: koyeb/action-git-deploy/cleanup@v1
          with:
            app-name: flask-${{ github.event.ref }}
-           api-token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
