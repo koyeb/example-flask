@@ -2,10 +2,27 @@ name: Build and deploy the application to Koyeb
 
 on:
   schedule:
-    - cron: '5 7 * * *'
+    - cron: "5 7 * * *"
+
   push:
     branches:
-      - '*'
+      - "*"
+
+  # The workflow_call event is used to trigger the job from another workflow, in
+  # which case the git-url must be set to the repository to build.
+  workflow_call:
+    secrets:
+      KOYEB_EXAMPLES_APPS_TOKEN:
+        required: true
+    inputs:
+      git-url:
+        description: "The repository to build"
+        required: true
+        type: string
+      api-url:
+        description: "The Koyeb API URL"
+        required: false
+        type: string
 
 jobs:
   deploy:
@@ -15,9 +32,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install and configure the Koyeb CLI
-        uses: koyeb-community/install-koyeb-cli@v2
+        uses: koyeb-community/install-koyeb-cli@main
         with:
           api_token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
+          api_url: "${{ inputs.api-url || 'https://app.koyeb.com' }}"
 
       - name: Build and deploy the application
         uses: koyeb/action-git-deploy@v1
@@ -26,3 +44,4 @@ jobs:
           service-env: "PORT=8000"
           service-ports: "8000:http"
           service-routes: "/:8000"
+          git-url: "github.com/${{ inputs.git-url || github.repository }}"
