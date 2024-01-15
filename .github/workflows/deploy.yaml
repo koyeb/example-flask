@@ -45,3 +45,4 @@ jobs:
           service-ports: "8000:http"
           service-routes: "/:8000"
           git-url: "github.com/${{ inputs.git-url || github.repository }}"
+          skip-cache: true
