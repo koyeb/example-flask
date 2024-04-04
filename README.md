@@ -49,13 +49,12 @@ If you want to customize and enhance this application, you need to fork this rep
 If you used the **Deploy to Koyeb** button, you can simply link your service to your forked repository to be able to push changes.
 Alternatively, you can manually create the application as described below.
 
-On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** button to go to the App creation page.
+On the [Koyeb Control Panel](//app.koyeb.com/apps), on the **Overview** tab, click the **Create Web Service** button to begin.
 
-1. Select `GitHub` as the deployment method to use
-2. In the repositories list, select the repository you just forked
-3. Specify the branch to deploy, in this case `main`
-4. To let Koyeb know how to launch the application, add `gunicorn app:app` as the run command
-5. Then, give your App a name, i.e `flask-on-koyeb`, and click **Create App.**
+1. Select **GitHub** as the deployment method.
+2. In the repositories list, select the repository you just forked.
+3. In the **Builder** section, click the **override** toggle associated with the **Run command** and enter `gunicorn app:app` in the field.
+4. Choose a name for your App and Service, i.e `flask-on-koyeb`, and click **Deploy**.
 
 You land on the deployment page where you can follow the build of your Flask application. Once the build is completed, your application is being deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
 
