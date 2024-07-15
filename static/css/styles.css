@@ -54,6 +54,11 @@ footer {
     width: 100%;
 }
 
+.menu.open {
+    display: flex !important;  /* Ensure that the menu displays as a flex container when open */
+}
+
+
 @media (max-width: 768px) {
     .menu {
         display: none;
