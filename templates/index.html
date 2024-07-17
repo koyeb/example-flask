@@ -1,37 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+{% extends "base.html" %}
 
+{% block title %}Home - My Website{% endblock %}
 
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">My Website</div>
-            <div class="menu" id="menu">
-                <a href="{{ url_for('home') }}">Home</a>
-                <a href="{{ url_for('about') }}">About</a>
-                <a href="{{ url_for('portfolio') }}">Portfolio</a>
-                <a href="{{ url_for('services') }}">Services</a>
-                <a href="{{ url_for('contact') }}">Contact</a>
-                <a href="{{ url_for('blog') }}">Blog</a>
-            </div>
-            <div class="hamburger" id="hamburger">&#9776;</div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Welcome to My Personal Website</h1>
-            <p>This is the home page content.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-</body>
-</html>
+{% block content %}
+<section>
+    <h1>Welcome to My Personal Website</h1>
+    <p>This is the home page content.</p>
+</section>
+{% endblock %}
