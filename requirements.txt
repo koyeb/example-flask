@@ -5,3 +5,6 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 MarkupSafe==2.1.1
 Werkzeug==2.2.2
+Flask-RESTX==0.5.1
+requests==2.26.0
+pytz==2021.3
