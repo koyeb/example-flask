@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install and configure the Koyeb CLI
-        uses: koyeb-community/install-koyeb-cli@main
+        uses: koyeb-community/koyeb-actions@main
         with:
           api_token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
           api_url: "${{ inputs.api-url || 'https://app.koyeb.com' }}"
