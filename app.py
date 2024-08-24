@@ -17,7 +17,7 @@ def require_api_key(f):
 @app.route('/')
 @require_api_key
 def hello_world():
-    return jsonify(message="Hello, World!")
+    return jsonify(message="Hello, Happy Flasking!")
 
 if __name__ == '__main__':
     app.run(debug=True)
