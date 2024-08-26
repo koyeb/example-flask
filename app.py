@@ -23,5 +23,22 @@ def hello_world():
 def api_spec():
     return send_from_directory('static', 'api_spec.yaml')
 
+@app.route('/tariff')
+def tariff():
+    # Retrieve the numHours parameter from the request's query string
+    num_hours_str = request.args.get('numHours', default=None)
+    
+    if num_hours_str is None:
+        return jsonify(error="numHours parameter is required"), 400
+    
+    try:
+        num_hours = int(num_hours_str)
+    except ValueError:
+        return jsonify(error="numHours must be an integer"), 400
+
+    # Use the external module to calculate the start time
+    start_time_str = calculate_start_time(num_hours)
+    return jsonify(startTime=start_time_str)
+
 if __name__ == '__main__':
     app.run(debug=True)
