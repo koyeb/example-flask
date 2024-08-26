@@ -23,3 +23,37 @@ paths:
                     example: "Hello, World!"
         401:
           description: Unauthorized access
+  /tariff:
+    get:
+      summary: Calculate and return a future start time when the appliance should start in order to minimize energy cost
+      operationId: cheapestStartTime
+      parameters:
+        - in: query
+          name: numHours
+          schema:
+            type: integer
+          required: true
+          description: Number of hours of the appliance going to run for 
+      responses:
+        200:
+          description: Successful response with the future start time
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  startTime:
+                    type: string
+                    example: "2024-08-10 17:00:00"
+        400:
+          description: Bad request response when input validation fails
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "numHours parameter is required"
+        401:
+          description: Unauthorized access
