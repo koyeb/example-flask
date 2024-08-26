@@ -1,0 +1,43 @@
+openapi: 3.1.0
+info:
+  title: Octopus Energy Electricity Tariffs API
+  description: API to retrieve electricity tariff details for specific products.
+  version: 1.0.0
+servers:
+  - url: https://api.octopus.energy/v1
+    description: Octopus Energy API server
+paths:
+  /products/AGILE-FLEX-22-11-25/electricity-tariffs/E-1R-AGILE-FLEX-22-11-25-C/standard-unit-rates/:
+    get:
+      operationId: getStandardUnitRates
+      summary: Retrieve standard unit rates for a specific electricity tariff.
+      responses:
+        '200':
+          description: A list of standard unit rates for the tariff.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    value_exc_vat:
+                      type: number
+                      format: float
+                    value_inc_vat:
+                      type: number
+                      format: float
+                    valid_from:
+                      type: string
+                      format: date-time
+                    valid_to:
+                      type: string
+                      format: date-time
+      security:
+        - basicAuth: []
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
