@@ -19,5 +19,9 @@ def require_api_key(f):
 def hello_world():
     return jsonify(message="Hello, Happy Flasking!")
 
+@app.route('/api/spec')
+def api_spec():
+    return send_from_directory('static', 'api_spec.yaml')
+
 if __name__ == '__main__':
     app.run(debug=True)
