@@ -13,7 +13,12 @@ def calculate_start_time(num_hours, api_key):
 
     print(api_url)
     response = requests.get(api_url, auth=(api_key, ''))
-    print(response)
+    if response.status_code == 200:
+        # Parse the JSON response
+        data = response.json()
+        print(data)
+    else:
+        print(f'Error: {response.status_code} - {response.reason}')
 
     current_time = datetime.now()
     start_time = current_time + timedelta(hours=num_hours)
