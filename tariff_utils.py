@@ -1,6 +1,8 @@
 from datetime import datetime, timedelta
 import requests
 
+scan_hours = 3
+
 def calculate_start_time(num_hours, api_key):
     """
     Calculate the start time from now given the number of hours.
@@ -14,17 +16,23 @@ def calculate_start_time(num_hours, api_key):
     print(api_url)
     response = requests.get(api_url, auth=(api_key, ''))
     if response.status_code == 200:
+
+        # Filter and sort the time slots within the next 12 hours
+        now = datetime.now()  # Current time
+        end_time = now + timedelta(hours=scan_hours)  # Time 12 hours from now 
+
         # Parse the JSON response
         data = response.json()
         tariff_data = response.json()['results']
         for slot in tariff_data:
-            # Parsing the datetime strings and ensuring UTC handling
+            # Parsing the datetime strings 
             valid_from = datetime.strptime(slot['valid_from'], "%Y-%m-%dT%H:%M:%SZ")
             valid_to = datetime.strptime(slot['valid_to'], "%Y-%m-%dT%H:%M:%SZ")
-
-            print ('---------------')
-            print(f'from datetime{valid_from}')
-            print(f'to datetime{valid_to}')
+            
+            if valid_from >= now and valid_to <= end_time:
+                print ('---------------')
+                print(f'from datetime{valid_from}')
+                print(f'to datetime{valid_to}')
 
     else:
         print(f'Error: {response.status_code} - {response.reason}')
