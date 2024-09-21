@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, abort, send_from_directory
 from tariff_utils import calculate_start_time
 import os
 
-api_user = os.getenv("octupus-key")
+api_user = os.getenv("OCTOPUS_KEY")
 
 app = Flask(__name__)
 
