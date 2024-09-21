@@ -1,8 +1,10 @@
 from datetime import datetime, timedelta
 import requests
+import os
+
 
 api_url = 'https://api.octopus.energy/v1/electricity-meter-points/1200036570277/meters/18L2047503/consumption/'
-api_auth = 'sk_live_6yKY1YmWVNJDN4sK7paEIYTi'
+api_auth = os.environ.get("octupus-key")
 
 def calculate_start_time(num_hours):
     """
