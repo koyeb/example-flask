@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 import requests
 
-def calculate_start_time(num_hours, api_auth):
+def calculate_start_time(num_hours, api_key):
     """
     Calculate the start time from now given the number of hours.
 
@@ -9,10 +9,10 @@ def calculate_start_time(num_hours, api_auth):
     :return: str - The start time formatted as 'YYYY-MM-DD HH:MM:SS'
     """
 
-    api_url = 'https://' + str(api_auth) + '@api.octopus.energy/v1/electricity-meter-points/1200036570277/meters/18L2047503/consumption/'
+    api_url = 'https://api.octopus.energy/v1/electricity-meter-points/1200036570277/meters/18L2047503/consumption/'
 
     print(api_url)
-    response = requests.get(api_url)
+    response = requests.get(api_url, auth=(api_key, ''))
     print(response)
 
     current_time = datetime.now()

@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, abort, send_from_directory
 from tariff_utils import calculate_start_time
 import os
 
-api_user = os.getenv("OCTOPUS_KEY")
+api_key = os.getenv("OCTOPUS_KEY")
 
 app = Flask(__name__)
 
@@ -40,7 +40,7 @@ def tariff():
         return jsonify(error="numHours must be an integer"), 400
 
     # Use the external module to calculate the start time
-    start_time_str = calculate_start_time(num_hours, api_user)
+    start_time_str = calculate_start_time(num_hours, api_key)
     return jsonify(startTime=start_time_str)
 
 if __name__ == '__main__':
