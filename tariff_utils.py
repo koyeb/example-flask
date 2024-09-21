@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
 import requests
-from dateutil import parser 
 
 def calculate_start_time(num_hours, api_key):
     """
@@ -19,9 +18,9 @@ def calculate_start_time(num_hours, api_key):
         data = response.json()
         tariff_data = response.json()['results']
         for slot in tariff_data:
-            # Parse the date strings assuming they are in UTC
-            valid_from = datetime.fromisoformat(slot['valid_from'].replace('Z', '+00:00'))
-            valid_to = datetime.fromisoformat(slot['valid_to'].replace('Z', '+00:00'))
+            # Parsing the datetime strings and ensuring UTC handling
+            valid_from = datetime.strptime(slot['valid_from'], "%Y-%m-%dT%H:%M:%SZ")
+            valid_to = datetime.strptime(slot['valid_to'], "%Y-%m-%dT%H:%M:%SZ")
 
             print ('---------------')
             print(f'from datetime{valid_from}')

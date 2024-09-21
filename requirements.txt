@@ -8,4 +8,3 @@ Werkzeug==2.2.2
 Flask-RESTX
 requests==2.26.0
 pytz
-dateutil
