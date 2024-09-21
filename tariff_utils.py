@@ -10,7 +10,7 @@ def calculate_start_time(num_hours, api_key):
     :return: str - The start time formatted as 'YYYY-MM-DD HH:MM:SS'
     """
 
-    api_url = 'https://api.octopus.energy/v1/electricity-meter-points/1200036570277/meters/18L2047503/consumption/'
+    api_url = 'https://api.octopus.energy/v1/products/AGILE-FLEX-22-11-25/electricity-tariffs/E-1R-AGILE-FLEX-22-11-25-C/standard-unit-rates/'
 
     print(api_url)
     response = requests.get(api_url, auth=(api_key, ''))
@@ -20,8 +20,8 @@ def calculate_start_time(num_hours, api_key):
         tariff_data = response.json()['results']
         for slot in tariff_data:
             # Using `dateutil.parser.parse` to correctly handle timezone information
-            valid_from = parser.isoparse(slot['interval_start'])  # Parses with timezone info
-            valid_to = parser.isoparse(slot['interval_end'])  # Parses with timezone info
+            valid_from = parser.isoparse(slot['valid_from'])  # Parses with timezone info
+            valid_to = parser.isoparse(slot['valid_to'])  # Parses with timezone info
             
             # Convert both valid_from and valid_to to UTC
             valid_from_utc = valid_from.astimezone(tz=datetime.timezone.utc)
