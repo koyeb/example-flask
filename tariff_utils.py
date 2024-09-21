@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 import requests
 
-scan_hours = 3
+scan_hours = 4
 
 def calculate_start_time(num_hours, api_key):
     """
@@ -19,6 +19,7 @@ def calculate_start_time(num_hours, api_key):
 
         # Filter and sort the time slots within the next 12 hours
         now = datetime.now()  # Current time
+        begin_time = now + timedelta(minutes=30)
         end_time = now + timedelta(hours=scan_hours)  # Time 12 hours from now 
 
         # Parse the JSON response
@@ -29,7 +30,7 @@ def calculate_start_time(num_hours, api_key):
             valid_from = datetime.strptime(slot['valid_from'], "%Y-%m-%dT%H:%M:%SZ")
             valid_to = datetime.strptime(slot['valid_to'], "%Y-%m-%dT%H:%M:%SZ")
             
-            if valid_from >= now and valid_to <= end_time:
+            if valid_from >= begin_time and valid_to <= end_time:
                 print ('---------------')
                 print(f'from datetime{valid_from}')
                 print(f'to datetime{valid_to}')
