@@ -20,20 +20,46 @@ def calculate_start_time(num_hours, api_key):
         # Filter and sort the time slots within the next 12 hours
         now = datetime.now()  # Current time
         begin_time = now + timedelta(minutes=30)
-        end_time = now + timedelta(hours=scan_hours)  # Time 12 hours from now 
+        end_time = begin_time + timedelta(hours=scan_hours)  # Time 12 hours from now 
 
         # Parse the JSON response
         data = response.json()
         tariff_data = response.json()['results']
+        available_slots = []
+
         for slot in tariff_data:
             # Parsing the datetime strings 
             valid_from = datetime.strptime(slot['valid_from'], "%Y-%m-%dT%H:%M:%SZ")
             valid_to = datetime.strptime(slot['valid_to'], "%Y-%m-%dT%H:%M:%SZ")
             
             if valid_from >= begin_time and valid_to <= end_time:
+                available_slots.append({
+                    'valid_from': valid_from,
+                    'valid_to': valid_to,
+                    'tariff': slot['value_inc_vat']
+                })
                 print ('---------------')
                 print(f'from datetime{valid_from}')
                 print(f'to datetime{valid_to}')
+
+        available_slots.sort(key=lambda x: x['valid_from'])
+        required_slots = num_hours * 2
+
+        for i in range(len(available_slots) - required_slots + 1):
+            consecutive_slots = available_slots[i:i + required_slots]
+            
+            # Check if all the slots are consecutive (i.e., exactly 30 minutes apart)
+            is_consecutive = all(
+                consecutive_slots[j]['valid_from'] == consecutive_slots[j-1]['valid_to']
+                for j in range(1, required_slots)
+            )
+            
+            if is_consecutive:
+                total_tariff = sum(slot['tariff'] for slot in consecutive_slots)
+                avg_tariff = total_tariff / required_slots
+                print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}')
+            else:
+                print(f'Not consecutive: {consecutive_slots[0]['valid_from']}')
 
     else:
         print(f'Error: {response.status_code} - {response.reason}')
