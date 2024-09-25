@@ -15,6 +15,9 @@ def calculate_start_time(num_hours, api_key):
 
     print(api_url)
     response = requests.get(api_url, auth=(api_key, ''))
+    best_start_time = None
+    best_tariff = float('inf')
+    
     if response.status_code == 200:
 
         # Filter and sort the time slots within the next 12 hours
@@ -42,6 +45,7 @@ def calculate_start_time(num_hours, api_key):
                 print(f'from datetime{valid_from}')
                 print(f'to datetime{valid_to}')
 
+        
         available_slots.sort(key=lambda x: x['valid_from'])
         required_slots = num_hours * 2
 
@@ -55,15 +59,25 @@ def calculate_start_time(num_hours, api_key):
             )
             
             if is_consecutive:
-                total_tariff = sum(slot['tariff'] for slot in consecutive_slots)
-                avg_tariff = total_tariff / required_slots
+                total_tariff = round(sum(slot['tariff'] for slot in consecutive_slots), 0.01)
+                avg_tariff = round(total_tariff / required_slots, 0.01)
                 print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}')
+
+                if total_tariff < best_tariff:
+                    best_tariff = avg_tariff
+                    best_start_time = consecutive_slots[0]['valid_from']
+                    print(f'BEST TIMESLOT FOUND at [{best_start_time}] for [{best_tariff}].')
             else:
                 print(f'Not consecutive: {consecutive_slots[0]['valid_from']}')
 
     else:
         print(f'Error: {response.status_code} - {response.reason}')
 
-    current_time = datetime.now()
-    start_time = current_time + timedelta(hours=num_hours)
-    return start_time.strftime('%Y-%m-%d %H:%M:%S')
+    if best_start_time:
+        return best_start_time.strftime('%Y-%m-%d %H:%M:%S')
+    else:
+        return None
+    
+    # current_time = datetime.now()
+    # start_time = current_time + timedelta(hours=num_hours)
+    # return start_time.strftime('%Y-%m-%d %H:%M:%S')
