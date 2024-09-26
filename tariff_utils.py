@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 import requests
 
-scan_hours = 4
+scan_hours = 10
 
 def calculate_start_time(num_hours, api_key):
     """
@@ -60,7 +60,7 @@ def calculate_start_time(num_hours, api_key):
             
             if is_consecutive:
                 total_tariff = sum(slot['tariff'] for slot in consecutive_slots)
-                avg_tariff = round(total_tariff / required_slots, 0.01)
+                avg_tariff = total_tariff / required_slots, 0.01
                 print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}')
 
                 if total_tariff < best_tariff:
