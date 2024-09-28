@@ -32,8 +32,8 @@ def calculate_start_time(num_hours, api_key):
 
         for slot in tariff_data:
             # Parsing the datetime strings 
-            valid_from = datetime.strptime(slot['valid_from'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %z")
-            valid_to = datetime.strptime(slot['valid_to'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %z")
+            valid_from = datetime.strptime(slot['valid_from'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %Z")
+            valid_to = datetime.strptime(slot['valid_to'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %Z")
             
             if valid_from >= begin_time and valid_to <= end_time:
                 available_slots.append({
