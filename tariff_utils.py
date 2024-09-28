@@ -60,10 +60,10 @@ def calculate_start_time(num_hours, api_key):
             
             if is_consecutive:
                 total_tariff = sum(slot['tariff'] for slot in consecutive_slots)
-                avg_tariff = total_tariff / required_slots, 0.01
-                print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}')
+                avg_tariff = total_tariff / required_slots
+                print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}; best tariff: {best_tariff}')
 
-                if total_tariff < best_tariff:
+                if total_tariff < best_tariff
                     best_tariff = avg_tariff
                     best_start_time = consecutive_slots[0]['valid_from']
                     print(f'BEST TIMESLOT FOUND at [{best_start_time}] for [{best_tariff}].')
