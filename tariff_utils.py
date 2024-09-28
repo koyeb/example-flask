@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import requests
+import pytz
 
 scan_hours = 12
 
@@ -74,7 +75,10 @@ def calculate_start_time(num_hours, api_key):
         print(f'Error: {response.status_code} - {response.reason}')
 
     if best_start_time:
-        return best_start_time.strftime('%Y-%m-%d %H:%M:%S')
+        london_tz = pytz.timezone('Europe/London')
+        best_start_time_uk = best_start_time.astimezone(london_tz)
+
+        return best_start_time_uk.strftime('%Y-%m-%d %H:%M:%S')
     else:
         return None
     
