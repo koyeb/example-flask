@@ -65,7 +65,7 @@ def calculate_start_time(num_hours, api_key):
                 print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}; best tariff: {best_tariff}')
 
                 if total_tariff < best_tariff:
-                    best_tariff = avg_tariff
+                    best_tariff = total_tariff
                     best_start_time = consecutive_slots[0]['valid_from']
                     print(f'BEST TIMESLOT FOUND at [{best_start_time}] for [{best_tariff}].')
             else:
