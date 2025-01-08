@@ -57,3 +57,72 @@ paths:
                     example: "numHours parameter is required"
         401:
           description: Unauthorized access
+  /demo_status:
+    get:
+      summary: Returns the status of connections
+      operationId: demoStatus
+      parameters:
+        - in: query
+          name: type
+          schema:
+            type: string
+            enum: [FIX, MQ, SFTP, ALL]
+          required: true
+          description: The type of connection to check
+      responses:
+        200:
+          description: Successful response confirming all connections are up
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "All your connections are up and running"
+        400:
+          description: Bad request response when input validation fails
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid connection type. Allowed values are FIX, MQ, SFTP, ALL."
+  /demo_details:
+    get:
+      summary: Returns the details of a specific connection
+      operationId: demoDetails
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: string
+          required: true
+          description: The ID of the connection to check
+      responses:
+        200:
+          description: Successful response with connection details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Connection 123 is up"
+                  lastConnectionTime:
+                    type: string
+                    format: date-time
+                    example: "2025-01-08T12:00:00Z"
+        400:
+          description: Bad request response when input validation fails
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "ID parameter is required"
