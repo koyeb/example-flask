@@ -52,7 +52,7 @@ def demo_status():
     if connection_type not in ["FIX", "MQ", "SFTP", "ALL"]:
         return jsonify(error="Invalid connection type. Allowed values are FIX, MQ, SFTP, ALL."), 400
 
-    return jsonify(message="All your connections are up and running")
+    return jsonify(message=f'All your {connection_type} connections are up and running')
 
 @app.route('/demo_details')
 def demo_details():
