@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request, abort, send_from_directory
 from tariff_utils import calculate_start_time
 import os
+from datetime import datetime, timedelta
+import random
 
 api_key = os.getenv("OCTOPUS_KEY")
 
@@ -42,6 +44,28 @@ def tariff():
     # Use the external module to calculate the start time
     start_time_str = calculate_start_time(num_hours, api_key)
     return jsonify(startTime=start_time_str)
+
+@app.route('/demo_status')
+def demo_status():
+    connection_type = request.args.get('type', default=None)
+
+    if connection_type not in ["FIX", "MQ", "SFTP", "ALL"]:
+        return jsonify(error="Invalid connection type. Allowed values are FIX, MQ, SFTP, ALL."), 400
+
+    return jsonify(message="All your connections are up and running")
+
+@app.route('/demo_details')
+def demo_details():
+    connection_id = request.args.get('id', default=None)
+
+    if not connection_id:
+        return jsonify(error="ID parameter is required"), 400
+
+    current_time = datetime.utcnow()
+    random_minutes = random.randint(1, 20)
+    last_connection_time = current_time - timedelta(minutes=random_minutes)
+
+    return jsonify(message=f"Connection {connection_id} is up", lastConnectionTime=last_connection_time.isoformat() + "Z")
 
 if __name__ == '__main__':
     app.run(debug=True)
