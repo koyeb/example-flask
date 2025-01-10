@@ -18,6 +18,9 @@ def calculate_start_time(num_hours, api_key):
     response = requests.get(api_url, auth=(api_key, ''))
     best_start_time = None
     best_tariff = float('inf')
+
+
+    print(f'Returned status code: {response.status_code}')
     
     if response.status_code == 200:
 
