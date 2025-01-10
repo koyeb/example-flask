@@ -34,6 +34,9 @@ def calculate_start_time(num_hours, api_key):
         tariff_data = response.json()['results']
         available_slots = []
 
+
+        print(f'tariff_data: {len(tariff_data)}')
+
         for slot in tariff_data:
             # Parsing the datetime strings 
             valid_from = datetime.strptime(slot['valid_from'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %Z")
@@ -52,6 +55,8 @@ def calculate_start_time(num_hours, api_key):
         
         available_slots.sort(key=lambda x: x['valid_from'])
         required_slots = num_hours * 2
+
+        print(f'available_slots: {len(available_slots)}')
 
         for i in range(len(available_slots) - required_slots + 1):
             consecutive_slots = available_slots[i:i + required_slots]
