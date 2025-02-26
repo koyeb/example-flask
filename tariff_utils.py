@@ -12,7 +12,8 @@ def calculate_start_time(num_hours, api_key):
     :return: str - The start time formatted as 'YYYY-MM-DD HH:MM:SS'
     """
 
-    api_url = 'https://api.octopus.energy/v1/products/AGILE-FLEX-22-11-25/electricity-tariffs/E-1R-AGILE-FLEX-22-11-25-C/standard-unit-rates/'
+    # api_url = 'https://api.octopus.energy/v1/products/AGILE-FLEX-22-11-25/electricity-tariffs/E-1R-AGILE-FLEX-22-11-25-C/standard-unit-rates/'
+    api_url = 'https://api.octopus.energy/v1/products/AGILE-24-10-01/electricity-tariffs/E-1R-AGILE-24-10-01-C/standard-unit-rates/'
 
     print(api_url)
     response = requests.get(api_url, auth=(api_key, ''))
