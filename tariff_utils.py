@@ -15,7 +15,6 @@ def calculate_start_time(num_hours, api_key):
     # api_url = 'https://api.octopus.energy/v1/products/AGILE-FLEX-22-11-25/electricity-tariffs/E-1R-AGILE-FLEX-22-11-25-C/standard-unit-rates/'
     api_url = 'https://api.octopus.energy/v1/products/AGILE-24-10-01/electricity-tariffs/E-1R-AGILE-24-10-01-C/standard-unit-rates/'
 
-    print(api_url)
     response = requests.get(api_url, auth=(api_key, ''))
     best_start_time = None
     best_tariff = float('inf')
@@ -35,17 +34,10 @@ def calculate_start_time(num_hours, api_key):
         tariff_data = response.json()['results']
         available_slots = []
 
-
-        print(f'tariff_data: {len(tariff_data)}')
-        print(f'begin_time: {begin_time}')
-        print(f'end_time: {end_time}')
-
         for slot in tariff_data:
             # Parsing the datetime strings 
             valid_from = datetime.strptime(slot['valid_from'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %Z")
             valid_to = datetime.strptime(slot['valid_to'].replace('Z', ' UTC'), "%Y-%m-%dT%H:%M:%S %Z")
-            
-            print(f'valid from: {valid_from} | valid to: {valid_to}')
             
             if valid_from >= begin_time and valid_to <= end_time:
                 available_slots.append({
@@ -53,15 +45,10 @@ def calculate_start_time(num_hours, api_key):
                     'valid_to': valid_to,
                     'tariff': slot['value_inc_vat']
                 })
-                print ('---------------')
-                print(f'from datetime{valid_from}')
-                print(f'to datetime{valid_to}')
 
         
         available_slots.sort(key=lambda x: x['valid_from'])
         required_slots = num_hours * 2
-
-        print(f'available_slots: {len(available_slots)}')
 
         for i in range(len(available_slots) - required_slots + 1):
             consecutive_slots = available_slots[i:i + required_slots]
@@ -75,7 +62,6 @@ def calculate_start_time(num_hours, api_key):
             if is_consecutive:
                 total_tariff = sum(slot['tariff'] for slot in consecutive_slots)
                 avg_tariff = total_tariff / required_slots
-                print(f'At time {consecutive_slots[0]['valid_from']}, total tariff: {total_tariff}; avg tariff: {avg_tariff}; best tariff: {best_tariff}')
 
                 if total_tariff < best_tariff:
                     best_tariff = total_tariff
@@ -95,6 +81,3 @@ def calculate_start_time(num_hours, api_key):
     else:
         return None
     
-    # current_time = datetime.now()
-    # start_time = current_time + timedelta(hours=num_hours)
-    # return start_time.strftime('%Y-%m-%d %H:%M:%S')
