@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced FIX Message Parser</title>
+  <style>
+    /* Namespaced CSS to prevent conflicts with Confluence styles. */
+    #fix-parser-macro {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+      margin: 2rem 0; 
+      background-color: #f9fafb;
+      color: #111827;
+    }
+    #fix-parser-macro .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    #fix-parser-macro h1, 
+    #fix-parser-macro h2,
+    #fix-parser-macro h3 {
+      color: #1f2937;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+    }
+    #fix-parser-macro p {
+      line-height: 1.6;
+    }
+    #fix-parser-macro textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      box-sizing: border-box;
+    }
+    #fix-parser-macro button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #3b82f6;
+      color: white !important;
+      transition: background-color 0.2s;
+    }
+    #fix-parser-macro button:hover {
+      background-color: #2563eb;
+    }
+    #fix-parser-macro button:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+    #fix-parser-macro .output-area { 
+      margin-top: 1.5rem;
+      background: #f3f4f6; 
+      padding: 1rem; 
+      white-space: pre; 
+      overflow-x: auto;
+      word-wrap: normal;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+      min-height: 100px;
+    }
+    #fix-parser-macro .separator-options,
+    #fix-parser-macro .dictionary-urls {
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+    }
+    #fix-parser-macro .separator-options label {
+        margin-right: 1rem;
+    }
+    #fix-parser-macro #customSeparator {
+        width: 40px;
+        margin-left: 0.5rem;
+    }
+    #fix-parser-macro .url-input {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    #fix-parser-macro .url-input label {
+        flex: 0 0 120px;
+    }
+    #fix-parser-macro .url-input input {
+        flex: 1;
+        padding: 0.3rem;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+    }
+    #fix-parser-macro #dictionaryStatus {
+        margin-top: 0.5rem;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="fix-parser-macro">
+    <div class="container">
+      <h1>FIX Message Parser</h1>
+
+      <div class="dictionary-urls">
+        <h3>FIX Dictionary Location</h3>
+        <div class="url-input"><label for="baseUrl">Base URL:</label><input type="text" id="baseUrl"></div>
+        <button id="loadDictionariesButton">Load Dictionaries</button>
+        <div id="dictionaryStatus"></div>
+      </div>
+      
+      <fieldset id="parser-fieldset" disabled>
+        <h3>FIX Message</h3>
+        <p>Enter a raw FIX message payload below. The message will be parsed into a human-readable format.</p>
+        <textarea id="fixInput" rows="10">8=FIX.4.2|9=178|35=D|34=2|49=SENDERCOMPID|52=20230101-12:00:00.000|56=TARGETCOMPID|11=12345|1=ACCOUNT1|21=1|38=1000|40=2|54=1|55=EUR/USD|59=0|60=20230101-12:00:00.000|453=2|448=PARTYID1|447=D|452=1|448=PARTYID2|447=D|452=3|10=168|</textarea>
+        
+        <div class="separator-options">
+          <strong>Separator:</strong>
+          <label><input type="radio" name="separator" value="soh"> SOH ()</label>
+          <label><input type="radio" name="separator" value="pipe" checked> Pipe (|)</label>
+          <label><input type="radio" name="separator" value="other"> Other <input type="text" id="customSeparator" disabled></label>
+        </div>
+
+        <button id="parseButton">Parse FIX Message</button>
+    
+        <h2>Parsed Output</h2>
+        <div id="output" class="output-area"></div>
+      </fieldset>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // --- Configuration ---
+      const DEFAULT_BASE_URL = 'https://sharp-moria-avon18-b017b82a.koyeb.app/xml/'; // Default location for dictionary files
+
+      // --- Global state for dictionaries ---
+      let fieldsMap, enumsMap, componentsMap, componentNameToId, msgContents, messagesMap;
+      
+      // --- UI Elements ---
+      const loadButton = document.getElementById('loadDictionariesButton');
+      const statusDiv = document.getElementById('dictionaryStatus');
+      const parserFieldset = document.getElementById('parser-fieldset');
+      const parseButton = document.getElementById('parseButton');
+      const fixInput = document.getElementById('fixInput');
+      const outputDiv = document.getElementById('output');
+      const baseUrlInput = document.getElementById('baseUrl');
+
+      // --- Dictionary Loading ---
+      async function loadDictionaries() {
+        statusDiv.textContent = 'Loading...';
+        statusDiv.style.color = 'orange';
+        loadButton.disabled = true;
+
+        const baseUrl = baseUrlInput.value;
+        const filenames = [
+            'Fields.xml', 
+            'Enums.xml', 
+            'Components.xml', 
+            'Messages.xml', 
+            'MsgContents.xml'
+        ];
+        
+        const urls = filenames.map(file => new URL(file, baseUrl).href);
+
+        try {
+          const responses = await Promise.all(urls.map(url => fetch(url)));
+          
+          for (const response of responses) {
+            if (!response.ok) {
+              throw new Error(`Failed to fetch ${response.url}: ${response.statusText}`);
+            }
+          }
+
+          const xmlStrings = await Promise.all(responses.map(res => res.text()));
+          
+          initializeDictionaries({
+            fieldsXml: xmlStrings[0],
+            enumsXml: xmlStrings[1],
+            componentsXml: xmlStrings[2],
+            messagesXml: xmlStrings[3],
+            msgContentsXml: xmlStrings[4],
+          });
+
+          statusDiv.textContent = 'Dictionaries loaded successfully!';
+          statusDiv.style.color = 'green';
+          parserFieldset.disabled = false;
+
+        } catch (error) {
+          console.error('Error loading dictionaries:', error);
+          statusDiv.textContent = `Error: ${error.message}. Check URL and CORS policy.`;
+          statusDiv.style.color = 'red';
+          loadButton.disabled = false;
+        }
+      }
+      
+      function initializeDictionaries({ fieldsXml, enumsXml, componentsXml, messagesXml, msgContentsXml }) {
+        const parser = new DOMParser();
+        const fieldsDoc = parser.parseFromString(fieldsXml.trim(), "text/xml");
+        const enumsDoc = parser.parseFromString(enumsXml.trim(), "text/xml");
+        const componentsDoc = parser.parseFromString(componentsXml.trim(), "text/xml");
+        const messagesDoc = parser.parseFromString(messagesXml.trim(), "text/xml");
+        const msgContentsDoc = parser.parseFromString(msgContentsXml.trim(), "text/xml");
+
+        fieldsMap = new Map();
+        fieldsDoc.querySelectorAll("Field").forEach(field => {
+          fieldsMap.set(field.querySelector("Tag").textContent, field.querySelector("Name").textContent);
+        });
+
+        enumsMap = new Map();
+        enumsDoc.querySelectorAll("Enum").forEach(enumNode => {
+          const tag = enumNode.querySelector("Tag").textContent;
+          if (!enumsMap.has(tag)) enumsMap.set(tag, new Map());
+          enumsMap.get(tag).set(enumNode.querySelector("Value").textContent, enumNode.querySelector("SymbolicName").textContent);
+        });
+        
+        componentsMap = new Map();
+        componentsDoc.querySelectorAll("Component").forEach(comp => {
+            const componentID = comp.querySelector("ComponentID").textContent;
+            const name = comp.querySelector("Name").textContent;
+            componentsMap.set(componentID, {name: name, type: comp.querySelector("ComponentType").textContent});
+        });
+
+        componentNameToId = new Map();
+        for(const [id, comp] of componentsMap.entries()) componentNameToId.set(comp.name, id);
+
+        msgContents = new Map();
+        msgContentsDoc.querySelectorAll("MsgContent").forEach(mc => {
+            const componentID = mc.querySelector("ComponentID").textContent;
+            if (!msgContents.has(componentID)) msgContents.set(componentID, []);
+            const tagText = mc.querySelector("TagText").textContent;
+            let id = isNaN(parseInt(tagText)) ? componentNameToId.get(tagText) : tagText;
+            msgContents.get(componentID).push({ id: id, indent: mc.querySelector("Indent").textContent });
+        });
+        
+        messagesMap = new Map();
+        messagesDoc.querySelectorAll("Message").forEach(msg => {
+            const msgType = msg.querySelector("MsgType").textContent;
+            const componentID = msg.querySelector("ComponentID").textContent;
+            messagesMap.set(msgType, componentID);
+        });
+      }
+
+      // --- UI Event Handlers ---
+      loadButton.addEventListener('click', loadDictionaries);
+
+      document.querySelectorAll('input[name="separator"]').forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            document.getElementById('customSeparator').disabled = event.target.value !== 'other';
+        });
+      });
+
+      parseButton.addEventListener('click', () => {
+        try {
+          const formattedMessage = parseFix(fixInput.value);
+          outputDiv.textContent = formattedMessage;
+        } catch (e) {
+          console.error(e);
+          outputDiv.textContent = 'Error parsing FIX message: ' + e.message;
+        }
+      });
+
+      // --- Core Parsing Logic ---
+      function getGroupInfo(componentId) {
+          const contents = msgContents.get(componentId);
+          if (!contents) return null;
+          const countTagItem = contents.find(item => parseInt(item.indent, 10) === 0 && !componentsMap.has(item.id));
+          const startTagItem = contents.find(item => parseInt(item.indent, 10) > 0);
+          if (!countTagItem || !startTagItem) return null;
+          let startTag = startTagItem.id;
+          if (componentsMap.has(startTag)) {
+              const nestedGroupInfo = getGroupInfo(startTag);
+              startTag = nestedGroupInfo ? nestedGroupInfo.startTag : null;
+          }
+          if (!startTag) return null;
+          const members = new Set();
+          function collectTags(cId){
+              const componentMembers = msgContents.get(cId);
+              if(!componentMembers) return;
+              for(const member of componentMembers){
+                  if (parseInt(member.indent, 10) > 0) {
+                      if(componentsMap.has(member.id)) collectTags(member.id);
+                      else members.add(member.id);
+                  }
+              }
+          }
+          collectTags(componentId);
+          return { countTag: countTagItem.id, startTag, members };
+      }
+
+      function buildMessageStructure(msgType) {
+          const rootComponentId = messagesMap.get(msgType);
+          if (!rootComponentId) return null;
+          const repeatingGroups = new Map();
+          function processComponent(componentId) {
+              const contents = msgContents.get(componentId);
+              if (!contents) return;
+              for (const item of contents) {
+                  const component = componentsMap.get(item.id);
+                  if (component) {
+                      if (component.type.includes('Repeating')) {
+                          const groupInfo = getGroupInfo(item.id);
+                          if (groupInfo) repeatingGroups.set(groupInfo.countTag, { startTag: groupInfo.startTag, members: groupInfo.members });
+                      }
+                      processComponent(item.id);
+                  }
+              }
+          }
+          processComponent(rootComponentId);
+          return repeatingGroups;
+      }
+
+      function getSeparator() {
+        const selected = document.querySelector('input[name="separator"]:checked').value;
+        if (selected === 'soh') return '';
+        if (selected === 'pipe') return '|';
+        if (selected === 'other') return document.getElementById('customSeparator').value;
+        return '';
+      }
+
+      function parseFix(message) {
+        const separator = getSeparator();
+        const tags = message.split(separator).filter(Boolean).map(t => {
+            const parts = t.split('=');
+            return { tag: parts[0], value: parts[1] };
+        });
+        
+        const msgTypeTag = tags.find(t => t.tag === '35');
+        if (!msgTypeTag) throw new Error("MsgType (35) not found in message.");
+        
+        const repeatingGroupsDef = buildMessageStructure(msgTypeTag.value);
+        if(!repeatingGroupsDef) throw new Error(`Could not find message structure for MsgType=${msgTypeTag.value}`);
+
+        let formatted = '';
+        let groupStack = [];
+        const PADDING_COLUMN = 45;
+
+        for (const { tag, value } of tags) {
+            if (groupStack.length > 0) {
+                let currentGroup = groupStack[groupStack.length - 1];
+                if (currentGroup.instancesSeen >= currentGroup.totalInstances && !currentGroup.members.has(tag)) {
+                    groupStack.pop();
+                }
+                if (groupStack.length > 0) {
+                    currentGroup = groupStack[groupStack.length - 1];
+                    if (tag === currentGroup.startTag) currentGroup.instancesSeen++;
+                }
+            }
+
+            let indentation = '  '.repeat(groupStack.length);
+            const tagName = fieldsMap.get(tag) || `UnknownTag(${tag})`;
+            let valueDisplay = value;
+            if (enumsMap.has(tag) && enumsMap.get(tag).has(value)) {
+                valueDisplay = `${value} (${enumsMap.get(tag).get(value)})`;
+            }
+            let firstPart = `${indentation}${tag}=${valueDisplay}`;
+            formatted += `${firstPart.padEnd(PADDING_COLUMN)} (${tagName})\n`;
+
+            if (repeatingGroupsDef.has(tag)) {
+                const groupDef = repeatingGroupsDef.get(tag);
+                groupStack.push({
+                    startTag: groupDef.startTag,
+                    members: groupDef.members,
+                    totalInstances: parseInt(value, 10),
+                    instancesSeen: 0
+                });
+            }
+        }
+        return formatted;
+      }
+
+      // --- Initialisation ---
+      baseUrlInput.value = DEFAULT_BASE_URL;
+      loadDictionaries(); // Attempt to load from the default URL on startup
+
+    })();
+  </script>
+</body>
+</html>
