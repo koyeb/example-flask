@@ -301,19 +301,27 @@
           const rootComponentId = messagesMap.get(msgType);
           if (!rootComponentId) return null;
           const repeatingGroups = new Map();
+          const visitedComponents = new Set(); // To prevent infinite recursion
+
           function processComponent(componentId) {
+              if (visitedComponents.has(componentId)) return; // Cycle detected
+              visitedComponents.add(componentId);
+
               const contents = msgContents.get(componentId);
-              if (!contents) return;
-              for (const item of contents) {
-                  const component = componentsMap.get(item.id);
-                  if (component) {
-                      if (component.type.includes('Repeating')) {
-                          const groupInfo = getGroupInfo(item.id);
-                          if (groupInfo) repeatingGroups.set(groupInfo.countTag, { startTag: groupInfo.startTag, members: groupInfo.members });
-                      }
-                      processComponent(item.id);
-                  }
+              if (contents) {
+                for (const item of contents) {
+                    const component = componentsMap.get(item.id);
+                    if (component) {
+                        if (component.type.includes('Repeating')) {
+                            const groupInfo = getGroupInfo(item.id);
+                            if (groupInfo) repeatingGroups.set(groupInfo.countTag, { startTag: groupInfo.startTag, members: groupInfo.members });
+                        }
+                        processComponent(item.id);
+                    }
+                }
               }
+              
+              visitedComponents.delete(componentId); // Backtrack
           }
           processComponent(rootComponentId);
           return repeatingGroups;
