@@ -28,6 +28,27 @@ def hello_world():
 def api_spec():
     return send_from_directory('static', 'api_spec.yaml')
 
+# --- New route: serve XML files from /static/xml ---
+@app.route('/xml/<path:filename>')
+def serve_xml(filename: str):
+    """Serve XML files from the /static/xml directory via /xml/<filename>.xml.
+
+    If the requested file does not exist, return a JSON 404 with a clear message.
+    Only .xml files are allowed (anything else 404s).
+    """
+    if not filename.lower().endswith('.xml'):
+        abort(404)
+
+    xml_dir = os.path.join(app.root_path, 'static', 'xml')
+    file_path = os.path.join(xml_dir, filename)
+
+    # Ensure the file exists; if not, return a simple JSON 404 response
+    if not os.path.isfile(file_path):
+        return jsonify(error="File not found"), 404
+
+    # send_from_directory safely serves files from a specific folder
+    return send_from_directory(xml_dir, filename, mimetype='application/xml')
+
 @app.route('/tariff')
 def tariff():
     # Retrieve the numHours parameter from the request's query string
