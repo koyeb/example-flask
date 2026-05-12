@@ -49,6 +49,28 @@ def serve_xml(filename: str):
     # send_from_directory safely serves files from a specific folder
     return send_from_directory(xml_dir, filename, mimetype='application/xml')
 
+# send_from_directory safely serves files from a specific folder
+# \1# --- New route: serve HTML files from /static/html ---
+@app.route('/html/<path:filename>')
+def serve_html(filename: str):
+    """Serve HTML files from the /static/html directory via /html/<filename>.html.
+
+    If the requested file does not exist, return a JSON 404 with a clear message.
+    Only .html files are allowed (anything else 404s).
+    """
+    if not filename.lower().endswith('.html'):
+        abort(404)
+
+    html_dir = os.path.join(app.root_path, 'static', 'html')
+    file_path = os.path.join(html_dir, filename)
+
+    # Ensure the file exists; if not, return a simple JSON 404 response
+    if not os.path.isfile(file_path):
+        return jsonify(error="File not found"), 404
+
+    # send_from_directory safely serves files from a specific folder
+    return send_from_directory(html_dir, filename, mimetype='text/html')
+
 @app.route('/tariff')
 def tariff():
     # Retrieve the numHours parameter from the request's query string
