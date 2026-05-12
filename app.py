@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request, send_from_directory
-from tariff_utils import calculate_start_time
+from flask import Flask, jsonify, request, abort, send_from_directory, render_template
+from tariff_utils import calculate_start_time, get_best_tariff_windows
 import os
 from datetime import datetime, timedelta
 import random
@@ -80,13 +80,49 @@ def tariff():
         return jsonify(error="numHours parameter is required"), 400
     
     try:
-        num_hours = int(num_hours_str)
+        num_hours = float(num_hours_str)
     except ValueError:
-        return jsonify(error="numHours must be an integer"), 400
+        return jsonify(error="numHours must be a number"), 400
 
-    # Use the external module to calculate the start time
-    start_time_str = calculate_start_time(num_hours, api_key)
+    try:
+        # Use the external module to calculate the start time
+        start_time_str = calculate_start_time(num_hours, api_key)
+    except ValueError as error:
+        return jsonify(error=str(error)), 400
+    except RuntimeError as error:
+        return jsonify(error=str(error)), 502
+
     return jsonify(startTime=start_time_str)
+
+
+@app.route('/octopus')
+def octopus():
+    durations = [1, 1.5, 2, 2.5, 3, 3.5]
+    page_error = None
+    window_rows = []
+
+    try:
+        window_rows = get_best_tariff_windows(durations, api_key)
+    except RuntimeError as error:
+        page_error = str(error)
+
+    for row in window_rows:
+        if row.get('error'):
+            row['duration_label'] = f"{row['duration_hours']:g} hours"
+            continue
+
+        row['duration_label'] = f"{row['duration_hours']:g} hours"
+        row['start_label'] = row['start_time'].strftime('%d %b %Y, %H:%M')
+        row['end_label'] = row['end_time'].strftime('%d %b %Y, %H:%M')
+        row['total_tariff_label'] = f"{row['total_tariff']:.2f} p/kWh"
+        row['average_tariff_label'] = f"{row['average_tariff']:.2f} p/kWh"
+        row['is_credit'] = row['total_tariff'] < 0
+
+    return render_template(
+        'octopus.html',
+        rows=window_rows,
+        page_error=page_error,
+    )
 
 @app.route('/demo_status')
 def demo_status():

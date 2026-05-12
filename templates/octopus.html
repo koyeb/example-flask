@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octopus Tariff Windows</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="octopus-page">
+    <main class="octopus-layout">
+        <section class="octopus-hero">
+            <p class="octopus-kicker">Octopus Agile</p>
+            <h1>Cheapest continuous windows in the next 12 hours</h1>
+            <p class="octopus-summary">
+                Each row shows the best upcoming continuous time block for that duration.
+                Negative tariff totals mean you are being credited to use electricity during that window.
+            </p>
+        </section>
+
+        {% if page_error %}
+        <section class="octopus-banner octopus-banner-error">
+            <strong>Tariff data unavailable.</strong>
+            <span>{{ page_error }}</span>
+        </section>
+        {% endif %}
+
+        <section class="octopus-card">
+            <div class="octopus-table-header">
+                <h2>Best windows</h2>
+                <p>Raw Octopus units are shown as returned from the tariff feed.</p>
+            </div>
+
+            <div class="octopus-table" role="table" aria-label="Cheapest Octopus tariff windows">
+                <div class="octopus-table-row octopus-table-row-head" role="row">
+                    <div role="columnheader">Duration</div>
+                    <div role="columnheader">Start</div>
+                    <div role="columnheader">End</div>
+                    <div role="columnheader">Total tariff</div>
+                    <div role="columnheader">Average slot tariff</div>
+                </div>
+
+                {% for row in rows %}
+                <article class="octopus-table-row" role="row">
+                    <div class="octopus-cell" role="cell" data-label="Duration">
+                        {{ row.duration_label }}
+                    </div>
+
+                    {% if row.error %}
+                    <div class="octopus-cell octopus-inline-error" role="cell" data-label="Start">
+                        Unable to calculate
+                    </div>
+                    <div class="octopus-cell octopus-inline-error" role="cell" data-label="End">
+                        Unable to calculate
+                    </div>
+                    <div class="octopus-cell octopus-inline-error" role="cell" data-label="Total tariff">
+                        {{ row.error }}
+                    </div>
+                    <div class="octopus-cell octopus-inline-error" role="cell" data-label="Average slot tariff">
+                        {{ row.error }}
+                    </div>
+                    {% else %}
+                    <div class="octopus-cell" role="cell" data-label="Start">
+                        {{ row.start_label }}
+                    </div>
+                    <div class="octopus-cell" role="cell" data-label="End">
+                        {{ row.end_label }}
+                    </div>
+                    <div class="octopus-cell" role="cell" data-label="Total tariff">
+                        <span class="octopus-pill {% if row.is_credit %}octopus-pill-credit{% endif %}">
+                            {{ row.total_tariff_label }}
+                        </span>
+                    </div>
+                    <div class="octopus-cell" role="cell" data-label="Average slot tariff">
+                        {{ row.average_tariff_label }}
+                    </div>
+                    {% endif %}
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
