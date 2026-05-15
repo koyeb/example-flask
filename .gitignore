@@ -113,6 +113,10 @@ ENV/
 env.bak/
 venv.bak/
 
+# Local Codex state
+.codex
+.codex/
+
 # Spyder project settings
 .spyderproject
 .spyproject
