@@ -1,5540 +1,1582 @@
 [
-  {
-    "id": "eng-vocab-0001",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"reclusive\" mean?",
-    "choices": [
-      {
-        "text": "Very eager to argue",
-        "correct": false
-      },
-      {
-        "text": "Preferring to live alone or avoid other people",
-        "correct": true
-      },
-      {
-        "text": "Extremely bright and colourful",
-        "correct": false
-      },
-      {
-        "text": "Quick to forgive someone",
-        "correct": false
-      },
-      {
-        "text": "Full of energy and noise",
-        "correct": false
-      }
-    ],
-    "explanation": "Reclusive means preferring to live alone or avoid other people.",
-    "target_word": "reclusive"
-  },
-  {
-    "id": "eng-vocab-0002",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Done secretly, especially because it should not be noticed."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "Surreptitious",
-        "correct": true
-      },
-      {
-        "text": "Robust",
-        "correct": false
-      },
-      {
-        "text": "Ample",
-        "correct": false
-      },
-      {
-        "text": "Diligent",
-        "correct": false
-      },
-      {
-        "text": "Frivolous",
-        "correct": false
-      }
-    ],
-    "explanation": "Surreptitious means done secretly or in a hidden way.",
-    "target_word": "surreptitious"
-  },
-  {
-    "id": "eng-vocab-0003",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The old bridge looked strong, but the wooden railings had begun to ______ after years of rain and wind."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "vindicate",
-        "correct": false
-      },
-      {
-        "text": "wither",
-        "correct": true
-      },
-      {
-        "text": "retain",
-        "correct": false
-      },
-      {
-        "text": "appease",
-        "correct": false
-      },
-      {
-        "text": "speculate",
-        "correct": false
-      }
-    ],
-    "explanation": "Wither means to dry up, weaken, or decay.",
-    "target_word": "wither"
-  },
-  {
-    "id": "eng-vocab-0004",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "His terse reply made it clear that he did not want to discuss the matter further."
-    },
-    "question": "Which word could best replace \"terse\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "cheerful",
-        "correct": false
-      },
-      {
-        "text": "brief",
-        "correct": true
-      },
-      {
-        "text": "confused",
-        "correct": false
-      },
-      {
-        "text": "generous",
-        "correct": false
-      },
-      {
-        "text": "dramatic",
-        "correct": false
-      }
-    ],
-    "explanation": "Terse means brief, short, or using very few words.",
-    "target_word": "terse"
-  },
-  {
-    "id": "eng-vocab-0005",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The detective tried to ______ the truth from the tiny clues left at the scene."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "deduce",
-        "correct": true
-      },
-      {
-        "text": "strew",
-        "correct": false
-      },
-      {
-        "text": "hinder",
-        "correct": false
-      },
-      {
-        "text": "grill",
-        "correct": false
-      },
-      {
-        "text": "recede",
-        "correct": false
-      }
-    ],
-    "explanation": "Deduce means to work out an answer or truth from evidence.",
-    "target_word": "deduce"
-  },
-  {
-    "id": "eng-vocab-0006",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The students worked meticulously on their model castle, checking every tiny detail."
-    },
-    "question": "In this sentence, what part of speech is \"meticulously\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": true
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "Meticulously describes how the students worked, so it is an adverb.",
-    "target_word": "meticulously"
-  },
-  {
-    "id": "eng-vocab-0007",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"prudent\" mean?",
-    "choices": [
-      {
-        "text": "Very noisy and excited",
-        "correct": false
-      },
-      {
-        "text": "Weak and easily broken",
-        "correct": false
-      },
-      {
-        "text": "Sensible and careful before making decisions",
-        "correct": true
-      },
-      {
-        "text": "Rude in a bold way",
-        "correct": false
-      },
-      {
-        "text": "Covered in bright colours",
-        "correct": false
-      }
-    ],
-    "explanation": "Prudent means sensible, careful, and showing good judgement before acting.",
-    "target_word": "prudent"
-  },
-  {
-    "id": "eng-vocab-0008",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Kind, helpful, and wanting to do good for others."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "Benevolent",
-        "correct": true
-      },
-      {
-        "text": "Treacherous",
-        "correct": false
-      },
-      {
-        "text": "Fusty",
-        "correct": false
-      },
-      {
-        "text": "Frantic",
-        "correct": false
-      },
-      {
-        "text": "Dingy",
-        "correct": false
-      }
-    ],
-    "explanation": "Benevolent means kind, generous, and wanting to help others.",
-    "target_word": "benevolent"
-  },
-  {
-    "id": "eng-vocab-0009",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The path along the cliff was narrow and ______, so we walked very slowly."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "courteous",
-        "correct": false
-      },
-      {
-        "text": "treacherous",
-        "correct": true
-      },
-      {
-        "text": "splendid",
-        "correct": false
-      },
-      {
-        "text": "tangible",
-        "correct": false
-      },
-      {
-        "text": "solemn",
-        "correct": false
-      }
-    ],
-    "explanation": "Treacherous means dangerous or unsafe, which fits a narrow cliff path.",
-    "target_word": "treacherous"
-  },
-  {
-    "id": "eng-vocab-0010",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The old castle looked forlorn in the rain."
-    },
-    "question": "Which word could best replace \"forlorn\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "cheerful",
-        "correct": false
-      },
-      {
-        "text": "lonely",
-        "correct": true
-      },
-      {
-        "text": "crowded",
-        "correct": false
-      },
-      {
-        "text": "shiny",
-        "correct": false
-      },
-      {
-        "text": "noisy",
-        "correct": false
-      }
-    ],
-    "explanation": "Forlorn means lonely, sad, or abandoned.",
-    "target_word": "forlorn"
-  },
-  {
-    "id": "eng-vocab-0011",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "She tried to fathom the strange message."
-    },
-    "question": "In this sentence, what part of speech is \"fathom\"?",
-    "choices": [
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": true
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "Fathom is a verb here because it names the action of trying to understand something.",
-    "target_word": "fathom"
-  },
-  {
-    "id": "eng-vocab-0012",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "From the high ______, we could see the sea stretching far into the distance."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "belfry",
-        "correct": false
-      },
-      {
-        "text": "thicket",
-        "correct": false
-      },
-      {
-        "text": "cask",
-        "correct": false
-      },
-      {
-        "text": "promontory",
-        "correct": true
-      },
-      {
-        "text": "visor",
-        "correct": false
-      }
-    ],
-    "explanation": "A promontory is a high point of land that sticks out, often over water.",
-    "target_word": "promontory"
-  },
-  {
-    "id": "eng-vocab-0013",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"uncanny\" mean?",
-    "choices": [
-      {
-        "text": "Very old and damaged",
-        "correct": false
-      },
-      {
-        "text": "Strange or mysterious in a slightly frightening way",
-        "correct": true
-      },
-      {
-        "text": "Extremely loud and cheerful",
-        "correct": false
-      },
-      {
-        "text": "Easy to understand",
-        "correct": false
-      },
-      {
-        "text": "Full of bright colours",
-        "correct": false
-      }
-    ],
-    "explanation": "Uncanny means strange or mysterious in a way that can feel slightly frightening.",
-    "target_word": "uncanny"
-  },
-  {
-    "id": "eng-vocab-0014",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Move quickly or awkwardly over rough ground, often using hands as well as feet."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "slumber",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": true
-      },
-      {
-        "text": "deceive",
-        "correct": false
-      },
-      {
-        "text": "perish",
-        "correct": false
-      },
-      {
-        "text": "reckon",
-        "correct": false
-      }
-    ],
-    "explanation": "Scramble means to move quickly or awkwardly, especially over rough ground.",
-    "target_word": "scramble"
-  },
-  {
-    "id": "eng-vocab-0015",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "After walking all day, the travellers ______ beside the river and slept under the stars."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "glanced",
-        "correct": false
-      },
-      {
-        "text": "bivouacked",
-        "correct": true
-      },
-      {
-        "text": "dispatched",
-        "correct": false
-      },
-      {
-        "text": "crowned",
-        "correct": false
-      },
-      {
-        "text": "quenched",
-        "correct": false
-      }
-    ],
-    "explanation": "Bivouacked means camped temporarily, especially without tents or in the open.",
-    "target_word": "bivouacked"
-  },
-  {
-    "id": "eng-vocab-0016",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "It was prudent to take a map before entering the forest."
-    },
-    "question": "Which word could best replace \"prudent\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "careless",
-        "correct": false
-      },
-      {
-        "text": "sensible",
-        "correct": true
-      },
-      {
-        "text": "noisy",
-        "correct": false
-      },
-      {
-        "text": "gloomy",
-        "correct": false
-      },
-      {
-        "text": "stubborn",
-        "correct": false
-      }
-    ],
-    "explanation": "Prudent means sensible and careful before acting.",
-    "target_word": "prudent"
-  },
-  {
-    "id": "eng-vocab-0017",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"promontory\" mean?",
-    "choices": [
-      {
-        "text": "A high piece of land that sticks out into the sea",
-        "correct": true
-      },
-      {
-        "text": "A small wooden boat",
-        "correct": false
-      },
-      {
-        "text": "A deep underground room",
-        "correct": false
-      },
-      {
-        "text": "A royal crown",
-        "correct": false
-      },
-      {
-        "text": "A narrow city street",
-        "correct": false
-      }
-    ],
-    "explanation": "A promontory is a high piece of land that sticks out into the sea or another body of water.",
-    "target_word": "promontory"
-  },
-  {
-    "id": "eng-vocab-0018",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Something given to show respect, thanks, or honour."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "tribute",
-        "correct": true
-      },
-      {
-        "text": "mischief",
-        "correct": false
-      },
-      {
-        "text": "grudge",
-        "correct": false
-      },
-      {
-        "text": "carcass",
-        "correct": false
-      },
-      {
-        "text": "gauntlet",
-        "correct": false
-      }
-    ],
-    "explanation": "A tribute is something said, done, or given to show respect, thanks, or honour.",
-    "target_word": "tribute"
-  },
-  {
-    "id": "eng-vocab-0019",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The old cupboard had a ______ smell, as if it had not been opened for years."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "frantic",
-        "correct": false
-      },
-      {
-        "text": "courteous",
-        "correct": false
-      },
-      {
-        "text": "fusty",
-        "correct": true
-      },
-      {
-        "text": "splendid",
-        "correct": false
-      },
-      {
-        "text": "tangible",
-        "correct": false
-      }
-    ],
-    "explanation": "Fusty means smelling stale, damp, or old.",
-    "target_word": "fusty"
-  },
-  {
-    "id": "eng-vocab-0020",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The pirate was notorious for attacking ships along the coast."
-    },
-    "question": "Which word could best replace \"notorious\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "famous for something bad",
-        "correct": true
-      },
-      {
-        "text": "completely unknown",
-        "correct": false
-      },
-      {
-        "text": "gentle and kind",
-        "correct": false
-      },
-      {
-        "text": "recently arrived",
-        "correct": false
-      },
-      {
-        "text": "easily frightened",
-        "correct": false
-      }
-    ],
-    "explanation": "Notorious means famous or well known for something bad.",
-    "target_word": "notorious"
-  },
-  {
-    "id": "eng-vocab-0021",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"fathom\" mean?",
-    "choices": [
-      {
-        "text": "To understand something after thinking about it",
-        "correct": true
-      },
-      {
-        "text": "To shout in anger",
-        "correct": false
-      },
-      {
-        "text": "To cover something with gold",
-        "correct": false
-      },
-      {
-        "text": "To run away secretly",
-        "correct": false
-      },
-      {
-        "text": "To build a wall around something",
-        "correct": false
-      }
-    ],
-    "explanation": "Fathom means to understand something, especially after thinking carefully.",
-    "target_word": "fathom"
-  },
-  {
-    "id": "eng-vocab-0022",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The cat moved stealthily through the garden."
-    },
-    "question": "In this sentence, what part of speech is \"stealthily\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": true
-      },
-      {
-        "text": "Conjunction",
-        "correct": false
-      }
-    ],
-    "explanation": "Stealthily describes how the cat moved, so it is an adverb.",
-    "target_word": "stealthily"
-  },
-  {
-    "id": "eng-vocab-0023",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The path was so ______ that we had to climb slowly and carefully."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "steep",
-        "correct": true
-      },
-      {
-        "text": "amiable",
-        "correct": false
-      },
-      {
-        "text": "briny",
-        "correct": false
-      },
-      {
-        "text": "solemn",
-        "correct": false
-      },
-      {
-        "text": "frail",
-        "correct": false
-      }
-    ],
-    "explanation": "Steep means rising or falling sharply, which explains why the path had to be climbed carefully.",
-    "target_word": "steep"
-  },
-  {
-    "id": "eng-vocab-0024",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "A tower or part of a tower where bells are kept, often in a church."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "belfry",
-        "correct": true
-      },
-      {
-        "text": "prow",
-        "correct": false
-      },
-      {
-        "text": "visor",
-        "correct": false
-      },
-      {
-        "text": "thicket",
-        "correct": false
-      },
-      {
-        "text": "cask",
-        "correct": false
-      }
-    ],
-    "explanation": "A belfry is a tower or part of a tower where bells are kept.",
-    "target_word": "belfry"
-  },
-  {
-    "id": "eng-vocab-0025",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"benevolent\" mean?",
-    "choices": [
-      {
-        "text": "Sneaky and dishonest",
-        "correct": false
-      },
-      {
-        "text": "Kind and wanting to help others",
-        "correct": true
-      },
-      {
-        "text": "Very old and weak",
-        "correct": false
-      },
-      {
-        "text": "Loud and unpleasant",
-        "correct": false
-      },
-      {
-        "text": "Difficult to control",
-        "correct": false
-      }
-    ],
-    "explanation": "Benevolent means kind, generous, and wanting to help others.",
-    "target_word": "benevolent"
-  },
-  {
-    "id": "eng-vocab-0026",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The soldier stood as a ______ at the gate, watching carefully for any danger."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "reveller",
-        "correct": false
-      },
-      {
-        "text": "regent",
-        "correct": false
-      },
-      {
-        "text": "sentinel",
-        "correct": true
-      },
-      {
-        "text": "prophet",
-        "correct": false
-      },
-      {
-        "text": "boatswain",
-        "correct": false
-      }
-    ],
-    "explanation": "A sentinel is a guard or watchperson who keeps lookout for danger.",
-    "target_word": "sentinel"
-  },
-  {
-    "id": "eng-vocab-0027",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The child looked apprehensive before entering the dark cave."
-    },
-    "question": "Which word could best replace \"apprehensive\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "excited",
-        "correct": false
-      },
-      {
-        "text": "fearless",
-        "correct": false
-      },
-      {
-        "text": "sleepy",
-        "correct": false
-      },
-      {
-        "text": "anxious",
-        "correct": true
-      },
-      {
-        "text": "cheerful",
-        "correct": false
-      }
-    ],
-    "explanation": "Apprehensive means anxious or worried that something bad may happen.",
-    "target_word": "apprehensive"
-  },
-  {
-    "id": "eng-vocab-0028",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "A deep narrow valley with steep rocky sides."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": true
-      },
-      {
-        "text": "belfry",
-        "correct": false
-      },
-      {
-        "text": "cask",
-        "correct": false
-      },
-      {
-        "text": "wigwam",
-        "correct": false
-      },
-      {
-        "text": "avenue",
-        "correct": false
-      }
-    ],
-    "explanation": "A gorge is a deep, narrow valley with steep rocky sides.",
-    "target_word": "gorge"
-  },
-  {
-    "id": "eng-vocab-0029",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The knight spoke courteously to the old woman."
-    },
-    "question": "In this sentence, what part of speech is \"courteously\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": true
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "Courteously describes how the knight spoke, so it is an adverb.",
-    "target_word": "courteously"
-  },
-  {
-    "id": "eng-vocab-0030",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"ostentatious\" mean?",
-    "choices": [
-      {
-        "text": "Quiet and shy",
-        "correct": false
-      },
-      {
-        "text": "Weak and easily broken",
-        "correct": false
-      },
-      {
-        "text": "Showy in a way that tries too hard to impress people",
-        "correct": true
-      },
-      {
-        "text": "Very ordinary and boring",
-        "correct": false
-      },
-      {
-        "text": "Kind and forgiving",
-        "correct": false
-      }
-    ],
-    "explanation": "Ostentatious means showy in a way intended to attract attention or impress people.",
-    "target_word": "ostentatious"
-  },
-  {
-    "id": "eng-vocab-0031",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "She checked every calculation ______, making sure there were no careless mistakes."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "hastily",
-        "correct": false
-      },
-      {
-        "text": "bitterly",
-        "correct": false
-      },
-      {
-        "text": "vaguely",
-        "correct": false
-      },
-      {
-        "text": "noisily",
-        "correct": false
-      },
-      {
-        "text": "meticulously",
-        "correct": true
-      }
-    ],
-    "explanation": "Meticulously means very carefully and with close attention to detail.",
-    "target_word": "meticulously"
-  },
-  {
-    "id": "eng-vocab-0032",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Something that is very unpleasant, disgusting, or offensive."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "repugnant",
-        "correct": true
-      },
-      {
-        "text": "versatile",
-        "correct": false
-      },
-      {
-        "text": "modest",
-        "correct": false
-      },
-      {
-        "text": "fleeting",
-        "correct": false
-      },
-      {
-        "text": "lenient",
-        "correct": false
-      }
-    ],
-    "explanation": "Repugnant means extremely unpleasant, disgusting, or offensive.",
-    "target_word": "repugnant"
-  },
-  {
-    "id": "eng-vocab-0033",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The new jacket was versatile because it could be worn for school, sports, or a party."
-    },
-    "question": "Which word could best replace \"versatile\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "expensive",
-        "correct": false
-      },
-      {
-        "text": "fragile",
-        "correct": false
-      },
-      {
-        "text": "colourful",
-        "correct": false
-      },
-      {
-        "text": "adaptable",
-        "correct": true
-      },
-      {
-        "text": "ancient",
-        "correct": false
-      }
-    ],
-    "explanation": "Versatile means adaptable or able to be used in many different ways.",
-    "target_word": "versatile"
-  },
-  {
-    "id": "eng-vocab-0034",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The teacher gave a lenient punishment because it was the student's first mistake."
-    },
-    "question": "In this sentence, what part of speech is \"lenient\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": true
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": false
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "Lenient describes the punishment, so it is an adjective.",
-    "target_word": "lenient"
-  },
-  {
-    "id": "eng-vocab-0035",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "The old bridge looked ______, so we crossed it one person at a time."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cheerful",
-        "correct": false
-      },
-      {
-        "text": "loyal",
-        "correct": false
-      },
-      {
-        "text": "invisible",
-        "correct": false
-      },
-      {
-        "text": "luxurious",
-        "correct": false
-      },
-      {
-        "text": "precarious",
-        "correct": true
-      }
-    ],
-    "explanation": "Precarious means unsafe, unstable, or likely to fall or fail.",
-    "target_word": "precarious"
-  },
-  {
-    "id": "eng-vocab-0036",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"conspicuous\" mean?",
-    "choices": [
-      {
-        "text": "Easy to notice",
-        "correct": true
-      },
-      {
-        "text": "Difficult to understand",
-        "correct": false
-      },
-      {
-        "text": "Quiet and shy",
-        "correct": false
-      },
-      {
-        "text": "Moving very fast",
-        "correct": false
-      },
-      {
-        "text": "Broken into pieces",
-        "correct": false
-      }
-    ],
-    "explanation": "Conspicuous means easy to see or notice.",
-    "target_word": "conspicuous"
-  },
-  {
-    "id": "eng-vocab-0037",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"grudge\" mean?",
-    "choices": [
-      {
-        "text": "A joyful celebration",
-        "correct": false
-      },
-      {
-        "text": "A long-lasting feeling of resentment",
-        "correct": true
-      },
-      {
-        "text": "A type of weapon",
-        "correct": false
-      },
-      {
-        "text": "A formal promise",
-        "correct": false
-      },
-      {
-        "text": "A sudden mistake",
-        "correct": false
-      }
-    ],
-    "explanation": "A grudge is a lasting feeling of anger or resentment toward someone.",
-    "target_word": "grudge"
-  },
-  {
-    "id": "eng-vocab-0038",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Bold and willing to take risks, sometimes in a shocking way."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "cautious",
-        "correct": false
-      },
-      {
-        "text": "audacious",
-        "correct": true
-      },
-      {
-        "text": "feeble",
-        "correct": false
-      },
-      {
-        "text": "obedient",
-        "correct": false
-      },
-      {
-        "text": "mournful",
-        "correct": false
-      }
-    ],
-    "explanation": "Audacious means boldly daring or willing to take risks.",
-    "target_word": "audacious"
-  },
-  {
-    "id": "eng-vocab-0039",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Real enough to be touched or clearly felt; not just imagined."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "sinister",
-        "correct": false
-      },
-      {
-        "text": "tangible",
-        "correct": true
-      },
-      {
-        "text": "forlorn",
-        "correct": false
-      },
-      {
-        "text": "obstinate",
-        "correct": false
-      },
-      {
-        "text": "shrill",
-        "correct": false
-      }
-    ],
-    "explanation": "Tangible means real enough to touch or clearly notice, rather than imagined.",
-    "target_word": "tangible"
-  },
-  {
-    "id": "eng-vocab-0040",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "Mia could not ______ how the magician made the coin disappear."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "scatter",
-        "correct": false
-      },
-      {
-        "text": "quarrel",
-        "correct": false
-      },
-      {
-        "text": "fathom",
-        "correct": true
-      },
-      {
-        "text": "perish",
-        "correct": false
-      },
-      {
-        "text": "mimic",
-        "correct": false
-      }
-    ],
-    "explanation": "Fathom means to understand something after thinking about it.",
-    "target_word": "fathom"
-  },
-  {
-    "id": "eng-vocab-0041",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "Even before the test began, Jayden felt ______ because he had forgotten to revise one whole topic."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "benevolent",
-        "correct": false
-      },
-      {
-        "text": "apprehensive",
-        "correct": true
-      },
-      {
-        "text": "courtly",
-        "correct": false
-      },
-      {
-        "text": "raucous",
-        "correct": false
-      },
-      {
-        "text": "pristine",
-        "correct": false
-      }
-    ],
-    "explanation": "Apprehensive means anxious or worried about something that might happen.",
-    "target_word": "apprehensive"
-  },
-  {
-    "id": "eng-vocab-0042",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The benevolent neighbour brought food to the family after the fire."
-    },
-    "question": "Which word could best replace \"benevolent\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "kind",
-        "correct": true
-      },
-      {
-        "text": "noisy",
-        "correct": false
-      },
-      {
-        "text": "stubborn",
-        "correct": false
-      },
-      {
-        "text": "careless",
-        "correct": false
-      },
-      {
-        "text": "greedy",
-        "correct": false
-      }
-    ],
-    "explanation": "Benevolent means kind and wanting to help others.",
-    "target_word": "benevolent"
-  },
-  {
-    "id": "eng-vocab-0043",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "There was something sinister about the empty house at the end of the lane."
-    },
-    "question": "Which word could best replace \"sinister\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "cheerful",
-        "correct": false
-      },
-      {
-        "text": "ordinary",
-        "correct": false
-      },
-      {
-        "text": "threatening",
-        "correct": true
-      },
-      {
-        "text": "colourful",
-        "correct": false
-      },
-      {
-        "text": "fragile",
-        "correct": false
-      }
-    ],
-    "explanation": "Sinister means threatening, evil-looking, or suggesting something bad may happen.",
-    "target_word": "sinister"
-  },
-  {
-    "id": "eng-vocab-0044",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The captain tried to deceive the guards with a false story."
-    },
-    "question": "In this sentence, what part of speech is \"deceive\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": true
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "Deceive is a verb here because it names the action the captain tried to do.",
-    "target_word": "deceive"
-  },
-  {
-    "id": "eng-vocab-0045",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The treacherous path was covered in loose stones and mud."
-    },
-    "question": "In this sentence, what part of speech is \"treacherous\"?",
-    "choices": [
-      {
-        "text": "Conjunction",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": true
-      },
-      {
-        "text": "Interjection",
-        "correct": false
-      },
-      {
-        "text": "Noun",
-        "correct": false
-      }
-    ],
-    "explanation": "Treacherous describes the path, so it is an adjective.",
-    "target_word": "treacherous"
-  },
-  {
-    "id": "eng-vocab-0046",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"audacious\" mean?",
-    "choices": [
-      {
-        "text": "very shy and quiet",
-        "correct": false
-      },
-      {
-        "text": "rude in a silly way",
-        "correct": false
-      },
-      {
-        "text": "bold and daring",
-        "correct": true
-      },
-      {
-        "text": "tired and weak",
-        "correct": false
-      },
-      {
-        "text": "slow to understand",
-        "correct": false
-      }
-    ],
-    "explanation": "Audacious means bold, daring, and willing to take risks.",
-    "target_word": "audacious"
-  },
-  {
-    "id": "eng-vocab-0047",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Kind and generous, and wanting to help other people."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "tangible",
-        "correct": false
-      },
-      {
-        "text": "sinister",
-        "correct": false
-      },
-      {
-        "text": "obstinate",
-        "correct": false
-      },
-      {
-        "text": "benevolent",
-        "correct": true
-      },
-      {
-        "text": "miserable",
-        "correct": false
-      }
-    ],
-    "explanation": "Benevolent means kind, generous, and wanting to help others.",
-    "target_word": "benevolent"
-  },
-  {
-    "id": "eng-vocab-0048",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "Even after the teacher explained the science idea twice, Noah still could not ______ it fully."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "dispatch",
-        "correct": false
-      },
-      {
-        "text": "fathom",
-        "correct": true
-      },
-      {
-        "text": "mimic",
-        "correct": false
-      },
-      {
-        "text": "hazard",
-        "correct": false
-      },
-      {
-        "text": "avenge",
-        "correct": false
-      }
-    ],
-    "explanation": "Fathom means to understand something after thinking about it.",
-    "target_word": "fathom"
-  },
-  {
-    "id": "eng-vocab-0049",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "Sana felt apprehensive before opening the letter from the headteacher."
-    },
-    "question": "Which word could best replace \"apprehensive\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "curious",
-        "correct": false
-      },
-      {
-        "text": "cheerful",
-        "correct": false
-      },
-      {
-        "text": "nervous",
-        "correct": true
-      },
-      {
-        "text": "careless",
-        "correct": false
-      },
-      {
-        "text": "patient",
-        "correct": false
-      }
-    ],
-    "explanation": "Apprehensive means anxious or nervous about something that may happen.",
-    "target_word": "apprehensive"
-  },
-  {
-    "id": "eng-vocab-0050",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The detectives finally found tangible evidence at the scene."
-    },
-    "question": "In this sentence, what part of speech is \"tangible\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": false
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": true
-      }
-    ],
-    "explanation": "Tangible describes the noun evidence, so it is an adjective.",
-    "target_word": "tangible"
-  },
-  {
-    "id": "eng-vocab-0051",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"pristine\" mean?",
-    "choices": [
-      {
-        "text": "badly damaged and broken",
-        "correct": false
-      },
-      {
-        "text": "fresh, clean, and in perfect condition",
-        "correct": true
-      },
-      {
-        "text": "noisy and chaotic",
-        "correct": false
-      },
-      {
-        "text": "ancient and forgotten",
-        "correct": false
-      },
-      {
-        "text": "difficult to reach",
-        "correct": false
-      }
-    ],
-    "explanation": "Pristine means fresh, clean, and in perfect or original condition.",
-    "target_word": "pristine"
-  },
-  {
-    "id": "eng-vocab-0052",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Refusing to change your opinion or behaviour, even when people try to persuade you."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "obstinate",
-        "correct": true
-      },
-      {
-        "text": "amiable",
-        "correct": false
-      },
-      {
-        "text": "fleeting",
-        "correct": false
-      },
-      {
-        "text": "cautious",
-        "correct": false
-      },
-      {
-        "text": "fragile",
-        "correct": false
-      }
-    ],
-    "explanation": "Obstinate means stubbornly refusing to change your opinion or behaviour.",
-    "target_word": "obstinate"
-  },
-  {
-    "id": "eng-vocab-0053",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "Mia moved so ______ through the dark hallway that nobody heard her enter the room."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "proudly",
-        "correct": false
-      },
-      {
-        "text": "rashly",
-        "correct": false
-      },
-      {
-        "text": "stealthily",
-        "correct": true
-      },
-      {
-        "text": "loudly",
-        "correct": false
-      },
-      {
-        "text": "eagerly",
-        "correct": false
-      }
-    ],
-    "explanation": "Stealthily means quietly and carefully so that others do not notice.",
-    "target_word": "stealthily"
-  },
-  {
-    "id": "eng-vocab-0054",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The old tunnel led to a subterranean chamber beneath the castle."
-    },
-    "question": "Which word could best replace \"subterranean\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "bright",
-        "correct": false
-      },
-      {
-        "text": "underground",
-        "correct": true
-      },
-      {
-        "text": "spacious",
-        "correct": false
-      },
-      {
-        "text": "hidden",
-        "correct": false
-      },
-      {
-        "text": "distant",
-        "correct": false
-      }
-    ],
-    "explanation": "Subterranean means underground or beneath the surface of the earth.",
-    "target_word": "subterranean"
-  },
-  {
-    "id": "eng-vocab-0055",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "After the unfair decision, Zara looked indignant and refused to stay silent."
-    },
-    "question": "In this sentence, what part of speech is \"indignant\"?",
-    "choices": [
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": true
-      },
-      {
-        "text": "Conjunction",
-        "correct": false
-      }
-    ],
-    "explanation": "Indignant describes how Zara looked, so it is an adjective.",
-    "target_word": "indignant"
-  },
-  {
-    "id": "eng-vocab-0056",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"grievous\" mean?",
-    "choices": [
-      {
-        "text": "very serious or severe",
-        "correct": true
-      },
-      {
-        "text": "full of bright colors",
-        "correct": false
-      },
-      {
-        "text": "easy to complete",
-        "correct": false
-      },
-      {
-        "text": "quiet and sleepy",
-        "correct": false
-      },
-      {
-        "text": "slightly amusing",
-        "correct": false
-      }
-    ],
-    "explanation": "Grievous describes something very serious, harmful, or severe.",
-    "target_word": "grievous"
-  },
-  {
-    "id": "eng-vocab-0057",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "Showing confidence in a proud, bold way that can seem arrogant."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "irresolute",
-        "correct": false
-      },
-      {
-        "text": "courteous",
-        "correct": false
-      },
-      {
-        "text": "swagger",
-        "correct": true
-      },
-      {
-        "text": "feeble",
-        "correct": false
-      },
-      {
-        "text": "solemn",
-        "correct": false
-      }
-    ],
-    "explanation": "Swagger means to act or walk with bold, proud confidence, often in a showy way.",
-    "target_word": "swagger"
-  },
-  {
-    "id": "eng-vocab-0058",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "With dark clouds ______ over the field, the match was stopped early."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "looming",
-        "correct": true
-      },
-      {
-        "text": "trickled",
-        "correct": false
-      },
-      {
-        "text": "dozed",
-        "correct": false
-      },
-      {
-        "text": "gilded",
-        "correct": false
-      },
-      {
-        "text": "mumbled",
-        "correct": false
-      }
-    ],
-    "explanation": "Looming fits because clouds can loom overhead when they appear large and threatening.",
-    "target_word": "looming"
-  },
-  {
-    "id": "eng-vocab-0059",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The coach gave prudent advice before the team made their final choice."
-    },
-    "question": "Which word could best replace \"prudent\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "careful",
-        "correct": true
-      },
-      {
-        "text": "reckless",
-        "correct": false
-      },
-      {
-        "text": "noisy",
-        "correct": false
-      },
-      {
-        "text": "hasty",
-        "correct": false
-      },
-      {
-        "text": "careless",
-        "correct": false
-      }
-    ],
-    "explanation": "Prudent means careful and sensible, especially when making decisions.",
-    "target_word": "prudent"
-  },
-  {
-    "id": "eng-vocab-0060",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The scouts bivouacked beside the river before sunrise."
-    },
-    "question": "In this sentence, what part of speech is \"bivouacked\"?",
-    "choices": [
-      {
-        "text": "Noun",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": true
-      },
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": false
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "Bivouacked shows the action the scouts performed, so it is a verb.",
-    "target_word": "bivouacked"
-  },
-  {
-    "id": "eng-vocab-0061",
-    "type": "word_meaning",
-    "prompt": {},
-    "question": "What does \"irresolute\" mean?",
-    "choices": [
-      {
-        "text": "unable to decide firmly",
-        "correct": true
-      },
-      {
-        "text": "full of excitement",
-        "correct": false
-      },
-      {
-        "text": "very well organized",
-        "correct": false
-      },
-      {
-        "text": "extremely noisy",
-        "correct": false
-      },
-      {
-        "text": "friendly and open",
-        "correct": false
-      }
-    ],
-    "explanation": "Irresolute means unsure or not firm in making decisions.",
-    "target_word": "irresolute"
-  },
-  {
-    "id": "eng-vocab-0062",
-    "type": "reverse_meaning",
-    "prompt": {
-      "meaning": "A current of cool air moving through a room."
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "draughts",
-        "correct": true
-      },
-      {
-        "text": "tidings",
-        "correct": false
-      },
-      {
-        "text": "stature",
-        "correct": false
-      },
-      {
-        "text": "prow",
-        "correct": false
-      },
-      {
-        "text": "coronet",
-        "correct": false
-      }
-    ],
-    "explanation": "Draughts means currents of cool air, often felt indoors.",
-    "target_word": "draughts"
-  },
-  {
-    "id": "eng-vocab-0063",
-    "type": "fill_in_blank",
-    "prompt": {
-      "sentence": "After hearing the good news, she smiled ______ and thanked everyone."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "sternly",
-        "correct": false
-      },
-      {
-        "text": "heartily",
-        "correct": true
-      },
-      {
-        "text": "grimly",
-        "correct": false
-      },
-      {
-        "text": "stealthily",
-        "correct": false
-      },
-      {
-        "text": "languidly",
-        "correct": false
-      }
-    ],
-    "explanation": "Heartily means warmly and with strong feeling, which matches a joyful response.",
-    "target_word": "heartily"
-  },
-  {
-    "id": "eng-vocab-0064",
-    "type": "alternative_word",
-    "prompt": {
-      "sentence": "The abandoned house looked dingy even in the afternoon light."
-    },
-    "question": "Which word could best replace \"dingy\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "bright",
-        "correct": false
-      },
-      {
-        "text": "elegant",
-        "correct": false
-      },
-      {
-        "text": "gloomy",
-        "correct": true
-      },
-      {
-        "text": "spacious",
-        "correct": false
-      },
-      {
-        "text": "fresh",
-        "correct": false
-      }
-    ],
-    "explanation": "Dingy means dark, dull, and dirty-looking, so gloomy is the closest match.",
-    "target_word": "dingy"
-  },
-  {
-    "id": "eng-vocab-0065",
-    "type": "part_of_speech",
-    "prompt": {
-      "sentence": "The oarsman checked behind him and saw the island was astern."
-    },
-    "question": "In this sentence, what part of speech is \"astern\"?",
-    "choices": [
-      {
-        "text": "Conjunction",
-        "correct": false
-      },
-      {
-        "text": "Adjective",
-        "correct": false
-      },
-      {
-        "text": "Verb",
-        "correct": false
-      },
-      {
-        "text": "Preposition",
-        "correct": false
-      },
-      {
-        "text": "Adverb",
-        "correct": true
-      }
-    ],
-    "explanation": "Astern describes position (behind the boat) in relation to motion/location, functioning as an adverb here.",
-    "target_word": "astern"
-  },
-  {
-    "id": "eng-vocab-0066",
-    "type": "word_meaning",
-    "target_word": "gale",
-    "prompt": {},
-    "question": "What does \"gale\" mean?",
-    "choices": [
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "a small mistake",
-        "correct": false
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      },
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a very strong wind",
-        "correct": true
-      }
-    ],
-    "explanation": "\"gale\" means a very strong wind."
-  },
-  {
-    "id": "eng-vocab-0067",
-    "type": "reverse_meaning",
-    "target_word": "gale",
-    "prompt": {
-      "meaning": "a very strong wind"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "gale",
-        "correct": true
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"gale\"."
-  },
-  {
-    "id": "eng-vocab-0068",
-    "type": "fill_in_blank",
-    "target_word": "gale",
-    "prompt": {
-      "sentence": "The sailors tightened the ropes as a ______ swept across the sea."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "lantern",
-        "correct": false
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "whisper",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "gale",
-        "correct": true
-      }
-    ],
-    "explanation": "Only \"gale\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0069",
-    "type": "alternative_word",
-    "target_word": "gale",
-    "prompt": {
-      "sentence": "A gale battered the tents all night."
-    },
-    "question": "Which word could best replace \"gale\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "basket",
-        "correct": false
-      },
-      {
-        "text": "mirror",
-        "correct": false
-      },
-      {
-        "text": "storm",
-        "correct": true
-      },
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      }
-    ],
-    "explanation": "\"storm\" is the closest meaning to \"gale\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0070",
-    "type": "part_of_speech",
-    "target_word": "gale",
-    "prompt": {
-      "sentence": "A gale hit the coast at dawn."
-    },
-    "question": "In this sentence, what part of speech is \"gale\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"gale\" functions as a noun."
-  },
-  {
-    "id": "eng-vocab-0071",
-    "type": "word_meaning",
-    "target_word": "prophecy",
-    "prompt": {},
-    "question": "What does \"prophecy\" mean?",
-    "choices": [
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a prediction about what will happen in the future",
-        "correct": true
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      },
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "a small mistake",
-        "correct": false
-      }
-    ],
-    "explanation": "\"prophecy\" means a prediction about what will happen in the future."
-  },
-  {
-    "id": "eng-vocab-0072",
-    "type": "reverse_meaning",
-    "target_word": "prophecy",
-    "prompt": {
-      "meaning": "a prediction about what will happen in the future"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      },
-      {
-        "text": "prophecy",
-        "correct": true
-      },
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"prophecy\"."
-  },
-  {
-    "id": "eng-vocab-0073",
-    "type": "fill_in_blank",
-    "target_word": "prophecy",
-    "prompt": {
-      "sentence": "The old scroll contained a ______ about the kingdom's future."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "lantern",
-        "correct": false
-      },
-      {
-        "text": "prophecy",
-        "correct": true
-      },
-      {
-        "text": "whisper",
-        "correct": false
-      }
-    ],
-    "explanation": "Only \"prophecy\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0074",
-    "type": "alternative_word",
-    "target_word": "prophecy",
-    "prompt": {
-      "sentence": "The prophecy warned of difficult times ahead."
-    },
-    "question": "Which word could best replace \"prophecy\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      },
-      {
-        "text": "mirror",
-        "correct": false
-      },
-      {
-        "text": "prediction",
-        "correct": true
-      },
-      {
-        "text": "basket",
-        "correct": false
-      }
-    ],
-    "explanation": "\"prediction\" is the closest meaning to \"prophecy\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0075",
-    "type": "part_of_speech",
-    "target_word": "prophecy",
-    "prompt": {
-      "sentence": "Her prophecy surprised the council."
-    },
-    "question": "In this sentence, what part of speech is \"prophecy\"?",
-    "choices": [
-      {
-        "text": "preposition",
-        "correct": false
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "noun",
-        "correct": true
-      },
-      {
-        "text": "verb",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"prophecy\" functions as a noun."
-  },
-  {
-    "id": "eng-vocab-0076",
-    "type": "word_meaning",
-    "target_word": "aloft",
-    "prompt": {},
-    "question": "What does \"aloft\" mean?",
-    "choices": [
-      {
-        "text": "a small mistake",
-        "correct": false
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      },
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "up in or into the air",
-        "correct": true
-      },
-      {
-        "text": "a narrow path",
-        "correct": false
-      }
-    ],
-    "explanation": "\"aloft\" means up in or into the air."
-  },
-  {
-    "id": "eng-vocab-0077",
-    "type": "reverse_meaning",
-    "target_word": "aloft",
-    "prompt": {
-      "meaning": "up in or into the air"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "aloft",
-        "correct": true
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      },
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a tiny insect",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"aloft\"."
-  },
-  {
-    "id": "eng-vocab-0078",
-    "type": "fill_in_blank",
-    "target_word": "aloft",
-    "prompt": {
-      "sentence": "The eagle circled ______ above the valley."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "whisper",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "aloft",
-        "correct": true
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "lantern",
-        "correct": false
-      }
-    ],
-    "explanation": "Only \"aloft\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0079",
-    "type": "alternative_word",
-    "target_word": "aloft",
-    "prompt": {
-      "sentence": "The kite stayed aloft for almost an hour."
-    },
-    "question": "Which word could best replace \"aloft\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "mirror",
-        "correct": false
-      },
-      {
-        "text": "airborne",
-        "correct": true
-      },
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      },
-      {
-        "text": "basket",
-        "correct": false
-      }
-    ],
-    "explanation": "\"airborne\" is the closest meaning to \"aloft\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0080",
-    "type": "part_of_speech",
-    "target_word": "aloft",
-    "prompt": {
-      "sentence": "The lantern floated aloft above the crowd."
-    },
-    "question": "In this sentence, what part of speech is \"aloft\"?",
-    "choices": [
-      {
-        "text": "adverb",
-        "correct": true
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      },
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"aloft\" functions as a adverb."
-  },
-  {
-    "id": "eng-vocab-0081",
-    "type": "word_meaning",
-    "target_word": "marooned",
-    "prompt": {},
-    "question": "What does \"marooned\" mean?",
-    "choices": [
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      },
-      {
-        "text": "a small mistake",
-        "correct": false
-      },
-      {
-        "text": "left stranded in an isolated place",
-        "correct": true
-      }
-    ],
-    "explanation": "\"marooned\" means left stranded in an isolated place."
-  },
-  {
-    "id": "eng-vocab-0082",
-    "type": "reverse_meaning",
-    "target_word": "marooned",
-    "prompt": {
-      "meaning": "left stranded in an isolated place"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "marooned",
-        "correct": true
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      },
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"marooned\"."
-  },
-  {
-    "id": "eng-vocab-0083",
-    "type": "fill_in_blank",
-    "target_word": "marooned",
-    "prompt": {
-      "sentence": "After the storm, the crew was ______ on a rocky island."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "whisper",
-        "correct": false
-      },
-      {
-        "text": "marooned",
-        "correct": true
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "lantern",
-        "correct": false
-      }
-    ],
-    "explanation": "Only \"marooned\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0084",
-    "type": "alternative_word",
-    "target_word": "marooned",
-    "prompt": {
-      "sentence": "The hikers were marooned by the floodwaters."
-    },
-    "question": "Which word could best replace \"marooned\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "stranded",
-        "correct": true
-      },
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      },
-      {
-        "text": "basket",
-        "correct": false
-      },
-      {
-        "text": "mirror",
-        "correct": false
-      }
-    ],
-    "explanation": "\"stranded\" is the closest meaning to \"marooned\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0085",
-    "type": "part_of_speech",
-    "target_word": "marooned",
-    "prompt": {
-      "sentence": "They felt marooned after the bridge collapsed."
-    },
-    "question": "In this sentence, what part of speech is \"marooned\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      },
-      {
-        "text": "adjective",
-        "correct": true
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"marooned\" functions as a adjective."
-  },
-  {
-    "id": "eng-vocab-0086",
-    "type": "word_meaning",
-    "target_word": "coronets",
-    "prompt": {},
-    "question": "What does \"coronets\" mean?",
-    "choices": [
-      {
-        "text": "a small mistake",
-        "correct": false
-      },
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      },
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "small crowns worn by nobles",
-        "correct": true
-      }
-    ],
-    "explanation": "\"coronets\" means small crowns worn by nobles."
-  },
-  {
-    "id": "eng-vocab-0087",
-    "type": "reverse_meaning",
-    "target_word": "coronets",
-    "prompt": {
-      "meaning": "small crowns worn by nobles"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      },
-      {
-        "text": "coronets",
-        "correct": true
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"coronets\"."
-  },
-  {
-    "id": "eng-vocab-0088",
-    "type": "fill_in_blank",
-    "target_word": "coronets",
-    "prompt": {
-      "sentence": "At the ceremony, the young nobles wore silver ______."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "lantern",
-        "correct": false
-      },
-      {
-        "text": "coronets",
-        "correct": true
-      },
-      {
-        "text": "whisper",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      }
-    ],
-    "explanation": "Only \"coronets\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0089",
-    "type": "alternative_word",
-    "target_word": "coronets",
-    "prompt": {
-      "sentence": "The portraits showed princes wearing jeweled coronets."
-    },
-    "question": "Which word could best replace \"coronets\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "basket",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      },
-      {
-        "text": "crowns",
-        "correct": true
-      },
-      {
-        "text": "mirror",
-        "correct": false
-      }
-    ],
-    "explanation": "\"crowns\" is the closest meaning to \"coronets\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0090",
-    "type": "part_of_speech",
-    "target_word": "coronets",
-    "prompt": {
-      "sentence": "The coronets glittered in the torchlight."
-    },
-    "question": "In this sentence, what part of speech is \"coronets\"?",
-    "choices": [
-      {
-        "text": "preposition",
-        "correct": false
-      },
-      {
-        "text": "noun",
-        "correct": true
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"coronets\" functions as a noun."
-  },
-  {
-    "id": "eng-vocab-0091",
-    "type": "word_meaning",
-    "target_word": "pinnacles",
-    "prompt": {},
-    "question": "What does \"pinnacles\" mean?",
-    "choices": [
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      },
-      {
-        "text": "the highest or most successful points",
-        "correct": true
-      },
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a small mistake",
-        "correct": false
-      }
-    ],
-    "explanation": "\"pinnacles\" means the highest or most successful points."
-  },
-  {
-    "id": "eng-vocab-0092",
-    "type": "reverse_meaning",
-    "target_word": "pinnacles",
-    "prompt": {
-      "meaning": "the highest or most successful points"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "pinnacles",
-        "correct": true
-      },
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      },
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"pinnacles\"."
-  },
-  {
-    "id": "eng-vocab-0093",
-    "type": "fill_in_blank",
-    "target_word": "pinnacles",
-    "prompt": {
-      "sentence": "Winning the championship was one of the ______ of her career."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "whisper",
-        "correct": false
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "lantern",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "pinnacles",
-        "correct": true
-      }
-    ],
-    "explanation": "Only \"pinnacles\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0094",
-    "type": "alternative_word",
-    "target_word": "pinnacles",
-    "prompt": {
-      "sentence": "These towers are the pinnacles of modern engineering."
-    },
-    "question": "Which word could best replace \"pinnacles\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "mirror",
-        "correct": false
-      },
-      {
-        "text": "basket",
-        "correct": false
-      },
-      {
-        "text": "peaks",
-        "correct": true
-      },
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      }
-    ],
-    "explanation": "\"peaks\" is the closest meaning to \"pinnacles\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0095",
-    "type": "part_of_speech",
-    "target_word": "pinnacles",
-    "prompt": {
-      "sentence": "These pinnacles attract many climbers."
-    },
-    "question": "In this sentence, what part of speech is \"pinnacles\"?",
-    "choices": [
-      {
-        "text": "preposition",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": false
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "noun",
-        "correct": true
-      }
-    ],
-    "explanation": "In this sentence, \"pinnacles\" functions as a noun."
-  },
-  {
-    "id": "eng-vocab-0096",
-    "type": "word_meaning",
-    "target_word": "expanse",
-    "prompt": {},
-    "question": "What does \"expanse\" mean?",
-    "choices": [
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "a small mistake",
-        "correct": false
-      },
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a wide, open stretch of area",
-        "correct": true
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      }
-    ],
-    "explanation": "\"expanse\" means a wide, open stretch of area."
-  },
-  {
-    "id": "eng-vocab-0097",
-    "type": "reverse_meaning",
-    "target_word": "expanse",
-    "prompt": {
-      "meaning": "a wide, open stretch of area"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "expanse",
-        "correct": true
-      },
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"expanse\"."
-  },
-  {
-    "id": "eng-vocab-0098",
-    "type": "fill_in_blank",
-    "target_word": "expanse",
-    "prompt": {
-      "sentence": "From the hilltop, we could see an ______ of golden fields."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "whisper",
-        "correct": false
-      },
-      {
-        "text": "expanse",
-        "correct": true
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "lantern",
-        "correct": false
-      }
-    ],
-    "explanation": "Only \"expanse\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0099",
-    "type": "alternative_word",
-    "target_word": "expanse",
-    "prompt": {
-      "sentence": "We crossed a vast expanse of desert before sunset."
-    },
-    "question": "Which word could best replace \"expanse\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "stretch",
-        "correct": true
-      },
-      {
-        "text": "basket",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      },
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "mirror",
-        "correct": false
-      }
-    ],
-    "explanation": "\"stretch\" is the closest meaning to \"expanse\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0100",
-    "type": "part_of_speech",
-    "target_word": "expanse",
-    "prompt": {
-      "sentence": "That expanse looks endless from here."
-    },
-    "question": "In this sentence, what part of speech is \"expanse\"?",
-    "choices": [
-      {
-        "text": "verb",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "noun",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"expanse\" functions as a noun."
-  },
-  {
-    "id": "eng-vocab-0101",
-    "type": "word_meaning",
-    "target_word": "tempest",
-    "prompt": {},
-    "question": "What does \"tempest\" mean?",
-    "choices": [
-      {
-        "text": "a narrow path",
-        "correct": false
-      },
-      {
-        "text": "a small mistake",
-        "correct": false
-      },
-      {
-        "text": "a violent storm",
-        "correct": true
-      },
-      {
-        "text": "a sudden laugh",
-        "correct": false
-      },
-      {
-        "text": "a quiet conversation",
-        "correct": false
-      }
-    ],
-    "explanation": "\"tempest\" means a violent storm."
-  },
-  {
-    "id": "eng-vocab-0102",
-    "type": "reverse_meaning",
-    "target_word": "tempest",
-    "prompt": {
-      "meaning": "a violent storm"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "a tiny insect",
-        "correct": false
-      },
-      {
-        "text": "a hidden doorway",
-        "correct": false
-      },
-      {
-        "text": "a soft blanket",
-        "correct": false
-      },
-      {
-        "text": "a quick snack",
-        "correct": false
-      },
-      {
-        "text": "tempest",
-        "correct": true
-      }
-    ],
-    "explanation": "The word that matches this meaning is \"tempest\"."
-  },
-  {
-    "id": "eng-vocab-0103",
-    "type": "fill_in_blank",
-    "target_word": "tempest",
-    "prompt": {
-      "sentence": "The fishing trip ended early when a ______ approached."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "tempest",
-        "correct": true
-      },
-      {
-        "text": "pebble",
-        "correct": false
-      },
-      {
-        "text": "meadow",
-        "correct": false
-      },
-      {
-        "text": "lantern",
-        "correct": false
-      },
-      {
-        "text": "whisper",
-        "correct": false
-      }
-    ],
-    "explanation": "Only \"tempest\" fits the meaning and grammar of the sentence."
-  },
-  {
-    "id": "eng-vocab-0104",
-    "type": "alternative_word",
-    "target_word": "tempest",
-    "prompt": {
-      "sentence": "The captain remained calm during the tempest."
-    },
-    "question": "Which word could best replace \"tempest\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "button",
-        "correct": false
-      },
-      {
-        "text": "puzzle",
-        "correct": false
-      },
-      {
-        "text": "mirror",
-        "correct": false
-      },
-      {
-        "text": "basket",
-        "correct": false
-      },
-      {
-        "text": "storm",
-        "correct": true
-      }
-    ],
-    "explanation": "\"storm\" is the closest meaning to \"tempest\" in this sentence."
-  },
-  {
-    "id": "eng-vocab-0105",
-    "type": "part_of_speech",
-    "target_word": "tempest",
-    "prompt": {
-      "sentence": "The tempest rattled every window."
-    },
-    "question": "In this sentence, what part of speech is \"tempest\"?",
-    "choices": [
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "noun",
-        "correct": true
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"tempest\" functions as a noun."
-  },
-  {
-    "id": "eng-vocab-0106",
-    "type": "fill_in_blank",
-    "target_word": "abate",
-    "prompt": {
-      "sentence": "During the hike, we saw ______ near the old trail."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "abate",
-        "correct": true
-      }
-    ],
-    "explanation": "\"abate\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0107",
-    "type": "fill_in_blank",
-    "target_word": "abdicating",
-    "prompt": {
-      "sentence": "In the story, the hero felt ______ before making a choice."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "abdicating",
-        "correct": true
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      }
-    ],
-    "explanation": "\"abdicating\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0108",
-    "type": "fill_in_blank",
-    "target_word": "abominable",
-    "prompt": {
-      "sentence": "The guide told us to remain ______ throughout the journey."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "abominable",
-        "correct": true
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      }
-    ],
-    "explanation": "\"abominable\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0109",
-    "type": "fill_in_blank",
-    "target_word": "aftermath",
-    "prompt": {
-      "sentence": "At dawn, a ______ moved across the valley."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "aftermath",
-        "correct": true
-      },
-      {
-        "text": "moor",
-        "correct": false
-      }
-    ],
-    "explanation": "\"aftermath\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0110",
-    "type": "fill_in_blank",
-    "target_word": "alighted",
-    "prompt": {
-      "sentence": "The team became ______ after losing the map."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "alighted",
-        "correct": true
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      }
-    ],
-    "explanation": "\"alighted\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0111",
-    "type": "fill_in_blank",
-    "target_word": "allegiance",
-    "prompt": {
-      "sentence": "From the tower, an ______ stretched to the horizon."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "allegiance",
-        "correct": true
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      }
-    ],
-    "explanation": "\"allegiance\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0112",
-    "type": "fill_in_blank",
-    "target_word": "amiable",
-    "prompt": {
-      "sentence": "The banner stayed ______ even in the wind."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "amiable",
-        "correct": true
-      }
-    ],
-    "explanation": "\"amiable\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0113",
-    "type": "fill_in_blank",
-    "target_word": "antechamber",
-    "prompt": {
-      "sentence": "The legend included a ______ about the kingdom."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "antechamber",
-        "correct": true
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      }
-    ],
-    "explanation": "\"antechamber\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0114",
-    "type": "fill_in_blank",
-    "target_word": "anteroom",
-    "prompt": {
-      "sentence": "The climbers reached the ______ after hours of effort."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "anteroom",
-        "correct": true
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      }
-    ],
-    "explanation": "\"anteroom\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0115",
-    "type": "fill_in_blank",
-    "target_word": "arithmetic",
-    "prompt": {
-      "sentence": "At the ceremony, nobles wore bright ______."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "arithmetic",
-        "correct": true
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      }
-    ],
-    "explanation": "\"arithmetic\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0116",
-    "type": "fill_in_blank",
-    "target_word": "astonishment",
-    "prompt": {
-      "sentence": "During the hike, we saw ______ near the old trail."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "astonishment",
-        "correct": true
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      }
-    ],
-    "explanation": "\"astonishment\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0117",
-    "type": "fill_in_blank",
-    "target_word": "avenge",
-    "prompt": {
-      "sentence": "In the story, the hero felt ______ before making a choice."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "avenge",
-        "correct": true
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      }
-    ],
-    "explanation": "\"avenge\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0118",
-    "type": "fill_in_blank",
-    "target_word": "avenue",
-    "prompt": {
-      "sentence": "The guide told us to remain ______ throughout the journey."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "avenue",
-        "correct": true
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      }
-    ],
-    "explanation": "\"avenue\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0119",
-    "type": "fill_in_blank",
-    "target_word": "bad",
-    "prompt": {
-      "sentence": "At dawn, a ______ moved across the valley."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "bad",
-        "correct": true
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      }
-    ],
-    "explanation": "\"bad\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0120",
-    "type": "fill_in_blank",
-    "target_word": "bared",
-    "prompt": {
-      "sentence": "The team became ______ after losing the map."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "bared",
-        "correct": true
-      }
-    ],
-    "explanation": "\"bared\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0121",
-    "type": "fill_in_blank",
-    "target_word": "battened",
-    "prompt": {
-      "sentence": "From the tower, an ______ stretched to the horizon."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "battened",
-        "correct": true
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      }
-    ],
-    "explanation": "\"battened\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0122",
-    "type": "fill_in_blank",
-    "target_word": "battledores",
-    "prompt": {
-      "sentence": "The banner stayed ______ even in the wind."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "battledores",
-        "correct": true
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      }
-    ],
-    "explanation": "\"battledores\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0123",
-    "type": "fill_in_blank",
-    "target_word": "battlement",
-    "prompt": {
-      "sentence": "The legend included a ______ about the kingdom."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "battlement",
-        "correct": true
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      }
-    ],
-    "explanation": "\"battlement\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0124",
-    "type": "fill_in_blank",
-    "target_word": "battlements",
-    "prompt": {
-      "sentence": "The climbers reached the ______ after hours of effort."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "battlements",
-        "correct": true
-      }
-    ],
-    "explanation": "\"battlements\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0125",
-    "type": "fill_in_blank",
-    "target_word": "becalmed",
-    "prompt": {
-      "sentence": "At the ceremony, nobles wore bright ______."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "moor",
-        "correct": false
-      },
-      {
-        "text": "scramble",
-        "correct": false
-      },
-      {
-        "text": "gorge",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "becalmed",
-        "correct": true
-      }
-    ],
-    "explanation": "\"becalmed\" best fits the sentence context and grammar."
-  },
-  {
-    "id": "eng-vocab-0126",
-    "type": "word_meaning",
-    "target_word": "beckoned",
-    "prompt": {},
-    "question": "What does \"beckoned\" mean?",
-    "choices": [
-      {
-        "text": "related to beckoned",
-        "correct": true
-      },
-      {
-        "text": "able to recover quickly",
-        "correct": false
-      },
-      {
-        "text": "related to constellations",
-        "correct": false
-      },
-      {
-        "text": "no longer in use",
-        "correct": false
-      },
-      {
-        "text": "clear and logical",
-        "correct": false
-      }
-    ],
-    "explanation": "\"beckoned\" means related to beckoned."
-  },
-  {
-    "id": "eng-vocab-0127",
-    "type": "reverse_meaning",
-    "target_word": "beseech",
-    "prompt": {
-      "meaning": "related to beseech"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "cask",
-        "correct": false
-      },
-      {
-        "text": "courtly",
-        "correct": false
-      },
-      {
-        "text": "burnt",
-        "correct": false
-      },
-      {
-        "text": "bestowed",
-        "correct": false
-      },
-      {
-        "text": "beseech",
-        "correct": true
-      }
-    ],
-    "explanation": "The meaning matches \"beseech\"."
-  },
-  {
-    "id": "eng-vocab-0128",
-    "type": "fill_in_blank",
-    "target_word": "beseech",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "brooding",
-        "correct": false
-      },
-      {
-        "text": "changeable",
-        "correct": false
-      },
-      {
-        "text": "beseech",
-        "correct": true
-      },
-      {
-        "text": "bulgy",
-        "correct": false
-      },
-      {
-        "text": "coronet",
-        "correct": false
-      }
-    ],
-    "explanation": "\"beseech\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0129",
-    "type": "alternative_word",
-    "target_word": "bestowed",
-    "prompt": {
-      "sentence": "The teacher praised her bestowed approach to solving problems."
-    },
-    "question": "Which word could best replace \"bestowed\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "confronted",
-        "correct": false
-      },
-      {
-        "text": "cataract",
-        "correct": false
-      },
-      {
-        "text": "confounded",
-        "correct": false
-      },
-      {
-        "text": "contrive",
-        "correct": false
-      },
-      {
-        "text": "bestowed",
-        "correct": true
-      }
-    ],
-    "explanation": "\"bestowed\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0130",
-    "type": "part_of_speech",
-    "target_word": "bewitched",
-    "prompt": {
-      "sentence": "We must bewitched the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"bewitched\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"bewitched\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0131",
-    "type": "word_meaning",
-    "target_word": "bilge",
-    "prompt": {},
-    "question": "What does \"bilge\" mean?",
-    "choices": [
-      {
-        "text": "fluent and persuasive in speaking",
-        "correct": false
-      },
-      {
-        "text": "hardworking and careful",
-        "correct": false
-      },
-      {
-        "text": "related to brooding",
-        "correct": false
-      },
-      {
-        "text": "related to bilge",
-        "correct": true
-      },
-      {
-        "text": "showing strong enthusiasm",
-        "correct": false
-      }
-    ],
-    "explanation": "\"bilge\" means related to bilge."
-  },
-  {
-    "id": "eng-vocab-0132",
-    "type": "reverse_meaning",
-    "target_word": "bivouac",
-    "prompt": {
-      "meaning": "related to bivouac"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "bracken",
-        "correct": false
-      },
-      {
-        "text": "bivouac",
-        "correct": true
-      },
-      {
-        "text": "cask",
-        "correct": false
-      },
-      {
-        "text": "contentment",
-        "correct": false
-      },
-      {
-        "text": "counsel",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"bivouac\"."
-  },
-  {
-    "id": "eng-vocab-0133",
-    "type": "fill_in_blank",
-    "target_word": "boatswain",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "boatswain",
-        "correct": true
-      },
-      {
-        "text": "beckoned",
-        "correct": false
-      },
-      {
-        "text": "bilge",
-        "correct": false
-      },
-      {
-        "text": "cabinet",
-        "correct": false
-      },
-      {
-        "text": "chamber",
-        "correct": false
-      }
-    ],
-    "explanation": "\"boatswain\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0134",
-    "type": "alternative_word",
-    "target_word": "bracken",
-    "prompt": {
-      "sentence": "The teacher praised her bracken approach to solving problems."
-    },
-    "question": "Which word could best replace \"bracken\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "bilge",
-        "correct": false
-      },
-      {
-        "text": "confounded",
-        "correct": false
-      },
-      {
-        "text": "corporal",
-        "correct": false
-      },
-      {
-        "text": "creaked",
-        "correct": false
-      },
-      {
-        "text": "bracken",
-        "correct": true
-      }
-    ],
-    "explanation": "\"bracken\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0135",
-    "type": "part_of_speech",
-    "target_word": "briny",
-    "prompt": {
-      "sentence": "We must briny the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"briny\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"briny\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0136",
-    "type": "word_meaning",
-    "target_word": "brooding",
-    "prompt": {},
-    "question": "What does \"brooding\" mean?",
-    "choices": [
-      {
-        "text": "related to courtly",
-        "correct": false
-      },
-      {
-        "text": "an idea or belief",
-        "correct": false
-      },
-      {
-        "text": "showing strong enthusiasm",
-        "correct": false
-      },
-      {
-        "text": "related to coronet",
-        "correct": false
-      },
-      {
-        "text": "related to brooding",
-        "correct": true
-      }
-    ],
-    "explanation": "\"brooding\" means related to brooding."
-  },
-  {
-    "id": "eng-vocab-0137",
-    "type": "reverse_meaning",
-    "target_word": "bulgy",
-    "prompt": {
-      "meaning": "related to bulgy"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "contentment",
-        "correct": false
-      },
-      {
-        "text": "confounded",
-        "correct": false
-      },
-      {
-        "text": "bulgy",
-        "correct": true
-      },
-      {
-        "text": "contrive",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"bulgy\"."
-  },
-  {
-    "id": "eng-vocab-0138",
-    "type": "fill_in_blank",
-    "target_word": "bulwark",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cask",
-        "correct": false
-      },
-      {
-        "text": "cantrips",
-        "correct": false
-      },
-      {
-        "text": "bracken",
-        "correct": false
-      },
-      {
-        "text": "cascades",
-        "correct": false
-      },
-      {
-        "text": "bulwark",
-        "correct": true
-      }
-    ],
-    "explanation": "\"bulwark\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0139",
-    "type": "alternative_word",
-    "target_word": "bulwarks",
-    "prompt": {
-      "sentence": "The teacher praised her bulwarks approach to solving problems."
-    },
-    "question": "Which word could best replace \"bulwarks\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "bulgy",
-        "correct": false
-      },
-      {
-        "text": "bulwarks",
-        "correct": true
-      },
-      {
-        "text": "considerable",
-        "correct": false
-      },
-      {
-        "text": "bewitched",
-        "correct": false
-      },
-      {
-        "text": "coronet",
-        "correct": false
-      }
-    ],
-    "explanation": "\"bulwarks\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0140",
-    "type": "part_of_speech",
-    "target_word": "burnt",
-    "prompt": {
-      "sentence": "We must burnt the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"burnt\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"burnt\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0141",
-    "type": "word_meaning",
-    "target_word": "cabinet",
-    "prompt": {},
-    "question": "What does \"cabinet\" mean?",
-    "choices": [
-      {
-        "text": "no longer in use",
-        "correct": false
-      },
-      {
-        "text": "related to cabinet",
-        "correct": true
-      },
-      {
-        "text": "related to confronted",
-        "correct": false
-      },
-      {
-        "text": "related to confounded",
-        "correct": false
-      },
-      {
-        "text": "related to contentment",
-        "correct": false
-      }
-    ],
-    "explanation": "\"cabinet\" means related to cabinet."
-  },
-  {
-    "id": "eng-vocab-0142",
-    "type": "reverse_meaning",
-    "target_word": "cairn",
-    "prompt": {
-      "meaning": "related to cairn"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "briny",
-        "correct": false
-      },
-      {
-        "text": "courtly",
-        "correct": false
-      },
-      {
-        "text": "ceased",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": true
-      },
-      {
-        "text": "capering",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"cairn\"."
-  },
-  {
-    "id": "eng-vocab-0143",
-    "type": "fill_in_blank",
-    "target_word": "cantrips",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "convulsions",
-        "correct": false
-      },
-      {
-        "text": "bulwarks",
-        "correct": false
-      },
-      {
-        "text": "chafed",
-        "correct": false
-      },
-      {
-        "text": "briny",
-        "correct": false
-      },
-      {
-        "text": "cantrips",
-        "correct": true
-      }
-    ],
-    "explanation": "\"cantrips\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0144",
-    "type": "alternative_word",
-    "target_word": "capering",
-    "prompt": {
-      "sentence": "The teacher praised her capering approach to solving problems."
-    },
-    "question": "Which word could best replace \"capering\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "chamber",
-        "correct": false
-      },
-      {
-        "text": "capering",
-        "correct": true
-      },
-      {
-        "text": "ceased",
-        "correct": false
-      },
-      {
-        "text": "counsel",
-        "correct": false
-      },
-      {
-        "text": "contemptuously",
-        "correct": false
-      }
-    ],
-    "explanation": "\"capering\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0145",
-    "type": "part_of_speech",
-    "target_word": "carbuncle",
-    "prompt": {
-      "sentence": "We must carbuncle the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"carbuncle\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"carbuncle\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0146",
-    "type": "word_meaning",
-    "target_word": "carcass",
-    "prompt": {},
-    "question": "What does \"carcass\" mean?",
-    "choices": [
-      {
-        "text": "related to changeable",
-        "correct": false
-      },
-      {
-        "text": "showing strong enthusiasm",
-        "correct": false
-      },
-      {
-        "text": "fluent and persuasive in speaking",
-        "correct": false
-      },
-      {
-        "text": "related to corporal",
-        "correct": false
-      },
-      {
-        "text": "related to carcass",
-        "correct": true
-      }
-    ],
-    "explanation": "\"carcass\" means related to carcass."
-  },
-  {
-    "id": "eng-vocab-0147",
-    "type": "reverse_meaning",
-    "target_word": "carvings",
-    "prompt": {
-      "meaning": "related to carvings"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "corporal",
-        "correct": false
-      },
-      {
-        "text": "contrive",
-        "correct": false
-      },
-      {
-        "text": "changeable",
-        "correct": false
-      },
-      {
-        "text": "bulwark",
-        "correct": false
-      },
-      {
-        "text": "carvings",
-        "correct": true
-      }
-    ],
-    "explanation": "The meaning matches \"carvings\"."
-  },
-  {
-    "id": "eng-vocab-0148",
-    "type": "fill_in_blank",
-    "target_word": "cascades",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "coronation",
-        "correct": false
-      },
-      {
-        "text": "coronet",
-        "correct": false
-      },
-      {
-        "text": "changeable",
-        "correct": false
-      },
-      {
-        "text": "cascades",
-        "correct": true
-      },
-      {
-        "text": "beseech",
-        "correct": false
-      }
-    ],
-    "explanation": "\"cascades\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0149",
-    "type": "alternative_word",
-    "target_word": "cask",
-    "prompt": {
-      "sentence": "The teacher praised her cask approach to solving problems."
-    },
-    "question": "Which word could best replace \"cask\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "coracle",
-        "correct": false
-      },
-      {
-        "text": "crowned",
-        "correct": false
-      },
-      {
-        "text": "convulsions",
-        "correct": false
-      },
-      {
-        "text": "cask",
-        "correct": true
-      },
-      {
-        "text": "capering",
-        "correct": false
-      }
-    ],
-    "explanation": "\"cask\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0150",
-    "type": "part_of_speech",
-    "target_word": "cataract",
-    "prompt": {
-      "sentence": "We must cataract the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"cataract\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"cataract\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0151",
-    "type": "word_meaning",
-    "target_word": "ceased",
-    "prompt": {},
-    "question": "What does \"ceased\" mean?",
-    "choices": [
-      {
-        "text": "to express sorrow",
-        "correct": false
-      },
-      {
-        "text": "related to ceased",
-        "correct": true
-      },
-      {
-        "text": "related to movement",
-        "correct": false
-      },
-      {
-        "text": "focused on practical results",
-        "correct": false
-      },
-      {
-        "text": "related to carvings",
-        "correct": false
-      }
-    ],
-    "explanation": "\"ceased\" means related to ceased."
-  },
-  {
-    "id": "eng-vocab-0152",
-    "type": "reverse_meaning",
-    "target_word": "ceased",
-    "prompt": {
-      "meaning": "related to ceased"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "ceased",
-        "correct": true
-      },
-      {
-        "text": "creaked",
-        "correct": false
-      },
-      {
-        "text": "coronation",
-        "correct": false
-      },
-      {
-        "text": "contentment",
-        "correct": false
-      },
-      {
-        "text": "confounded",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"ceased\"."
-  },
-  {
-    "id": "eng-vocab-0153",
-    "type": "fill_in_blank",
-    "target_word": "chafed",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "contrive",
-        "correct": false
-      },
-      {
-        "text": "contemptuously",
-        "correct": false
-      },
-      {
-        "text": "briny",
-        "correct": false
-      },
-      {
-        "text": "chafed",
-        "correct": true
-      },
-      {
-        "text": "chasms",
-        "correct": false
-      }
-    ],
-    "explanation": "\"chafed\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0154",
-    "type": "alternative_word",
-    "target_word": "chamber",
-    "prompt": {
-      "sentence": "The teacher praised her chamber approach to solving problems."
-    },
-    "question": "Which word could best replace \"chamber\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "chamber",
-        "correct": true
-      },
-      {
-        "text": "confronted",
-        "correct": false
-      },
-      {
-        "text": "considerable",
-        "correct": false
-      },
-      {
-        "text": "boatswain",
-        "correct": false
-      },
-      {
-        "text": "bewitched",
-        "correct": false
-      }
-    ],
-    "explanation": "\"chamber\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0155",
-    "type": "part_of_speech",
-    "target_word": "changeable",
-    "prompt": {
-      "sentence": "We must changeable the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"changeable\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"changeable\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0156",
-    "type": "word_meaning",
-    "target_word": "chasms",
-    "prompt": {},
-    "question": "What does \"chasms\" mean?",
-    "choices": [
-      {
-        "text": "related to bulwark",
-        "correct": false
-      },
-      {
-        "text": "related to cascades",
-        "correct": false
-      },
-      {
-        "text": "related to convulsions",
-        "correct": false
-      },
-      {
-        "text": "related to chasms",
-        "correct": true
-      },
-      {
-        "text": "related to cask",
-        "correct": false
-      }
-    ],
-    "explanation": "\"chasms\" means related to chasms."
-  },
-  {
-    "id": "eng-vocab-0157",
-    "type": "reverse_meaning",
-    "target_word": "coarse",
-    "prompt": {
-      "meaning": "related to coarse"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "ceased",
-        "correct": false
-      },
-      {
-        "text": "confronted",
-        "correct": false
-      },
-      {
-        "text": "coarse",
-        "correct": true
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "crowned",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"coarse\"."
-  },
-  {
-    "id": "eng-vocab-0158",
-    "type": "fill_in_blank",
-    "target_word": "confounded",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "burnt",
-        "correct": false
-      },
-      {
-        "text": "confounded",
-        "correct": true
-      },
-      {
-        "text": "ceased",
-        "correct": false
-      },
-      {
-        "text": "briny",
-        "correct": false
-      },
-      {
-        "text": "cataract",
-        "correct": false
-      }
-    ],
-    "explanation": "\"confounded\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0159",
-    "type": "alternative_word",
-    "target_word": "confronted",
-    "prompt": {
-      "sentence": "The teacher praised her confronted approach to solving problems."
-    },
-    "question": "Which word could best replace \"confronted\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "confronted",
-        "correct": true
-      },
-      {
-        "text": "crowned",
-        "correct": false
-      },
-      {
-        "text": "coronation",
-        "correct": false
-      },
-      {
-        "text": "chafed",
-        "correct": false
-      },
-      {
-        "text": "changeable",
-        "correct": false
-      }
-    ],
-    "explanation": "\"confronted\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0160",
-    "type": "part_of_speech",
-    "target_word": "considerable",
-    "prompt": {
-      "sentence": "We must considerable the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"considerable\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"considerable\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0161",
-    "type": "word_meaning",
-    "target_word": "constellations",
-    "prompt": {},
-    "question": "What does \"constellations\" mean?",
-    "choices": [
-      {
-        "text": "related to constellations",
-        "correct": true
-      },
-      {
-        "text": "to resist successfully",
-        "correct": false
-      },
-      {
-        "text": "related to confronted",
-        "correct": false
-      },
-      {
-        "text": "to make as effective as possible",
-        "correct": false
-      },
-      {
-        "text": "to collect into one work",
-        "correct": false
-      }
-    ],
-    "explanation": "\"constellations\" means related to constellations."
-  },
-  {
-    "id": "eng-vocab-0162",
-    "type": "reverse_meaning",
-    "target_word": "contemptuously",
-    "prompt": {
-      "meaning": "related to contemptuously"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "contemptuously",
-        "correct": true
-      },
-      {
-        "text": "bracken",
-        "correct": false
-      },
-      {
-        "text": "cabinet",
-        "correct": false
-      },
-      {
-        "text": "contrive",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"contemptuously\"."
-  },
-  {
-    "id": "eng-vocab-0163",
-    "type": "fill_in_blank",
-    "target_word": "contentment",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "chafed",
-        "correct": false
-      },
-      {
-        "text": "corporal",
-        "correct": false
-      },
-      {
-        "text": "courteous",
-        "correct": false
-      },
-      {
-        "text": "brooding",
-        "correct": false
-      },
-      {
-        "text": "contentment",
-        "correct": true
-      }
-    ],
-    "explanation": "\"contentment\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0164",
-    "type": "alternative_word",
-    "target_word": "contingent",
-    "prompt": {
-      "sentence": "The teacher praised her contingent approach to solving problems."
-    },
-    "question": "Which word could best replace \"contingent\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "counsel",
-        "correct": false
-      },
-      {
-        "text": "cascades",
-        "correct": false
-      },
-      {
-        "text": "contingent",
-        "correct": true
-      },
-      {
-        "text": "briny",
-        "correct": false
-      },
-      {
-        "text": "bracken",
-        "correct": false
-      }
-    ],
-    "explanation": "\"contingent\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0165",
-    "type": "part_of_speech",
-    "target_word": "contrive",
-    "prompt": {
-      "sentence": "We must contrive the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"contrive\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"contrive\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0166",
-    "type": "word_meaning",
-    "target_word": "convulsions",
-    "prompt": {},
-    "question": "What does \"convulsions\" mean?",
-    "choices": [
-      {
-        "text": "to grow strongly",
-        "correct": false
-      },
-      {
-        "text": "related to cantrips",
-        "correct": false
-      },
-      {
-        "text": "related to convulsions",
-        "correct": true
-      },
-      {
-        "text": "related to bewitched",
-        "correct": false
-      },
-      {
-        "text": "careful with money",
-        "correct": false
-      }
-    ],
-    "explanation": "\"convulsions\" means related to convulsions."
-  },
-  {
-    "id": "eng-vocab-0167",
-    "type": "reverse_meaning",
-    "target_word": "coracle",
-    "prompt": {
-      "meaning": "related to coracle"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "ceased",
-        "correct": false
-      },
-      {
-        "text": "courtly",
-        "correct": false
-      },
-      {
-        "text": "coracle",
-        "correct": true
-      },
-      {
-        "text": "contrive",
-        "correct": false
-      },
-      {
-        "text": "bulgy",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"coracle\"."
-  },
-  {
-    "id": "eng-vocab-0168",
-    "type": "fill_in_blank",
-    "target_word": "coronation",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cataract",
-        "correct": false
-      },
-      {
-        "text": "courteous",
-        "correct": false
-      },
-      {
-        "text": "coronation",
-        "correct": true
-      },
-      {
-        "text": "cantrips",
-        "correct": false
-      },
-      {
-        "text": "cairn",
-        "correct": false
-      }
-    ],
-    "explanation": "\"coronation\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0169",
-    "type": "alternative_word",
-    "target_word": "coronet",
-    "prompt": {
-      "sentence": "The teacher praised her coronet approach to solving problems."
-    },
-    "question": "Which word could best replace \"coronet\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "coronet",
-        "correct": true
-      },
-      {
-        "text": "bulwark",
-        "correct": false
-      },
-      {
-        "text": "coracle",
-        "correct": false
-      },
-      {
-        "text": "boatswain",
-        "correct": false
-      },
-      {
-        "text": "contingent",
-        "correct": false
-      }
-    ],
-    "explanation": "\"coronet\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0170",
-    "type": "part_of_speech",
-    "target_word": "corporal",
-    "prompt": {
-      "sentence": "We must corporal the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"corporal\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"corporal\" functions as a verb."
-  },
-  {
-    "id": "eng-vocab-0171",
-    "type": "word_meaning",
-    "target_word": "counsel",
-    "prompt": {},
-    "question": "What does \"counsel\" mean?",
-    "choices": [
-      {
-        "text": "to support or strengthen",
-        "correct": false
-      },
-      {
-        "text": "related to counsel",
-        "correct": true
-      },
-      {
-        "text": "related to coracle",
-        "correct": false
-      },
-      {
-        "text": "honest and direct",
-        "correct": false
-      },
-      {
-        "text": "an idea that can be tested",
-        "correct": false
-      }
-    ],
-    "explanation": "\"counsel\" means related to counsel."
-  },
-  {
-    "id": "eng-vocab-0172",
-    "type": "reverse_meaning",
-    "target_word": "courteous",
-    "prompt": {
-      "meaning": "related to courteous"
-    },
-    "question": "Which word matches the meaning given?",
-    "choices": [
-      {
-        "text": "capering",
-        "correct": false
-      },
-      {
-        "text": "courteous",
-        "correct": true
-      },
-      {
-        "text": "beseech",
-        "correct": false
-      },
-      {
-        "text": "convulsions",
-        "correct": false
-      },
-      {
-        "text": "ceased",
-        "correct": false
-      }
-    ],
-    "explanation": "The meaning matches \"courteous\"."
-  },
-  {
-    "id": "eng-vocab-0173",
-    "type": "fill_in_blank",
-    "target_word": "courtly",
-    "prompt": {
-      "sentence": "The students tried to ______ during the activity."
-    },
-    "question": "Which word best completes the sentence?",
-    "choices": [
-      {
-        "text": "cairn",
-        "correct": false
-      },
-      {
-        "text": "cantrips",
-        "correct": false
-      },
-      {
-        "text": "capering",
-        "correct": false
-      },
-      {
-        "text": "coronet",
-        "correct": false
-      },
-      {
-        "text": "courtly",
-        "correct": true
-      }
-    ],
-    "explanation": "\"courtly\" best fits the sentence context."
-  },
-  {
-    "id": "eng-vocab-0174",
-    "type": "alternative_word",
-    "target_word": "creaked",
-    "prompt": {
-      "sentence": "The teacher praised her creaked approach to solving problems."
-    },
-    "question": "Which word could best replace \"creaked\" without changing the meaning?",
-    "choices": [
-      {
-        "text": "constellations",
-        "correct": false
-      },
-      {
-        "text": "chasms",
-        "correct": false
-      },
-      {
-        "text": "contingent",
-        "correct": false
-      },
-      {
-        "text": "creaked",
-        "correct": true
-      },
-      {
-        "text": "ceased",
-        "correct": false
-      }
-    ],
-    "explanation": "\"creaked\" is the closest synonym in this context."
-  },
-  {
-    "id": "eng-vocab-0175",
-    "type": "part_of_speech",
-    "target_word": "crowned",
-    "prompt": {
-      "sentence": "We must crowned the details before publishing the report."
-    },
-    "question": "In this sentence, what part of speech is \"crowned\"?",
-    "choices": [
-      {
-        "text": "noun",
-        "correct": false
-      },
-      {
-        "text": "verb",
-        "correct": true
-      },
-      {
-        "text": "adjective",
-        "correct": false
-      },
-      {
-        "text": "adverb",
-        "correct": false
-      },
-      {
-        "text": "preposition",
-        "correct": false
-      }
-    ],
-    "explanation": "In this sentence, \"crowned\" functions as a verb."
-  }
+    {
+        "id": "eng-vocab-0001",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"reclusive\" mean?",
+        "choices": [
+            {
+                "text": "Very eager to argue",
+                "correct": false
+            },
+            {
+                "text": "Preferring to live alone or avoid other people",
+                "correct": true
+            },
+            {
+                "text": "Extremely bright and colourful",
+                "correct": false
+            },
+            {
+                "text": "Quick to forgive someone",
+                "correct": false
+            },
+            {
+                "text": "Full of energy and noise",
+                "correct": false
+            }
+        ],
+        "explanation": "Reclusive means preferring to live alone or avoid other people.",
+        "target_word": "reclusive"
+    },
+    {
+        "id": "eng-vocab-0002",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Done secretly, especially because it should not be noticed."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "Surreptitious",
+                "correct": true
+            },
+            {
+                "text": "Robust",
+                "correct": false
+            },
+            {
+                "text": "Ample",
+                "correct": false
+            },
+            {
+                "text": "Diligent",
+                "correct": false
+            },
+            {
+                "text": "Frivolous",
+                "correct": false
+            }
+        ],
+        "explanation": "Surreptitious means done secretly or in a hidden way.",
+        "target_word": "surreptitious"
+    },
+    {
+        "id": "eng-vocab-0003",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The old bridge looked strong, but the wooden railings had begun to ______ after years of rain and wind."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "vindicate",
+                "correct": false
+            },
+            {
+                "text": "wither",
+                "correct": true
+            },
+            {
+                "text": "retain",
+                "correct": false
+            },
+            {
+                "text": "appease",
+                "correct": false
+            },
+            {
+                "text": "speculate",
+                "correct": false
+            }
+        ],
+        "explanation": "Wither means to dry up, weaken, or decay.",
+        "target_word": "wither"
+    },
+    {
+        "id": "eng-vocab-0004",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "His terse reply made it clear that he did not want to discuss the matter further."
+        },
+        "question": "Which word could best replace \"terse\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "cheerful",
+                "correct": false
+            },
+            {
+                "text": "brief",
+                "correct": true
+            },
+            {
+                "text": "confused",
+                "correct": false
+            },
+            {
+                "text": "generous",
+                "correct": false
+            },
+            {
+                "text": "dramatic",
+                "correct": false
+            }
+        ],
+        "explanation": "Terse means brief, short, or using very few words.",
+        "target_word": "terse"
+    },
+    {
+        "id": "eng-vocab-0005",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The detective tried to ______ the truth from the tiny clues left at the scene."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "deduce",
+                "correct": true
+            },
+            {
+                "text": "strew",
+                "correct": false
+            },
+            {
+                "text": "hinder",
+                "correct": false
+            },
+            {
+                "text": "grill",
+                "correct": false
+            },
+            {
+                "text": "recede",
+                "correct": false
+            }
+        ],
+        "explanation": "Deduce means to work out an answer or truth from evidence.",
+        "target_word": "deduce"
+    },
+    {
+        "id": "eng-vocab-0006",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The students worked meticulously on their model castle, checking every tiny detail."
+        },
+        "question": "In this sentence, what part of speech is \"meticulously\"?",
+        "choices": [
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": true
+            },
+            {
+                "text": "Preposition",
+                "correct": false
+            }
+        ],
+        "explanation": "Meticulously describes how the students worked, so it is an adverb.",
+        "target_word": "meticulously"
+    },
+    {
+        "id": "eng-vocab-0007",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"prudent\" mean?",
+        "choices": [
+            {
+                "text": "Very noisy and excited",
+                "correct": false
+            },
+            {
+                "text": "Weak and easily broken",
+                "correct": false
+            },
+            {
+                "text": "Sensible and careful before making decisions",
+                "correct": true
+            },
+            {
+                "text": "Rude in a bold way",
+                "correct": false
+            },
+            {
+                "text": "Covered in bright colours",
+                "correct": false
+            }
+        ],
+        "explanation": "Prudent means sensible, careful, and showing good judgement before acting.",
+        "target_word": "prudent"
+    },
+    {
+        "id": "eng-vocab-0008",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Kind, helpful, and wanting to do good for others."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "Benevolent",
+                "correct": true
+            },
+            {
+                "text": "Treacherous",
+                "correct": false
+            },
+            {
+                "text": "Fusty",
+                "correct": false
+            },
+            {
+                "text": "Frantic",
+                "correct": false
+            },
+            {
+                "text": "Dingy",
+                "correct": false
+            }
+        ],
+        "explanation": "Benevolent means kind, generous, and wanting to help others.",
+        "target_word": "benevolent"
+    },
+    {
+        "id": "eng-vocab-0009",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The path along the cliff was narrow and ______, so we walked very slowly."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "courteous",
+                "correct": false
+            },
+            {
+                "text": "treacherous",
+                "correct": true
+            },
+            {
+                "text": "splendid",
+                "correct": false
+            },
+            {
+                "text": "tangible",
+                "correct": false
+            },
+            {
+                "text": "solemn",
+                "correct": false
+            }
+        ],
+        "explanation": "Treacherous means dangerous or unsafe, which fits a narrow cliff path.",
+        "target_word": "treacherous"
+    },
+    {
+        "id": "eng-vocab-0010",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "The old castle looked forlorn in the rain."
+        },
+        "question": "Which word could best replace \"forlorn\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "cheerful",
+                "correct": false
+            },
+            {
+                "text": "lonely",
+                "correct": true
+            },
+            {
+                "text": "crowded",
+                "correct": false
+            },
+            {
+                "text": "shiny",
+                "correct": false
+            },
+            {
+                "text": "noisy",
+                "correct": false
+            }
+        ],
+        "explanation": "Forlorn means lonely, sad, or abandoned.",
+        "target_word": "forlorn"
+    },
+    {
+        "id": "eng-vocab-0011",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "She tried to fathom the strange message."
+        },
+        "question": "In this sentence, what part of speech is \"fathom\"?",
+        "choices": [
+            {
+                "text": "Adjective",
+                "correct": false
+            },
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": true
+            },
+            {
+                "text": "Preposition",
+                "correct": false
+            }
+        ],
+        "explanation": "Fathom is a verb here because it names the action of trying to understand something.",
+        "target_word": "fathom"
+    },
+    {
+        "id": "eng-vocab-0012",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "From the high ______, we could see the sea stretching far into the distance."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "belfry",
+                "correct": false
+            },
+            {
+                "text": "thicket",
+                "correct": false
+            },
+            {
+                "text": "cask",
+                "correct": false
+            },
+            {
+                "text": "promontory",
+                "correct": true
+            },
+            {
+                "text": "visor",
+                "correct": false
+            }
+        ],
+        "explanation": "A promontory is a high point of land that sticks out, often over water.",
+        "target_word": "promontory"
+    },
+    {
+        "id": "eng-vocab-0013",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"uncanny\" mean?",
+        "choices": [
+            {
+                "text": "Very old and damaged",
+                "correct": false
+            },
+            {
+                "text": "Strange or mysterious in a slightly frightening way",
+                "correct": true
+            },
+            {
+                "text": "Extremely loud and cheerful",
+                "correct": false
+            },
+            {
+                "text": "Easy to understand",
+                "correct": false
+            },
+            {
+                "text": "Full of bright colours",
+                "correct": false
+            }
+        ],
+        "explanation": "Uncanny means strange or mysterious in a way that can feel slightly frightening.",
+        "target_word": "uncanny"
+    },
+    {
+        "id": "eng-vocab-0014",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Move quickly or awkwardly over rough ground, often using hands as well as feet."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "slumber",
+                "correct": false
+            },
+            {
+                "text": "scramble",
+                "correct": true
+            },
+            {
+                "text": "deceive",
+                "correct": false
+            },
+            {
+                "text": "perish",
+                "correct": false
+            },
+            {
+                "text": "reckon",
+                "correct": false
+            }
+        ],
+        "explanation": "Scramble means to move quickly or awkwardly, especially over rough ground.",
+        "target_word": "scramble"
+    },
+    {
+        "id": "eng-vocab-0015",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "After walking all day, the travellers ______ beside the river and slept under the stars."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "glanced",
+                "correct": false
+            },
+            {
+                "text": "bivouacked",
+                "correct": true
+            },
+            {
+                "text": "dispatched",
+                "correct": false
+            },
+            {
+                "text": "crowned",
+                "correct": false
+            },
+            {
+                "text": "quenched",
+                "correct": false
+            }
+        ],
+        "explanation": "Bivouacked means camped temporarily, especially without tents or in the open.",
+        "target_word": "bivouacked"
+    },
+    {
+        "id": "eng-vocab-0016",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "It was prudent to take a map before entering the forest."
+        },
+        "question": "Which word could best replace \"prudent\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "careless",
+                "correct": false
+            },
+            {
+                "text": "sensible",
+                "correct": true
+            },
+            {
+                "text": "noisy",
+                "correct": false
+            },
+            {
+                "text": "gloomy",
+                "correct": false
+            },
+            {
+                "text": "stubborn",
+                "correct": false
+            }
+        ],
+        "explanation": "Prudent means sensible and careful before acting.",
+        "target_word": "prudent"
+    },
+    {
+        "id": "eng-vocab-0017",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"promontory\" mean?",
+        "choices": [
+            {
+                "text": "A high piece of land that sticks out into the sea",
+                "correct": true
+            },
+            {
+                "text": "A small wooden boat",
+                "correct": false
+            },
+            {
+                "text": "A deep underground room",
+                "correct": false
+            },
+            {
+                "text": "A royal crown",
+                "correct": false
+            },
+            {
+                "text": "A narrow city street",
+                "correct": false
+            }
+        ],
+        "explanation": "A promontory is a high piece of land that sticks out into the sea or another body of water.",
+        "target_word": "promontory"
+    },
+    {
+        "id": "eng-vocab-0018",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Something given to show respect, thanks, or honour."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "tribute",
+                "correct": true
+            },
+            {
+                "text": "mischief",
+                "correct": false
+            },
+            {
+                "text": "grudge",
+                "correct": false
+            },
+            {
+                "text": "carcass",
+                "correct": false
+            },
+            {
+                "text": "gauntlet",
+                "correct": false
+            }
+        ],
+        "explanation": "A tribute is something said, done, or given to show respect, thanks, or honour.",
+        "target_word": "tribute"
+    },
+    {
+        "id": "eng-vocab-0019",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The old cupboard had a ______ smell, as if it had not been opened for years."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "frantic",
+                "correct": false
+            },
+            {
+                "text": "courteous",
+                "correct": false
+            },
+            {
+                "text": "fusty",
+                "correct": true
+            },
+            {
+                "text": "splendid",
+                "correct": false
+            },
+            {
+                "text": "tangible",
+                "correct": false
+            }
+        ],
+        "explanation": "Fusty means smelling stale, damp, or old.",
+        "target_word": "fusty"
+    },
+    {
+        "id": "eng-vocab-0020",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "The pirate was notorious for attacking ships along the coast."
+        },
+        "question": "Which word could best replace \"notorious\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "famous for something bad",
+                "correct": true
+            },
+            {
+                "text": "completely unknown",
+                "correct": false
+            },
+            {
+                "text": "gentle and kind",
+                "correct": false
+            },
+            {
+                "text": "recently arrived",
+                "correct": false
+            },
+            {
+                "text": "easily frightened",
+                "correct": false
+            }
+        ],
+        "explanation": "Notorious means famous or well known for something bad.",
+        "target_word": "notorious"
+    },
+    {
+        "id": "eng-vocab-0021",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"fathom\" mean?",
+        "choices": [
+            {
+                "text": "To understand something after thinking about it",
+                "correct": true
+            },
+            {
+                "text": "To shout in anger",
+                "correct": false
+            },
+            {
+                "text": "To cover something with gold",
+                "correct": false
+            },
+            {
+                "text": "To run away secretly",
+                "correct": false
+            },
+            {
+                "text": "To build a wall around something",
+                "correct": false
+            }
+        ],
+        "explanation": "Fathom means to understand something, especially after thinking carefully.",
+        "target_word": "fathom"
+    },
+    {
+        "id": "eng-vocab-0022",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The cat moved stealthily through the garden."
+        },
+        "question": "In this sentence, what part of speech is \"stealthily\"?",
+        "choices": [
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": true
+            },
+            {
+                "text": "Conjunction",
+                "correct": false
+            }
+        ],
+        "explanation": "Stealthily describes how the cat moved, so it is an adverb.",
+        "target_word": "stealthily"
+    },
+    {
+        "id": "eng-vocab-0023",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The path was so ______ that we had to climb slowly and carefully."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "steep",
+                "correct": true
+            },
+            {
+                "text": "amiable",
+                "correct": false
+            },
+            {
+                "text": "briny",
+                "correct": false
+            },
+            {
+                "text": "solemn",
+                "correct": false
+            },
+            {
+                "text": "frail",
+                "correct": false
+            }
+        ],
+        "explanation": "Steep means rising or falling sharply, which explains why the path had to be climbed carefully.",
+        "target_word": "steep"
+    },
+    {
+        "id": "eng-vocab-0024",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "A tower or part of a tower where bells are kept, often in a church."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "belfry",
+                "correct": true
+            },
+            {
+                "text": "prow",
+                "correct": false
+            },
+            {
+                "text": "visor",
+                "correct": false
+            },
+            {
+                "text": "thicket",
+                "correct": false
+            },
+            {
+                "text": "cask",
+                "correct": false
+            }
+        ],
+        "explanation": "A belfry is a tower or part of a tower where bells are kept.",
+        "target_word": "belfry"
+    },
+    {
+        "id": "eng-vocab-0025",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"benevolent\" mean?",
+        "choices": [
+            {
+                "text": "Sneaky and dishonest",
+                "correct": false
+            },
+            {
+                "text": "Kind and wanting to help others",
+                "correct": true
+            },
+            {
+                "text": "Very old and weak",
+                "correct": false
+            },
+            {
+                "text": "Loud and unpleasant",
+                "correct": false
+            },
+            {
+                "text": "Difficult to control",
+                "correct": false
+            }
+        ],
+        "explanation": "Benevolent means kind, generous, and wanting to help others.",
+        "target_word": "benevolent"
+    },
+    {
+        "id": "eng-vocab-0026",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The soldier stood as a ______ at the gate, watching carefully for any danger."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "reveller",
+                "correct": false
+            },
+            {
+                "text": "regent",
+                "correct": false
+            },
+            {
+                "text": "sentinel",
+                "correct": true
+            },
+            {
+                "text": "prophet",
+                "correct": false
+            },
+            {
+                "text": "boatswain",
+                "correct": false
+            }
+        ],
+        "explanation": "A sentinel is a guard or watchperson who keeps lookout for danger.",
+        "target_word": "sentinel"
+    },
+    {
+        "id": "eng-vocab-0027",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "The child looked apprehensive before entering the dark cave."
+        },
+        "question": "Which word could best replace \"apprehensive\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "excited",
+                "correct": false
+            },
+            {
+                "text": "fearless",
+                "correct": false
+            },
+            {
+                "text": "sleepy",
+                "correct": false
+            },
+            {
+                "text": "anxious",
+                "correct": true
+            },
+            {
+                "text": "cheerful",
+                "correct": false
+            }
+        ],
+        "explanation": "Apprehensive means anxious or worried that something bad may happen.",
+        "target_word": "apprehensive"
+    },
+    {
+        "id": "eng-vocab-0028",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "A deep narrow valley with steep rocky sides."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "gorge",
+                "correct": true
+            },
+            {
+                "text": "belfry",
+                "correct": false
+            },
+            {
+                "text": "cask",
+                "correct": false
+            },
+            {
+                "text": "wigwam",
+                "correct": false
+            },
+            {
+                "text": "avenue",
+                "correct": false
+            }
+        ],
+        "explanation": "A gorge is a deep, narrow valley with steep rocky sides.",
+        "target_word": "gorge"
+    },
+    {
+        "id": "eng-vocab-0029",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The knight spoke courteously to the old woman."
+        },
+        "question": "In this sentence, what part of speech is \"courteously\"?",
+        "choices": [
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": true
+            },
+            {
+                "text": "Preposition",
+                "correct": false
+            }
+        ],
+        "explanation": "Courteously describes how the knight spoke, so it is an adverb.",
+        "target_word": "courteously"
+    },
+    {
+        "id": "eng-vocab-0030",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"ostentatious\" mean?",
+        "choices": [
+            {
+                "text": "Quiet and shy",
+                "correct": false
+            },
+            {
+                "text": "Weak and easily broken",
+                "correct": false
+            },
+            {
+                "text": "Showy in a way that tries too hard to impress people",
+                "correct": true
+            },
+            {
+                "text": "Very ordinary and boring",
+                "correct": false
+            },
+            {
+                "text": "Kind and forgiving",
+                "correct": false
+            }
+        ],
+        "explanation": "Ostentatious means showy in a way intended to attract attention or impress people.",
+        "target_word": "ostentatious"
+    },
+    {
+        "id": "eng-vocab-0031",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "She checked every calculation ______, making sure there were no careless mistakes."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "hastily",
+                "correct": false
+            },
+            {
+                "text": "bitterly",
+                "correct": false
+            },
+            {
+                "text": "vaguely",
+                "correct": false
+            },
+            {
+                "text": "noisily",
+                "correct": false
+            },
+            {
+                "text": "meticulously",
+                "correct": true
+            }
+        ],
+        "explanation": "Meticulously means very carefully and with close attention to detail.",
+        "target_word": "meticulously"
+    },
+    {
+        "id": "eng-vocab-0032",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Something that is very unpleasant, disgusting, or offensive."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "repugnant",
+                "correct": true
+            },
+            {
+                "text": "versatile",
+                "correct": false
+            },
+            {
+                "text": "modest",
+                "correct": false
+            },
+            {
+                "text": "fleeting",
+                "correct": false
+            },
+            {
+                "text": "lenient",
+                "correct": false
+            }
+        ],
+        "explanation": "Repugnant means extremely unpleasant, disgusting, or offensive.",
+        "target_word": "repugnant"
+    },
+    {
+        "id": "eng-vocab-0033",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "The new jacket was versatile because it could be worn for school, sports, or a party."
+        },
+        "question": "Which word could best replace \"versatile\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "expensive",
+                "correct": false
+            },
+            {
+                "text": "fragile",
+                "correct": false
+            },
+            {
+                "text": "colourful",
+                "correct": false
+            },
+            {
+                "text": "adaptable",
+                "correct": true
+            },
+            {
+                "text": "ancient",
+                "correct": false
+            }
+        ],
+        "explanation": "Versatile means adaptable or able to be used in many different ways.",
+        "target_word": "versatile"
+    },
+    {
+        "id": "eng-vocab-0034",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The teacher gave a lenient punishment because it was the student's first mistake."
+        },
+        "question": "In this sentence, what part of speech is \"lenient\"?",
+        "choices": [
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": true
+            },
+            {
+                "text": "Verb",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": false
+            },
+            {
+                "text": "Preposition",
+                "correct": false
+            }
+        ],
+        "explanation": "Lenient describes the punishment, so it is an adjective.",
+        "target_word": "lenient"
+    },
+    {
+        "id": "eng-vocab-0035",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "The old bridge looked ______, so we crossed it one person at a time."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "cheerful",
+                "correct": false
+            },
+            {
+                "text": "loyal",
+                "correct": false
+            },
+            {
+                "text": "invisible",
+                "correct": false
+            },
+            {
+                "text": "luxurious",
+                "correct": false
+            },
+            {
+                "text": "precarious",
+                "correct": true
+            }
+        ],
+        "explanation": "Precarious means unsafe, unstable, or likely to fall or fail.",
+        "target_word": "precarious"
+    },
+    {
+        "id": "eng-vocab-0036",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"conspicuous\" mean?",
+        "choices": [
+            {
+                "text": "Easy to notice",
+                "correct": true
+            },
+            {
+                "text": "Difficult to understand",
+                "correct": false
+            },
+            {
+                "text": "Quiet and shy",
+                "correct": false
+            },
+            {
+                "text": "Moving very fast",
+                "correct": false
+            },
+            {
+                "text": "Broken into pieces",
+                "correct": false
+            }
+        ],
+        "explanation": "Conspicuous means easy to see or notice.",
+        "target_word": "conspicuous"
+    },
+    {
+        "id": "eng-vocab-0037",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"grudge\" mean?",
+        "choices": [
+            {
+                "text": "A joyful celebration",
+                "correct": false
+            },
+            {
+                "text": "A long-lasting feeling of resentment",
+                "correct": true
+            },
+            {
+                "text": "A type of weapon",
+                "correct": false
+            },
+            {
+                "text": "A formal promise",
+                "correct": false
+            },
+            {
+                "text": "A sudden mistake",
+                "correct": false
+            }
+        ],
+        "explanation": "A grudge is a lasting feeling of anger or resentment toward someone.",
+        "target_word": "grudge"
+    },
+    {
+        "id": "eng-vocab-0038",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Bold and willing to take risks, sometimes in a shocking way."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "cautious",
+                "correct": false
+            },
+            {
+                "text": "audacious",
+                "correct": true
+            },
+            {
+                "text": "feeble",
+                "correct": false
+            },
+            {
+                "text": "obedient",
+                "correct": false
+            },
+            {
+                "text": "mournful",
+                "correct": false
+            }
+        ],
+        "explanation": "Audacious means boldly daring or willing to take risks.",
+        "target_word": "audacious"
+    },
+    {
+        "id": "eng-vocab-0039",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Real enough to be touched or clearly felt; not just imagined."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "sinister",
+                "correct": false
+            },
+            {
+                "text": "tangible",
+                "correct": true
+            },
+            {
+                "text": "forlorn",
+                "correct": false
+            },
+            {
+                "text": "obstinate",
+                "correct": false
+            },
+            {
+                "text": "shrill",
+                "correct": false
+            }
+        ],
+        "explanation": "Tangible means real enough to touch or clearly notice, rather than imagined.",
+        "target_word": "tangible"
+    },
+    {
+        "id": "eng-vocab-0040",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "Mia could not ______ how the magician made the coin disappear."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "scatter",
+                "correct": false
+            },
+            {
+                "text": "quarrel",
+                "correct": false
+            },
+            {
+                "text": "fathom",
+                "correct": true
+            },
+            {
+                "text": "perish",
+                "correct": false
+            },
+            {
+                "text": "mimic",
+                "correct": false
+            }
+        ],
+        "explanation": "Fathom means to understand something after thinking about it.",
+        "target_word": "fathom"
+    },
+    {
+        "id": "eng-vocab-0041",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "Even before the test began, Jayden felt ______ because he had forgotten to revise one whole topic."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "benevolent",
+                "correct": false
+            },
+            {
+                "text": "apprehensive",
+                "correct": true
+            },
+            {
+                "text": "courtly",
+                "correct": false
+            },
+            {
+                "text": "raucous",
+                "correct": false
+            },
+            {
+                "text": "pristine",
+                "correct": false
+            }
+        ],
+        "explanation": "Apprehensive means anxious or worried about something that might happen.",
+        "target_word": "apprehensive"
+    },
+    {
+        "id": "eng-vocab-0042",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "The benevolent neighbour brought food to the family after the fire."
+        },
+        "question": "Which word could best replace \"benevolent\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "kind",
+                "correct": true
+            },
+            {
+                "text": "noisy",
+                "correct": false
+            },
+            {
+                "text": "stubborn",
+                "correct": false
+            },
+            {
+                "text": "careless",
+                "correct": false
+            },
+            {
+                "text": "greedy",
+                "correct": false
+            }
+        ],
+        "explanation": "Benevolent means kind and wanting to help others.",
+        "target_word": "benevolent"
+    },
+    {
+        "id": "eng-vocab-0043",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "There was something sinister about the empty house at the end of the lane."
+        },
+        "question": "Which word could best replace \"sinister\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "cheerful",
+                "correct": false
+            },
+            {
+                "text": "ordinary",
+                "correct": false
+            },
+            {
+                "text": "threatening",
+                "correct": true
+            },
+            {
+                "text": "colourful",
+                "correct": false
+            },
+            {
+                "text": "fragile",
+                "correct": false
+            }
+        ],
+        "explanation": "Sinister means threatening, evil-looking, or suggesting something bad may happen.",
+        "target_word": "sinister"
+    },
+    {
+        "id": "eng-vocab-0044",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The captain tried to deceive the guards with a false story."
+        },
+        "question": "In this sentence, what part of speech is \"deceive\"?",
+        "choices": [
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": true
+            },
+            {
+                "text": "Preposition",
+                "correct": false
+            }
+        ],
+        "explanation": "Deceive is a verb here because it names the action the captain tried to do.",
+        "target_word": "deceive"
+    },
+    {
+        "id": "eng-vocab-0045",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The treacherous path was covered in loose stones and mud."
+        },
+        "question": "In this sentence, what part of speech is \"treacherous\"?",
+        "choices": [
+            {
+                "text": "Conjunction",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": true
+            },
+            {
+                "text": "Interjection",
+                "correct": false
+            },
+            {
+                "text": "Noun",
+                "correct": false
+            }
+        ],
+        "explanation": "Treacherous describes the path, so it is an adjective.",
+        "target_word": "treacherous"
+    },
+    {
+        "id": "eng-vocab-0046",
+        "type": "word_meaning",
+        "prompt": {},
+        "question": "What does \"audacious\" mean?",
+        "choices": [
+            {
+                "text": "very shy and quiet",
+                "correct": false
+            },
+            {
+                "text": "rude in a silly way",
+                "correct": false
+            },
+            {
+                "text": "bold and daring",
+                "correct": true
+            },
+            {
+                "text": "tired and weak",
+                "correct": false
+            },
+            {
+                "text": "slow to understand",
+                "correct": false
+            }
+        ],
+        "explanation": "Audacious means bold, daring, and willing to take risks.",
+        "target_word": "audacious"
+    },
+    {
+        "id": "eng-vocab-0047",
+        "type": "reverse_meaning",
+        "prompt": {
+            "meaning": "Kind and generous, and wanting to help other people."
+        },
+        "question": "Which word matches the meaning given?",
+        "choices": [
+            {
+                "text": "tangible",
+                "correct": false
+            },
+            {
+                "text": "sinister",
+                "correct": false
+            },
+            {
+                "text": "obstinate",
+                "correct": false
+            },
+            {
+                "text": "benevolent",
+                "correct": true
+            },
+            {
+                "text": "miserable",
+                "correct": false
+            }
+        ],
+        "explanation": "Benevolent means kind, generous, and wanting to help others.",
+        "target_word": "benevolent"
+    },
+    {
+        "id": "eng-vocab-0048",
+        "type": "fill_in_blank",
+        "prompt": {
+            "sentence": "Even after the teacher explained the science idea twice, Noah still could not ______ it fully."
+        },
+        "question": "Which word best completes the sentence?",
+        "choices": [
+            {
+                "text": "dispatch",
+                "correct": false
+            },
+            {
+                "text": "fathom",
+                "correct": true
+            },
+            {
+                "text": "mimic",
+                "correct": false
+            },
+            {
+                "text": "hazard",
+                "correct": false
+            },
+            {
+                "text": "avenge",
+                "correct": false
+            }
+        ],
+        "explanation": "Fathom means to understand something after thinking about it.",
+        "target_word": "fathom"
+    },
+    {
+        "id": "eng-vocab-0049",
+        "type": "alternative_word",
+        "prompt": {
+            "sentence": "Sana felt apprehensive before opening the letter from the headteacher."
+        },
+        "question": "Which word could best replace \"apprehensive\" without changing the meaning?",
+        "choices": [
+            {
+                "text": "curious",
+                "correct": false
+            },
+            {
+                "text": "cheerful",
+                "correct": false
+            },
+            {
+                "text": "nervous",
+                "correct": true
+            },
+            {
+                "text": "careless",
+                "correct": false
+            },
+            {
+                "text": "patient",
+                "correct": false
+            }
+        ],
+        "explanation": "Apprehensive means anxious or nervous about something that may happen.",
+        "target_word": "apprehensive"
+    },
+    {
+        "id": "eng-vocab-0050",
+        "type": "part_of_speech",
+        "prompt": {
+            "sentence": "The detectives finally found tangible evidence at the scene."
+        },
+        "question": "In this sentence, what part of speech is \"tangible\"?",
+        "choices": [
+            {
+                "text": "Noun",
+                "correct": false
+            },
+            {
+                "text": "Verb",
+                "correct": false
+            },
+            {
+                "text": "Adverb",
+                "correct": false
+            },
+            {
+                "text": "Preposition",
+                "correct": false
+            },
+            {
+                "text": "Adjective",
+                "correct": true
+            }
+        ],
+        "explanation": "Tangible describes the noun evidence, so it is an adjective.",
+        "target_word": "tangible"
+    }
 ]
