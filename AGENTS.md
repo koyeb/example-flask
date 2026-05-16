@@ -19,7 +19,9 @@
 - The server shuffles the selected question set and shuffles each question's choices before sending them to the page.
 - It is acceptable for the HTML document to carry answer metadata such as `correct` and `target_word`, but the page must not visibly display correct answers before marking.
 - The main `Submit` button marks the quiz in the browser. Unanswered questions count as wrong.
+- After submit, show the score as a fraction such as `7/10`: green for `>= 80%`, amber for `>= 60%` and `< 80%`, and red for `< 60%`.
 - On submit, wrong questions should not reveal the correct answer. They should remain answerable and show a per-question `Retry` button until the student selects the correct option.
+- When a retry attempt is correct, show `Retry correct` in blue instead of the normal first-attempt `Correct` label.
 - Retry marking is client-side only and does not send feedback to the server.
 - On submit, send the `target_word` values for questions missed on the first marking attempt to `POST /vocab/feedback` using this payload shape:
   ```json

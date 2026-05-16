@@ -435,6 +435,11 @@ footer {
     background: #f2fbf5;
 }
 
+.vocab-question.is-retry-correct {
+    border-color: #88b7e6;
+    background: #f1f7ff;
+}
+
 .vocab-question.is-wrong {
     border-color: #dfb15b;
     background: #fff9ed;
@@ -466,6 +471,10 @@ footer {
 
 .vocab-question.is-correct .vocab-result {
     color: #1f7a45;
+}
+
+.vocab-question.is-retry-correct .vocab-result {
+    color: #1d5fa8;
 }
 
 .vocab-question.is-wrong .vocab-result {
@@ -507,6 +516,12 @@ footer {
     background: #f4f8fa;
 }
 
+.vocab-choice.is-selected {
+    border-color: #204f75;
+    background: #e8f2f8;
+    box-shadow: inset 4px 0 0 #204f75;
+}
+
 .vocab-choice input {
     margin-top: 0.2rem;
     accent-color: #204f75;
@@ -527,6 +542,24 @@ footer {
 .vocab-submit-status {
     color: #5a6475;
     font-weight: 700;
+}
+
+.vocab-score {
+    min-width: 3.5rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.vocab-score[data-tone="high"] {
+    color: #1f7a45;
+}
+
+.vocab-score[data-tone="mid"] {
+    color: #b36b00;
+}
+
+.vocab-score[data-tone="low"] {
+    color: #a33b2f;
 }
 
 .vocab-submit-status[data-tone="success"] {
