@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Keep the legacy mobile menu script harmless on pages without that header.
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
 
@@ -10,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    // The vocab quiz is rendered from JSON embedded by Flask, then regenerated
+    // from /vocab/questions without a full page reload.
     const quiz = document.getElementById('vocab-quiz');
     const questionList = document.getElementById('vocab-question-list');
     const countInput = document.getElementById('vocab-count');
@@ -27,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getSelectedCount = () => allowedCounts[Number(countInput.value)] || 10;
 
+    // Submit feedback and score use separate labels so either can update alone.
     const setStatus = (message, tone = '') => {
         submitStatus.textContent = message;
         submitStatus.dataset.tone = tone;
@@ -114,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         questionList.appendChild(fragment);
     };
 
+    // Marking deliberately never reveals the correct answer for wrong attempts.
     const markQuestion = (questionElement, mode = 'submit') => {
         const selectedChoice = questionElement.querySelector('input[type="radio"]:checked');
         const result = questionElement.querySelector('.vocab-result');
@@ -142,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     };
 
+    // Native radio state is subtle, so mirror it onto the label for visibility.
     const updateSelectedChoice = (input) => {
         const choices = input.closest('.vocab-choices');
 
@@ -150,6 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // This dummy call lets the server receive first-attempt misses while the
+    // browser continues showing the mark result immediately.
     const sendFeedback = async (missedTargetWords) => {
         setStatus('Sending feedback...', 'pending');
 
