@@ -117,6 +117,14 @@ def octopus():
         row['total_tariff_label'] = f"{row['total_tariff']:.2f} p/kWh"
         row['average_tariff_label'] = f"{row['average_tariff']:.2f} p/kWh"
         row['is_credit'] = row['total_tariff'] < 0
+        row['slot_details'] = [
+            {
+                'start_label': slot['start_time'].strftime('%d %b %Y, %H:%M'),
+                'end_label': slot['end_time'].strftime('%d %b %Y, %H:%M'),
+                'tariff_label': f"{slot['tariff']:.2f} p/kWh",
+            }
+            for slot in row.get('slots', [])
+        ]
 
     return render_template(
         'octopus.html',

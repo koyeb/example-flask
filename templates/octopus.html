@@ -73,6 +73,31 @@
                     <div class="octopus-cell" role="cell" data-label="Average slot tariff">
                         {{ row.average_tariff_label }}
                     </div>
+                    <div class="octopus-slot-details" role="cell">
+                        <details>
+                            <summary>Half-hour tariff slots in this window</summary>
+                            <div class="octopus-slot-table-wrap">
+                                <table class="octopus-slot-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Start</th>
+                                            <th>End</th>
+                                            <th>Tariff</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for slot in row.slot_details %}
+                                        <tr>
+                                            <td>{{ slot.start_label }}</td>
+                                            <td>{{ slot.end_label }}</td>
+                                            <td>{{ slot.tariff_label }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+                    </div>
                     {% endif %}
                 </article>
                 {% endfor %}

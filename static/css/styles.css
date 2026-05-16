@@ -218,6 +218,47 @@ footer {
     color: #8a1c1c;
 }
 
+.octopus-slot-details {
+    grid-column: 1 / -1;
+}
+
+.octopus-slot-details details {
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 12px;
+    background: rgba(248, 250, 252, 0.9);
+}
+
+.octopus-slot-details summary {
+    cursor: pointer;
+    padding: 0.65rem 0.8rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.octopus-slot-table-wrap {
+    padding: 0 0.8rem 0.8rem;
+}
+
+.octopus-slot-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.octopus-slot-table th,
+.octopus-slot-table td {
+    text-align: left;
+    padding: 0.45rem 0.3rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.octopus-slot-table th {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #52606d;
+}
+
 @media (max-width: 900px) {
     .octopus-table-header {
         flex-direction: column;
