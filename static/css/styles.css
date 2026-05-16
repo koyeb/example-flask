@@ -409,8 +409,10 @@ footer {
 }
 
 .vocab-type-control {
-    display: grid;
-    gap: 0.3rem;
+    min-width: 220px;
+    border: 0;
+    padding: 0;
+    margin: 0;
     color: #5a6475;
     font-size: 0.72rem;
     font-weight: 700;
@@ -418,17 +420,41 @@ footer {
     text-transform: uppercase;
 }
 
-.vocab-type-select {
-    min-width: 210px;
-    min-height: 2.5rem;
-    padding: 0.35rem;
+.vocab-type-control legend {
+    padding: 0;
+    margin-bottom: 0.3rem;
+}
+
+.vocab-type-picker {
     border: 1px solid #c6d1de;
     border-radius: 7px;
-    font: inherit;
+    background: #fff;
+}
+
+.vocab-type-picker summary {
+    cursor: pointer;
+    padding: 0.5rem 0.6rem;
     color: #172033;
     text-transform: none;
     letter-spacing: 0;
-    background: #fff;
+    font-size: 0.9rem;
+}
+
+.vocab-type-options {
+    display: grid;
+    gap: 0.4rem;
+    padding: 0.2rem 0.6rem 0.6rem;
+}
+
+.vocab-type-option {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #172033;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 
