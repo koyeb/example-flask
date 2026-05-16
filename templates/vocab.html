@@ -36,13 +36,20 @@
                     value="{{ allowed_counts.index(selected_count) }}"
                     aria-label="Number of questions"
                 >
-                <label class="vocab-type-control" for="vocab-types">Question types
-                    <select id="vocab-types" class="vocab-type-select" multiple aria-label="Question types for regeneration">
-                        {% for question_type in allowed_types %}
-                        <option value="{{ question_type }}" selected>{{ question_type.replace("_", " ").title() }}</option>
-                        {% endfor %}
-                    </select>
-                </label>
+                <fieldset class="vocab-type-control" aria-label="Question types for regeneration">
+                    <legend>Question types</legend>
+                    <details class="vocab-type-picker" id="vocab-type-picker">
+                        <summary id="vocab-type-summary">All types selected</summary>
+                        <div class="vocab-type-options" id="vocab-types">
+                            {% for question_type in allowed_types %}
+                            <label class="vocab-type-option">
+                                <input type="checkbox" value="{{ question_type }}" checked>
+                                <span>{{ question_type.replace("_", " ").title() }}</span>
+                            </label>
+                            {% endfor %}
+                        </div>
+                    </details>
+                </fieldset>
                 <button type="button" class="vocab-button vocab-button-secondary" id="vocab-regenerate">Regenerate</button>
             </div>
         </section>

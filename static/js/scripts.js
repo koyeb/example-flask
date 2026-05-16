@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreElement = document.getElementById('vocab-score');
     const submitStatus = document.getElementById('vocab-submit-status');
     const submitButton = document.getElementById('vocab-submit');
-    const typeSelect = document.getElementById('vocab-types');
+    const typeContainer = document.getElementById('vocab-types');
+    const typeSummary = document.getElementById('vocab-type-summary');
 
-    if (!quiz || !questionList || !countInput || !countLabel || !regenerateButton || !scoreElement || !submitStatus || !submitButton || !typeSelect) {
+    if (!quiz || !questionList || !countInput || !countLabel || !regenerateButton || !scoreElement || !submitStatus || !submitButton || !typeContainer || !typeSummary) {
         return;
     }
 
@@ -33,12 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getSelectedCount = () => allowedCounts[Number(countInput.value)] || 10;
 
-    const getSelectedTypes = () => Array.from(typeSelect.selectedOptions).map((option) => option.value);
+    const getTypeInputs = () => Array.from(typeContainer.querySelectorAll('input[type="checkbox"]'));
+
+    const getSelectedTypes = () => getTypeInputs().filter((input) => input.checked).map((input) => input.value);
 
     const selectAllTypes = () => {
-        Array.from(typeSelect.options).forEach((option) => {
-            option.selected = true;
+        getTypeInputs().forEach((input) => {
+            input.checked = true;
         });
+        updateTypeSummary();
+    };
+
+    const updateTypeSummary = () => {
+        const selectedTypes = getSelectedTypes();
+
+        if (!selectedTypes.length) {
+            typeSummary.textContent = 'No type selected';
+            return;
+        }
+
+        if (selectedTypes.length === allowedTypes.length) {
+            typeSummary.textContent = 'All types selected';
+            return;
+        }
+
+        typeSummary.textContent = `${selectedTypes.length} types selected`;
     };
 
     // Submit feedback and score use separate labels so either can update alone.
@@ -200,6 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
     countInput.addEventListener('input', () => {
         countLabel.textContent = String(getSelectedCount());
     });
+
+    typeContainer.addEventListener('change', (event) => {
+        if (event.target.matches('input[type="checkbox"]')) {
+            updateTypeSummary();
+        }
+    });
+
+    updateTypeSummary();
 
     regenerateButton.addEventListener('click', async () => {
         const count = getSelectedCount();
