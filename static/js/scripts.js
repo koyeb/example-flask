@@ -142,6 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     };
 
+    const updateSelectedChoice = (input) => {
+        const choices = input.closest('.vocab-choices');
+
+        choices.querySelectorAll('.vocab-choice').forEach((choice) => {
+            choice.classList.toggle('is-selected', choice.contains(input));
+        });
+    };
+
     const sendFeedback = async (missedTargetWords) => {
         setStatus('Sending feedback...', 'pending');
 
@@ -198,6 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const questionElement = event.target.closest('.vocab-question');
         markQuestion(questionElement, 'retry');
+    });
+
+    quiz.addEventListener('change', (event) => {
+        if (event.target.matches('.vocab-choice input[type="radio"]')) {
+            updateSelectedChoice(event.target);
+        }
     });
 
     quiz.addEventListener('submit', (event) => {

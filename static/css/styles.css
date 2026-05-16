@@ -516,6 +516,12 @@ footer {
     background: #f4f8fa;
 }
 
+.vocab-choice.is-selected {
+    border-color: #204f75;
+    background: #e8f2f8;
+    box-shadow: inset 4px 0 0 #204f75;
+}
+
 .vocab-choice input {
     margin-top: 0.2rem;
     accent-color: #204f75;
