@@ -37,7 +37,9 @@ Renders an HTML vocabulary practice quiz using `static/English/Vocabulary/questi
 - Shuffles the selected questions and each question's answer choices.
 - Marks answers in the browser when `Submit` is clicked.
 - Counts unanswered questions as wrong.
+- Shows the score as a colored fraction: green for `>= 80%`, amber for `>= 60%` and `< 80%`, red for `< 60%`.
 - Allows retries for wrong answers without immediately showing the correct answer.
+- Shows retry successes as `Retry correct` in blue.
 - Sends missed `target_word` values from the first submit attempt to the dummy feedback endpoint.
 
 **Query parameters**

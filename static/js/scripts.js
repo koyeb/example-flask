@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const countInput = document.getElementById('vocab-count');
     const countLabel = document.getElementById('vocab-count-label');
     const regenerateButton = document.getElementById('vocab-regenerate');
+    const scoreElement = document.getElementById('vocab-score');
     const submitStatus = document.getElementById('vocab-submit-status');
 
-    if (!quiz || !questionList || !countInput || !countLabel || !regenerateButton || !submitStatus) {
+    if (!quiz || !questionList || !countInput || !countLabel || !regenerateButton || !scoreElement || !submitStatus) {
         return;
     }
 
@@ -29,6 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const setStatus = (message, tone = '') => {
         submitStatus.textContent = message;
         submitStatus.dataset.tone = tone;
+    };
+
+    const setScore = (correctCount, totalCount) => {
+        const percentage = totalCount ? correctCount / totalCount : 0;
+        let tone = 'low';
+
+        if (percentage >= 0.8) {
+            tone = 'high';
+        } else if (percentage >= 0.6) {
+            tone = 'mid';
+        }
+
+        scoreElement.textContent = `${correctCount}/${totalCount}`;
+        scoreElement.dataset.tone = tone;
+    };
+
+    const clearScore = () => {
+        scoreElement.textContent = '';
+        scoreElement.dataset.tone = '';
     };
 
     const renderPrompt = (prompt) => {
@@ -48,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderQuestions = () => {
         questionList.innerHTML = '';
         setStatus('');
+        clearScore();
 
         if (!questions.length) {
             questionList.innerHTML = '<section class="vocab-empty">No vocabulary questions are available.</section>';
@@ -93,17 +114,24 @@ document.addEventListener('DOMContentLoaded', () => {
         questionList.appendChild(fragment);
     };
 
-    const markQuestion = (questionElement) => {
+    const markQuestion = (questionElement, mode = 'submit') => {
         const selectedChoice = questionElement.querySelector('input[type="radio"]:checked');
         const result = questionElement.querySelector('.vocab-result');
         const retryButton = questionElement.querySelector('.vocab-retry');
         const isCorrect = selectedChoice && selectedChoice.dataset.correct === 'true';
+        const wasRetryCorrect = questionElement.classList.contains('is-retry-correct');
 
-        questionElement.classList.remove('is-correct', 'is-wrong');
+        questionElement.classList.remove('is-correct', 'is-wrong', 'is-retry-correct');
 
         if (isCorrect) {
-            questionElement.classList.add('is-correct');
-            result.textContent = 'Correct';
+            if (mode === 'retry' || wasRetryCorrect) {
+                questionElement.classList.add('is-retry-correct');
+                result.textContent = 'Retry correct';
+            } else {
+                questionElement.classList.add('is-correct');
+                result.textContent = 'Correct';
+            }
+
             retryButton.hidden = true;
             return true;
         }
@@ -169,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const questionElement = event.target.closest('.vocab-question');
-        markQuestion(questionElement);
+        markQuestion(questionElement, 'retry');
     });
 
     quiz.addEventListener('submit', (event) => {
@@ -177,15 +205,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const missedTargetWords = [];
         const questionElements = questionList.querySelectorAll('.vocab-question');
+        let correctCount = 0;
 
         questionElements.forEach((questionElement) => {
             const isCorrect = markQuestion(questionElement);
+
+            if (isCorrect) {
+                correctCount += 1;
+            }
 
             if (!isCorrect && questionElement.dataset.targetWord) {
                 missedTargetWords.push(questionElement.dataset.targetWord);
             }
         });
 
+        setScore(correctCount, questionElements.length);
         sendFeedback(missedTargetWords);
     });
 
