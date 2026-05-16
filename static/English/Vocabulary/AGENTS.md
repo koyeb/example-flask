@@ -17,6 +17,11 @@ These instructions apply to files under `static/English/Vocabulary/`.
 - Reusing the same target word is allowed when the question itself is different.
 - Derived forms are allowed when clearly linked to a word-bank base word.
 
+## Maintaining `word_bank.txt`
+- When asked to add new words or phrases to `word_bank.txt`, first check whether each item already exists in the word bank.
+- Only append items that are not already present.
+- Keep one vocabulary item per line.
+
 ## Question Type Selection Default
 - If the user does not specify question type(s), produce a mixed question set that includes a mixture of all 5 defined types.
 
