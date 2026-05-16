@@ -308,3 +308,260 @@ footer {
         color: #52606d;
     }
 }
+
+.vocab-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+    color: #172033;
+}
+
+.vocab-layout {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+    text-align: left;
+}
+
+.vocab-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.25rem;
+}
+
+.vocab-kicker {
+    margin: 0 0 0.4rem;
+    color: #2f6f6c;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.vocab-header h1 {
+    margin: 0;
+    font-size: 2.3rem;
+    line-height: 1.1;
+}
+
+.vocab-controls {
+    display: grid;
+    grid-template-columns: auto minmax(150px, 210px) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.8rem;
+    border: 1px solid #d7dde7;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.vocab-count-control {
+    display: grid;
+    gap: 0.1rem;
+    color: #5a6475;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.vocab-count-control strong {
+    color: #172033;
+    font-size: 1.15rem;
+}
+
+.vocab-range {
+    accent-color: #2f6f6c;
+}
+
+.vocab-button {
+    min-height: 2.5rem;
+    border: 0;
+    border-radius: 7px;
+    padding: 0.55rem 0.9rem;
+    background: #204f75;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.vocab-button:hover {
+    background: #173b59;
+}
+
+.vocab-button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.vocab-button-secondary {
+    background: #2f6f6c;
+}
+
+.vocab-button-secondary:hover {
+    background: #245957;
+}
+
+.vocab-button-small {
+    min-height: 2.15rem;
+    padding: 0.4rem 0.75rem;
+}
+
+.vocab-alert,
+.vocab-empty {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #efb8b8;
+    border-radius: 8px;
+    background: #fff1f1;
+    color: #8a1c1c;
+}
+
+.vocab-question-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.vocab-question {
+    padding: 1.1rem;
+    border: 1px solid #d7dde7;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.vocab-question.is-correct {
+    border-color: #8fc6a7;
+    background: #f2fbf5;
+}
+
+.vocab-question.is-wrong {
+    border-color: #dfb15b;
+    background: #fff9ed;
+}
+
+.vocab-question-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+
+.vocab-number,
+.vocab-result {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.vocab-number {
+    color: #5a6475;
+}
+
+.vocab-result {
+    color: #204f75;
+}
+
+.vocab-question.is-correct .vocab-result {
+    color: #1f7a45;
+}
+
+.vocab-question.is-wrong .vocab-result {
+    color: #9a5a00;
+}
+
+.vocab-prompt {
+    margin: 0 0 0.6rem;
+    color: #39455a;
+    line-height: 1.5;
+}
+
+.vocab-question h2 {
+    margin: 0 0 0.9rem;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.vocab-choices {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.vocab-choice {
+    display: grid;
+    grid-template-columns: 1.1rem 1fr;
+    gap: 0.6rem;
+    align-items: start;
+    padding: 0.7rem;
+    border: 1px solid #e0e5ed;
+    border-radius: 7px;
+    background: #fbfcfe;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.vocab-choice:hover {
+    border-color: #9eb8c6;
+    background: #f4f8fa;
+}
+
+.vocab-choice input {
+    margin-top: 0.2rem;
+    accent-color: #204f75;
+}
+
+.vocab-retry-row {
+    min-height: 2.15rem;
+    margin-top: 0.8rem;
+}
+
+.vocab-submit-row {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 1.25rem;
+}
+
+.vocab-submit-status {
+    color: #5a6475;
+    font-weight: 700;
+}
+
+.vocab-submit-status[data-tone="success"] {
+    color: #1f7a45;
+}
+
+.vocab-submit-status[data-tone="error"] {
+    color: #a33b2f;
+}
+
+.vocab-submit-status[data-tone="pending"] {
+    color: #204f75;
+}
+
+@media (max-width: 760px) {
+    .vocab-header {
+        display: grid;
+        align-items: start;
+    }
+
+    .vocab-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .vocab-layout {
+        padding: 1.25rem 1rem 3rem;
+    }
+
+    .vocab-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .vocab-submit-row {
+        display: grid;
+    }
+}

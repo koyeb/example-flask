@@ -1,12 +1,21 @@
 from flask import Flask, jsonify, request, abort, send_from_directory, render_template
 from tariff_utils import calculate_start_time, get_best_tariff_windows
 import os
+import json
 from datetime import datetime, timedelta
 import random
 
 api_key = os.getenv("OCTOPUS_KEY")
 
 app = Flask(__name__)
+VOCAB_QUESTION_PATH = os.path.join(
+    app.root_path,
+    'static',
+    'English',
+    'Vocabulary',
+    'questions.json',
+)
+VOCAB_ALLOWED_COUNTS = [5, 10, 15, 20, 25, 30]
 
 # Read API Key from environment variable
 # VALID_API_KEYS = {os.getenv('API_KEY')}  # Assuming there's only one key for simplicity
@@ -130,6 +139,88 @@ def octopus():
         'octopus.html',
         rows=window_rows,
         page_error=page_error,
+    )
+
+
+def _get_vocab_count(default=10):
+    count = request.args.get('count', default=default, type=int)
+    if count not in VOCAB_ALLOWED_COUNTS:
+        count = default
+    return count
+
+
+def _load_vocab_questions():
+    with open(VOCAB_QUESTION_PATH, encoding='utf-8') as question_file:
+        questions = json.load(question_file)
+
+    if not isinstance(questions, list):
+        raise ValueError('Vocabulary question bank must be a JSON array.')
+
+    return questions
+
+
+def _sample_vocab_questions(count):
+    questions = _load_vocab_questions()
+    selected_questions = random.sample(questions, min(count, len(questions)))
+
+    sampled_questions = []
+    for question in selected_questions:
+        question_copy = dict(question)
+        choices = [dict(choice) for choice in question_copy.get('choices', [])]
+        random.shuffle(choices)
+        question_copy['choices'] = choices
+        sampled_questions.append(question_copy)
+
+    return sampled_questions
+
+
+@app.route('/vocab')
+def vocab():
+    count = _get_vocab_count()
+
+    try:
+        questions = _sample_vocab_questions(count)
+    except (OSError, json.JSONDecodeError, ValueError) as error:
+        return render_template(
+            'vocab.html',
+            questions=[],
+            selected_count=count,
+            allowed_counts=VOCAB_ALLOWED_COUNTS,
+            page_error=str(error),
+        ), 500
+
+    return render_template(
+        'vocab.html',
+        questions=questions,
+        selected_count=count,
+        allowed_counts=VOCAB_ALLOWED_COUNTS,
+        page_error=None,
+    )
+
+
+@app.route('/vocab/questions')
+def vocab_questions():
+    count = _get_vocab_count()
+
+    try:
+        questions = _sample_vocab_questions(count)
+    except (OSError, json.JSONDecodeError, ValueError) as error:
+        return jsonify(error=str(error)), 500
+
+    return jsonify(questions=questions, count=len(questions))
+
+
+@app.route('/vocab/feedback', methods=['POST'])
+def vocab_feedback():
+    data = request.get_json(silent=True) or {}
+    missed_target_words = data.get('missed_target_words', [])
+
+    if not isinstance(missed_target_words, list):
+        return jsonify(error='missed_target_words must be a list'), 400
+
+    return jsonify(
+        status='received',
+        missed_count=len(missed_target_words),
     )
 
 @app.route('/demo_status')
