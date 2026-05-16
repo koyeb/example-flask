@@ -8,6 +8,9 @@ import random
 api_key = os.getenv("OCTOPUS_KEY")
 
 app = Flask(__name__)
+
+# Vocabulary quiz settings are kept here because both the HTML page and
+# regenerate endpoint need the same source file and allowed count values.
 VOCAB_QUESTION_PATH = os.path.join(
     app.root_path,
     'static',
@@ -17,19 +20,8 @@ VOCAB_QUESTION_PATH = os.path.join(
 )
 VOCAB_ALLOWED_COUNTS = [5, 10, 15, 20, 25, 30]
 
-# Read API Key from environment variable
-# VALID_API_KEYS = {os.getenv('API_KEY')}  # Assuming there's only one key for simplicity
-
-# def require_api_key(f):
-#     def decorated(*args, **kwargs):
-#         api_key = request.headers.get('API-Key')
-#         if api_key not in VALID_API_KEYS:
-#             abort(401)  # Unauthorized access if the API key is not valid
-#         return f(*args, **kwargs)
-#     return decorated
 
 @app.route('/')
-# @require_api_key
 def hello_world():
     return jsonify(message="Hello, Happy Flasking!")
 
@@ -37,7 +29,7 @@ def hello_world():
 def api_spec():
     return send_from_directory('static', 'api_spec.yaml')
 
-# --- New route: serve XML files from /static/xml ---
+
 @app.route('/xml/<path:filename>')
 def serve_xml(filename: str):
     """Serve XML files from the /static/xml directory via /xml/<filename>.xml.
@@ -48,18 +40,16 @@ def serve_xml(filename: str):
     if not filename.lower().endswith('.xml'):
         abort(404)
 
+    # Resolve from the intended static subdirectory and reject missing files.
     xml_dir = os.path.join(app.root_path, 'static', 'xml')
     file_path = os.path.join(xml_dir, filename)
 
-    # Ensure the file exists; if not, return a simple JSON 404 response
     if not os.path.isfile(file_path):
         return jsonify(error="File not found"), 404
 
-    # send_from_directory safely serves files from a specific folder
     return send_from_directory(xml_dir, filename, mimetype='application/xml')
 
-# send_from_directory safely serves files from a specific folder
-# \1# --- New route: serve HTML files from /static/html ---
+
 @app.route('/html/<path:filename>')
 def serve_html(filename: str):
     """Serve HTML files from the /static/html directory via /html/<filename>.html.
@@ -70,19 +60,18 @@ def serve_html(filename: str):
     if not filename.lower().endswith('.html'):
         abort(404)
 
+    # Mirror the XML route, but restrict this endpoint to static HTML files.
     html_dir = os.path.join(app.root_path, 'static', 'html')
     file_path = os.path.join(html_dir, filename)
 
-    # Ensure the file exists; if not, return a simple JSON 404 response
     if not os.path.isfile(file_path):
         return jsonify(error="File not found"), 404
 
-    # send_from_directory safely serves files from a specific folder
     return send_from_directory(html_dir, filename, mimetype='text/html')
+
 
 @app.route('/tariff')
 def tariff():
-    # Retrieve the numHours parameter from the request's query string
     num_hours_str = request.args.get('numHours', default=None)
     
     if num_hours_str is None:
@@ -94,7 +83,6 @@ def tariff():
         return jsonify(error="numHours must be a number"), 400
 
     try:
-        # Use the external module to calculate the start time
         start_time_str = calculate_start_time(num_hours, api_key)
     except ValueError as error:
         return jsonify(error=str(error)), 400
@@ -106,6 +94,7 @@ def tariff():
 
 @app.route('/octopus')
 def octopus():
+    # The Octopus page presents fixed appliance durations as a compact table.
     durations = [1, 1.5, 2, 2.5, 3, 3.5]
     page_error = None
     window_rows = []
@@ -116,6 +105,7 @@ def octopus():
         page_error = str(error)
 
     for row in window_rows:
+        # Convert tariff utility output into labels that the template can print.
         if row.get('error'):
             row['duration_label'] = f"{row['duration_hours']:g} hours"
             continue
@@ -143,6 +133,7 @@ def octopus():
 
 
 def _get_vocab_count(default=10):
+    """Return a supported quiz size, falling back to the default for bad input."""
     count = request.args.get('count', default=default, type=int)
     if count not in VOCAB_ALLOWED_COUNTS:
         count = default
@@ -150,6 +141,7 @@ def _get_vocab_count(default=10):
 
 
 def _load_vocab_questions():
+    """Load the vocabulary question bank and ensure it keeps the expected shape."""
     with open(VOCAB_QUESTION_PATH, encoding='utf-8') as question_file:
         questions = json.load(question_file)
 
@@ -160,6 +152,7 @@ def _load_vocab_questions():
 
 
 def _sample_vocab_questions(count):
+    """Pick random questions and shuffle each choice list before rendering."""
     questions = _load_vocab_questions()
     selected_questions = random.sample(questions, min(count, len(questions)))
 
@@ -176,6 +169,7 @@ def _sample_vocab_questions(count):
 
 @app.route('/vocab')
 def vocab():
+    """Render the vocabulary quiz page with an initial random question set."""
     count = _get_vocab_count()
 
     try:
@@ -200,6 +194,7 @@ def vocab():
 
 @app.route('/vocab/questions')
 def vocab_questions():
+    """Return a fresh question set for no-refresh quiz regeneration."""
     count = _get_vocab_count()
 
     try:
@@ -212,6 +207,7 @@ def vocab_questions():
 
 @app.route('/vocab/feedback', methods=['POST'])
 def vocab_feedback():
+    """Accept first-attempt misses; currently this is a dummy receiver."""
     data = request.get_json(silent=True) or {}
     missed_target_words = data.get('missed_target_words', [])
 
@@ -223,6 +219,7 @@ def vocab_feedback():
         missed_count=len(missed_target_words),
     )
 
+
 @app.route('/demo_status')
 def demo_status():
     connection_type = request.args.get('type', default=None)
@@ -231,6 +228,7 @@ def demo_status():
         return jsonify(error="Invalid connection type. Allowed values are FIX, MQ, SFTP, ALL."), 400
 
     return jsonify(message=f'All your {"" if connection_type == "ALL" else connection_type} connections are up and running')
+
 
 @app.route('/demo_details')
 def demo_details():
@@ -244,6 +242,7 @@ def demo_details():
     last_connection_time = current_time - timedelta(minutes=random_minutes)
 
     return jsonify(message=f"Connection {connection_id} is up", lastConnectionTime=last_connection_time.isoformat() + "Z")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
