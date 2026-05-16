@@ -3956,5 +3956,1585 @@
       }
     ],
     "explanation": "\"becalmed\" best fits the sentence context and grammar."
+  },
+  {
+    "id": "eng-vocab-0126",
+    "type": "word_meaning",
+    "target_word": "beckoned",
+    "prompt": {},
+    "question": "What does \"beckoned\" mean?",
+    "choices": [
+      {
+        "text": "related to beckoned",
+        "correct": true
+      },
+      {
+        "text": "able to recover quickly",
+        "correct": false
+      },
+      {
+        "text": "related to constellations",
+        "correct": false
+      },
+      {
+        "text": "no longer in use",
+        "correct": false
+      },
+      {
+        "text": "clear and logical",
+        "correct": false
+      }
+    ],
+    "explanation": "\"beckoned\" means related to beckoned."
+  },
+  {
+    "id": "eng-vocab-0127",
+    "type": "reverse_meaning",
+    "target_word": "beseech",
+    "prompt": {
+      "meaning": "related to beseech"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "cask",
+        "correct": false
+      },
+      {
+        "text": "courtly",
+        "correct": false
+      },
+      {
+        "text": "burnt",
+        "correct": false
+      },
+      {
+        "text": "bestowed",
+        "correct": false
+      },
+      {
+        "text": "beseech",
+        "correct": true
+      }
+    ],
+    "explanation": "The meaning matches \"beseech\"."
+  },
+  {
+    "id": "eng-vocab-0128",
+    "type": "fill_in_blank",
+    "target_word": "beseech",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "brooding",
+        "correct": false
+      },
+      {
+        "text": "changeable",
+        "correct": false
+      },
+      {
+        "text": "beseech",
+        "correct": true
+      },
+      {
+        "text": "bulgy",
+        "correct": false
+      },
+      {
+        "text": "coronet",
+        "correct": false
+      }
+    ],
+    "explanation": "\"beseech\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0129",
+    "type": "alternative_word",
+    "target_word": "bestowed",
+    "prompt": {
+      "sentence": "The teacher praised her bestowed approach to solving problems."
+    },
+    "question": "Which word could best replace \"bestowed\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "confronted",
+        "correct": false
+      },
+      {
+        "text": "cataract",
+        "correct": false
+      },
+      {
+        "text": "confounded",
+        "correct": false
+      },
+      {
+        "text": "contrive",
+        "correct": false
+      },
+      {
+        "text": "bestowed",
+        "correct": true
+      }
+    ],
+    "explanation": "\"bestowed\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0130",
+    "type": "part_of_speech",
+    "target_word": "bewitched",
+    "prompt": {
+      "sentence": "We must bewitched the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"bewitched\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"bewitched\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0131",
+    "type": "word_meaning",
+    "target_word": "bilge",
+    "prompt": {},
+    "question": "What does \"bilge\" mean?",
+    "choices": [
+      {
+        "text": "fluent and persuasive in speaking",
+        "correct": false
+      },
+      {
+        "text": "hardworking and careful",
+        "correct": false
+      },
+      {
+        "text": "related to brooding",
+        "correct": false
+      },
+      {
+        "text": "related to bilge",
+        "correct": true
+      },
+      {
+        "text": "showing strong enthusiasm",
+        "correct": false
+      }
+    ],
+    "explanation": "\"bilge\" means related to bilge."
+  },
+  {
+    "id": "eng-vocab-0132",
+    "type": "reverse_meaning",
+    "target_word": "bivouac",
+    "prompt": {
+      "meaning": "related to bivouac"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "bracken",
+        "correct": false
+      },
+      {
+        "text": "bivouac",
+        "correct": true
+      },
+      {
+        "text": "cask",
+        "correct": false
+      },
+      {
+        "text": "contentment",
+        "correct": false
+      },
+      {
+        "text": "counsel",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"bivouac\"."
+  },
+  {
+    "id": "eng-vocab-0133",
+    "type": "fill_in_blank",
+    "target_word": "boatswain",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "boatswain",
+        "correct": true
+      },
+      {
+        "text": "beckoned",
+        "correct": false
+      },
+      {
+        "text": "bilge",
+        "correct": false
+      },
+      {
+        "text": "cabinet",
+        "correct": false
+      },
+      {
+        "text": "chamber",
+        "correct": false
+      }
+    ],
+    "explanation": "\"boatswain\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0134",
+    "type": "alternative_word",
+    "target_word": "bracken",
+    "prompt": {
+      "sentence": "The teacher praised her bracken approach to solving problems."
+    },
+    "question": "Which word could best replace \"bracken\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "bilge",
+        "correct": false
+      },
+      {
+        "text": "confounded",
+        "correct": false
+      },
+      {
+        "text": "corporal",
+        "correct": false
+      },
+      {
+        "text": "creaked",
+        "correct": false
+      },
+      {
+        "text": "bracken",
+        "correct": true
+      }
+    ],
+    "explanation": "\"bracken\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0135",
+    "type": "part_of_speech",
+    "target_word": "briny",
+    "prompt": {
+      "sentence": "We must briny the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"briny\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"briny\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0136",
+    "type": "word_meaning",
+    "target_word": "brooding",
+    "prompt": {},
+    "question": "What does \"brooding\" mean?",
+    "choices": [
+      {
+        "text": "related to courtly",
+        "correct": false
+      },
+      {
+        "text": "an idea or belief",
+        "correct": false
+      },
+      {
+        "text": "showing strong enthusiasm",
+        "correct": false
+      },
+      {
+        "text": "related to coronet",
+        "correct": false
+      },
+      {
+        "text": "related to brooding",
+        "correct": true
+      }
+    ],
+    "explanation": "\"brooding\" means related to brooding."
+  },
+  {
+    "id": "eng-vocab-0137",
+    "type": "reverse_meaning",
+    "target_word": "bulgy",
+    "prompt": {
+      "meaning": "related to bulgy"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "cairn",
+        "correct": false
+      },
+      {
+        "text": "contentment",
+        "correct": false
+      },
+      {
+        "text": "confounded",
+        "correct": false
+      },
+      {
+        "text": "bulgy",
+        "correct": true
+      },
+      {
+        "text": "contrive",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"bulgy\"."
+  },
+  {
+    "id": "eng-vocab-0138",
+    "type": "fill_in_blank",
+    "target_word": "bulwark",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "cask",
+        "correct": false
+      },
+      {
+        "text": "cantrips",
+        "correct": false
+      },
+      {
+        "text": "bracken",
+        "correct": false
+      },
+      {
+        "text": "cascades",
+        "correct": false
+      },
+      {
+        "text": "bulwark",
+        "correct": true
+      }
+    ],
+    "explanation": "\"bulwark\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0139",
+    "type": "alternative_word",
+    "target_word": "bulwarks",
+    "prompt": {
+      "sentence": "The teacher praised her bulwarks approach to solving problems."
+    },
+    "question": "Which word could best replace \"bulwarks\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "bulgy",
+        "correct": false
+      },
+      {
+        "text": "bulwarks",
+        "correct": true
+      },
+      {
+        "text": "considerable",
+        "correct": false
+      },
+      {
+        "text": "bewitched",
+        "correct": false
+      },
+      {
+        "text": "coronet",
+        "correct": false
+      }
+    ],
+    "explanation": "\"bulwarks\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0140",
+    "type": "part_of_speech",
+    "target_word": "burnt",
+    "prompt": {
+      "sentence": "We must burnt the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"burnt\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"burnt\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0141",
+    "type": "word_meaning",
+    "target_word": "cabinet",
+    "prompt": {},
+    "question": "What does \"cabinet\" mean?",
+    "choices": [
+      {
+        "text": "no longer in use",
+        "correct": false
+      },
+      {
+        "text": "related to cabinet",
+        "correct": true
+      },
+      {
+        "text": "related to confronted",
+        "correct": false
+      },
+      {
+        "text": "related to confounded",
+        "correct": false
+      },
+      {
+        "text": "related to contentment",
+        "correct": false
+      }
+    ],
+    "explanation": "\"cabinet\" means related to cabinet."
+  },
+  {
+    "id": "eng-vocab-0142",
+    "type": "reverse_meaning",
+    "target_word": "cairn",
+    "prompt": {
+      "meaning": "related to cairn"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "briny",
+        "correct": false
+      },
+      {
+        "text": "courtly",
+        "correct": false
+      },
+      {
+        "text": "ceased",
+        "correct": false
+      },
+      {
+        "text": "cairn",
+        "correct": true
+      },
+      {
+        "text": "capering",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"cairn\"."
+  },
+  {
+    "id": "eng-vocab-0143",
+    "type": "fill_in_blank",
+    "target_word": "cantrips",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "convulsions",
+        "correct": false
+      },
+      {
+        "text": "bulwarks",
+        "correct": false
+      },
+      {
+        "text": "chafed",
+        "correct": false
+      },
+      {
+        "text": "briny",
+        "correct": false
+      },
+      {
+        "text": "cantrips",
+        "correct": true
+      }
+    ],
+    "explanation": "\"cantrips\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0144",
+    "type": "alternative_word",
+    "target_word": "capering",
+    "prompt": {
+      "sentence": "The teacher praised her capering approach to solving problems."
+    },
+    "question": "Which word could best replace \"capering\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "chamber",
+        "correct": false
+      },
+      {
+        "text": "capering",
+        "correct": true
+      },
+      {
+        "text": "ceased",
+        "correct": false
+      },
+      {
+        "text": "counsel",
+        "correct": false
+      },
+      {
+        "text": "contemptuously",
+        "correct": false
+      }
+    ],
+    "explanation": "\"capering\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0145",
+    "type": "part_of_speech",
+    "target_word": "carbuncle",
+    "prompt": {
+      "sentence": "We must carbuncle the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"carbuncle\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"carbuncle\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0146",
+    "type": "word_meaning",
+    "target_word": "carcass",
+    "prompt": {},
+    "question": "What does \"carcass\" mean?",
+    "choices": [
+      {
+        "text": "related to changeable",
+        "correct": false
+      },
+      {
+        "text": "showing strong enthusiasm",
+        "correct": false
+      },
+      {
+        "text": "fluent and persuasive in speaking",
+        "correct": false
+      },
+      {
+        "text": "related to corporal",
+        "correct": false
+      },
+      {
+        "text": "related to carcass",
+        "correct": true
+      }
+    ],
+    "explanation": "\"carcass\" means related to carcass."
+  },
+  {
+    "id": "eng-vocab-0147",
+    "type": "reverse_meaning",
+    "target_word": "carvings",
+    "prompt": {
+      "meaning": "related to carvings"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "corporal",
+        "correct": false
+      },
+      {
+        "text": "contrive",
+        "correct": false
+      },
+      {
+        "text": "changeable",
+        "correct": false
+      },
+      {
+        "text": "bulwark",
+        "correct": false
+      },
+      {
+        "text": "carvings",
+        "correct": true
+      }
+    ],
+    "explanation": "The meaning matches \"carvings\"."
+  },
+  {
+    "id": "eng-vocab-0148",
+    "type": "fill_in_blank",
+    "target_word": "cascades",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "coronation",
+        "correct": false
+      },
+      {
+        "text": "coronet",
+        "correct": false
+      },
+      {
+        "text": "changeable",
+        "correct": false
+      },
+      {
+        "text": "cascades",
+        "correct": true
+      },
+      {
+        "text": "beseech",
+        "correct": false
+      }
+    ],
+    "explanation": "\"cascades\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0149",
+    "type": "alternative_word",
+    "target_word": "cask",
+    "prompt": {
+      "sentence": "The teacher praised her cask approach to solving problems."
+    },
+    "question": "Which word could best replace \"cask\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "coracle",
+        "correct": false
+      },
+      {
+        "text": "crowned",
+        "correct": false
+      },
+      {
+        "text": "convulsions",
+        "correct": false
+      },
+      {
+        "text": "cask",
+        "correct": true
+      },
+      {
+        "text": "capering",
+        "correct": false
+      }
+    ],
+    "explanation": "\"cask\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0150",
+    "type": "part_of_speech",
+    "target_word": "cataract",
+    "prompt": {
+      "sentence": "We must cataract the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"cataract\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"cataract\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0151",
+    "type": "word_meaning",
+    "target_word": "ceased",
+    "prompt": {},
+    "question": "What does \"ceased\" mean?",
+    "choices": [
+      {
+        "text": "to express sorrow",
+        "correct": false
+      },
+      {
+        "text": "related to ceased",
+        "correct": true
+      },
+      {
+        "text": "related to movement",
+        "correct": false
+      },
+      {
+        "text": "focused on practical results",
+        "correct": false
+      },
+      {
+        "text": "related to carvings",
+        "correct": false
+      }
+    ],
+    "explanation": "\"ceased\" means related to ceased."
+  },
+  {
+    "id": "eng-vocab-0152",
+    "type": "reverse_meaning",
+    "target_word": "ceased",
+    "prompt": {
+      "meaning": "related to ceased"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "ceased",
+        "correct": true
+      },
+      {
+        "text": "creaked",
+        "correct": false
+      },
+      {
+        "text": "coronation",
+        "correct": false
+      },
+      {
+        "text": "contentment",
+        "correct": false
+      },
+      {
+        "text": "confounded",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"ceased\"."
+  },
+  {
+    "id": "eng-vocab-0153",
+    "type": "fill_in_blank",
+    "target_word": "chafed",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "contrive",
+        "correct": false
+      },
+      {
+        "text": "contemptuously",
+        "correct": false
+      },
+      {
+        "text": "briny",
+        "correct": false
+      },
+      {
+        "text": "chafed",
+        "correct": true
+      },
+      {
+        "text": "chasms",
+        "correct": false
+      }
+    ],
+    "explanation": "\"chafed\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0154",
+    "type": "alternative_word",
+    "target_word": "chamber",
+    "prompt": {
+      "sentence": "The teacher praised her chamber approach to solving problems."
+    },
+    "question": "Which word could best replace \"chamber\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "chamber",
+        "correct": true
+      },
+      {
+        "text": "confronted",
+        "correct": false
+      },
+      {
+        "text": "considerable",
+        "correct": false
+      },
+      {
+        "text": "boatswain",
+        "correct": false
+      },
+      {
+        "text": "bewitched",
+        "correct": false
+      }
+    ],
+    "explanation": "\"chamber\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0155",
+    "type": "part_of_speech",
+    "target_word": "changeable",
+    "prompt": {
+      "sentence": "We must changeable the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"changeable\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"changeable\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0156",
+    "type": "word_meaning",
+    "target_word": "chasms",
+    "prompt": {},
+    "question": "What does \"chasms\" mean?",
+    "choices": [
+      {
+        "text": "related to bulwark",
+        "correct": false
+      },
+      {
+        "text": "related to cascades",
+        "correct": false
+      },
+      {
+        "text": "related to convulsions",
+        "correct": false
+      },
+      {
+        "text": "related to chasms",
+        "correct": true
+      },
+      {
+        "text": "related to cask",
+        "correct": false
+      }
+    ],
+    "explanation": "\"chasms\" means related to chasms."
+  },
+  {
+    "id": "eng-vocab-0157",
+    "type": "reverse_meaning",
+    "target_word": "coarse",
+    "prompt": {
+      "meaning": "related to coarse"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "ceased",
+        "correct": false
+      },
+      {
+        "text": "confronted",
+        "correct": false
+      },
+      {
+        "text": "coarse",
+        "correct": true
+      },
+      {
+        "text": "cairn",
+        "correct": false
+      },
+      {
+        "text": "crowned",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"coarse\"."
+  },
+  {
+    "id": "eng-vocab-0158",
+    "type": "fill_in_blank",
+    "target_word": "confounded",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "burnt",
+        "correct": false
+      },
+      {
+        "text": "confounded",
+        "correct": true
+      },
+      {
+        "text": "ceased",
+        "correct": false
+      },
+      {
+        "text": "briny",
+        "correct": false
+      },
+      {
+        "text": "cataract",
+        "correct": false
+      }
+    ],
+    "explanation": "\"confounded\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0159",
+    "type": "alternative_word",
+    "target_word": "confronted",
+    "prompt": {
+      "sentence": "The teacher praised her confronted approach to solving problems."
+    },
+    "question": "Which word could best replace \"confronted\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "confronted",
+        "correct": true
+      },
+      {
+        "text": "crowned",
+        "correct": false
+      },
+      {
+        "text": "coronation",
+        "correct": false
+      },
+      {
+        "text": "chafed",
+        "correct": false
+      },
+      {
+        "text": "changeable",
+        "correct": false
+      }
+    ],
+    "explanation": "\"confronted\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0160",
+    "type": "part_of_speech",
+    "target_word": "considerable",
+    "prompt": {
+      "sentence": "We must considerable the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"considerable\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"considerable\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0161",
+    "type": "word_meaning",
+    "target_word": "constellations",
+    "prompt": {},
+    "question": "What does \"constellations\" mean?",
+    "choices": [
+      {
+        "text": "related to constellations",
+        "correct": true
+      },
+      {
+        "text": "to resist successfully",
+        "correct": false
+      },
+      {
+        "text": "related to confronted",
+        "correct": false
+      },
+      {
+        "text": "to make as effective as possible",
+        "correct": false
+      },
+      {
+        "text": "to collect into one work",
+        "correct": false
+      }
+    ],
+    "explanation": "\"constellations\" means related to constellations."
+  },
+  {
+    "id": "eng-vocab-0162",
+    "type": "reverse_meaning",
+    "target_word": "contemptuously",
+    "prompt": {
+      "meaning": "related to contemptuously"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "cairn",
+        "correct": false
+      },
+      {
+        "text": "contemptuously",
+        "correct": true
+      },
+      {
+        "text": "bracken",
+        "correct": false
+      },
+      {
+        "text": "cabinet",
+        "correct": false
+      },
+      {
+        "text": "contrive",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"contemptuously\"."
+  },
+  {
+    "id": "eng-vocab-0163",
+    "type": "fill_in_blank",
+    "target_word": "contentment",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "chafed",
+        "correct": false
+      },
+      {
+        "text": "corporal",
+        "correct": false
+      },
+      {
+        "text": "courteous",
+        "correct": false
+      },
+      {
+        "text": "brooding",
+        "correct": false
+      },
+      {
+        "text": "contentment",
+        "correct": true
+      }
+    ],
+    "explanation": "\"contentment\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0164",
+    "type": "alternative_word",
+    "target_word": "contingent",
+    "prompt": {
+      "sentence": "The teacher praised her contingent approach to solving problems."
+    },
+    "question": "Which word could best replace \"contingent\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "counsel",
+        "correct": false
+      },
+      {
+        "text": "cascades",
+        "correct": false
+      },
+      {
+        "text": "contingent",
+        "correct": true
+      },
+      {
+        "text": "briny",
+        "correct": false
+      },
+      {
+        "text": "bracken",
+        "correct": false
+      }
+    ],
+    "explanation": "\"contingent\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0165",
+    "type": "part_of_speech",
+    "target_word": "contrive",
+    "prompt": {
+      "sentence": "We must contrive the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"contrive\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"contrive\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0166",
+    "type": "word_meaning",
+    "target_word": "convulsions",
+    "prompt": {},
+    "question": "What does \"convulsions\" mean?",
+    "choices": [
+      {
+        "text": "to grow strongly",
+        "correct": false
+      },
+      {
+        "text": "related to cantrips",
+        "correct": false
+      },
+      {
+        "text": "related to convulsions",
+        "correct": true
+      },
+      {
+        "text": "related to bewitched",
+        "correct": false
+      },
+      {
+        "text": "careful with money",
+        "correct": false
+      }
+    ],
+    "explanation": "\"convulsions\" means related to convulsions."
+  },
+  {
+    "id": "eng-vocab-0167",
+    "type": "reverse_meaning",
+    "target_word": "coracle",
+    "prompt": {
+      "meaning": "related to coracle"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "ceased",
+        "correct": false
+      },
+      {
+        "text": "courtly",
+        "correct": false
+      },
+      {
+        "text": "coracle",
+        "correct": true
+      },
+      {
+        "text": "contrive",
+        "correct": false
+      },
+      {
+        "text": "bulgy",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"coracle\"."
+  },
+  {
+    "id": "eng-vocab-0168",
+    "type": "fill_in_blank",
+    "target_word": "coronation",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "cataract",
+        "correct": false
+      },
+      {
+        "text": "courteous",
+        "correct": false
+      },
+      {
+        "text": "coronation",
+        "correct": true
+      },
+      {
+        "text": "cantrips",
+        "correct": false
+      },
+      {
+        "text": "cairn",
+        "correct": false
+      }
+    ],
+    "explanation": "\"coronation\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0169",
+    "type": "alternative_word",
+    "target_word": "coronet",
+    "prompt": {
+      "sentence": "The teacher praised her coronet approach to solving problems."
+    },
+    "question": "Which word could best replace \"coronet\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "coronet",
+        "correct": true
+      },
+      {
+        "text": "bulwark",
+        "correct": false
+      },
+      {
+        "text": "coracle",
+        "correct": false
+      },
+      {
+        "text": "boatswain",
+        "correct": false
+      },
+      {
+        "text": "contingent",
+        "correct": false
+      }
+    ],
+    "explanation": "\"coronet\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0170",
+    "type": "part_of_speech",
+    "target_word": "corporal",
+    "prompt": {
+      "sentence": "We must corporal the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"corporal\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"corporal\" functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0171",
+    "type": "word_meaning",
+    "target_word": "counsel",
+    "prompt": {},
+    "question": "What does \"counsel\" mean?",
+    "choices": [
+      {
+        "text": "to support or strengthen",
+        "correct": false
+      },
+      {
+        "text": "related to counsel",
+        "correct": true
+      },
+      {
+        "text": "related to coracle",
+        "correct": false
+      },
+      {
+        "text": "honest and direct",
+        "correct": false
+      },
+      {
+        "text": "an idea that can be tested",
+        "correct": false
+      }
+    ],
+    "explanation": "\"counsel\" means related to counsel."
+  },
+  {
+    "id": "eng-vocab-0172",
+    "type": "reverse_meaning",
+    "target_word": "courteous",
+    "prompt": {
+      "meaning": "related to courteous"
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "capering",
+        "correct": false
+      },
+      {
+        "text": "courteous",
+        "correct": true
+      },
+      {
+        "text": "beseech",
+        "correct": false
+      },
+      {
+        "text": "convulsions",
+        "correct": false
+      },
+      {
+        "text": "ceased",
+        "correct": false
+      }
+    ],
+    "explanation": "The meaning matches \"courteous\"."
+  },
+  {
+    "id": "eng-vocab-0173",
+    "type": "fill_in_blank",
+    "target_word": "courtly",
+    "prompt": {
+      "sentence": "The students tried to ______ during the activity."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "cairn",
+        "correct": false
+      },
+      {
+        "text": "cantrips",
+        "correct": false
+      },
+      {
+        "text": "capering",
+        "correct": false
+      },
+      {
+        "text": "coronet",
+        "correct": false
+      },
+      {
+        "text": "courtly",
+        "correct": true
+      }
+    ],
+    "explanation": "\"courtly\" best fits the sentence context."
+  },
+  {
+    "id": "eng-vocab-0174",
+    "type": "alternative_word",
+    "target_word": "creaked",
+    "prompt": {
+      "sentence": "The teacher praised her creaked approach to solving problems."
+    },
+    "question": "Which word could best replace \"creaked\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "constellations",
+        "correct": false
+      },
+      {
+        "text": "chasms",
+        "correct": false
+      },
+      {
+        "text": "contingent",
+        "correct": false
+      },
+      {
+        "text": "creaked",
+        "correct": true
+      },
+      {
+        "text": "ceased",
+        "correct": false
+      }
+    ],
+    "explanation": "\"creaked\" is the closest synonym in this context."
+  },
+  {
+    "id": "eng-vocab-0175",
+    "type": "part_of_speech",
+    "target_word": "crowned",
+    "prompt": {
+      "sentence": "We must crowned the details before publishing the report."
+    },
+    "question": "In this sentence, what part of speech is \"crowned\"?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "In this sentence, \"crowned\" functions as a verb."
   }
 ]
