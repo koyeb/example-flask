@@ -84,6 +84,14 @@ def find_best_tariff_window(duration_hours, api_key, available_slots=None):
                 "end_time": consecutive_slots[-1]["valid_to"],
                 "total_tariff": total_tariff,
                 "average_tariff": total_tariff / required_slots,
+                "slots": [
+                    {
+                        "start_time": slot["valid_from"],
+                        "end_time": slot["valid_to"],
+                        "tariff": slot["tariff"],
+                    }
+                    for slot in consecutive_slots
+                ],
             }
             print(
                 "BEST TIMESLOT FOUND at "

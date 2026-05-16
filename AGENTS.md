@@ -5,6 +5,12 @@
 
 - This rule applies to all future merges into `main`.
 
+## Octopus Endpoint Notes
+
+- The `/octopus` endpoint returns an HTML page (not JSON).
+- It shows the best (cheapest) continuous upcoming usage window for each supported appliance duration.
+- For each suggested window, the UI includes a collapsed-by-default expandable section with a mini table of half-hour slots and their tariff values in `p/kWh`.
+
 ## Study Question Storage
 
 - Store multiple choice study questions under `static/<Subject>/<Category>/questions.json`.
