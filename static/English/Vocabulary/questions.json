@@ -1736,5 +1736,321 @@
     ],
     "explanation": "Indignant describes how Zara looked, so it is an adjective.",
     "target_word": "indignant"
+  },
+  {
+    "id": "eng-vocab-0056",
+    "type": "word_meaning",
+    "prompt": {},
+    "question": "What does \"grievous\" mean?",
+    "choices": [
+      {
+        "text": "very serious or severe",
+        "correct": true
+      },
+      {
+        "text": "full of bright colors",
+        "correct": false
+      },
+      {
+        "text": "easy to complete",
+        "correct": false
+      },
+      {
+        "text": "quiet and sleepy",
+        "correct": false
+      },
+      {
+        "text": "slightly amusing",
+        "correct": false
+      }
+    ],
+    "explanation": "Grievous describes something very serious, harmful, or severe.",
+    "target_word": "grievous"
+  },
+  {
+    "id": "eng-vocab-0057",
+    "type": "reverse_meaning",
+    "prompt": {
+      "meaning": "Showing confidence in a proud, bold way that can seem arrogant."
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "irresolute",
+        "correct": false
+      },
+      {
+        "text": "courteous",
+        "correct": false
+      },
+      {
+        "text": "swagger",
+        "correct": true
+      },
+      {
+        "text": "feeble",
+        "correct": false
+      },
+      {
+        "text": "solemn",
+        "correct": false
+      }
+    ],
+    "explanation": "Swagger means to act or walk with bold, proud confidence, often in a showy way.",
+    "target_word": "swagger"
+  },
+  {
+    "id": "eng-vocab-0058",
+    "type": "fill_in_blank",
+    "prompt": {
+      "sentence": "With dark clouds ______ over the field, the match was stopped early."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "looming",
+        "correct": true
+      },
+      {
+        "text": "trickled",
+        "correct": false
+      },
+      {
+        "text": "dozed",
+        "correct": false
+      },
+      {
+        "text": "gilded",
+        "correct": false
+      },
+      {
+        "text": "mumbled",
+        "correct": false
+      }
+    ],
+    "explanation": "Looming fits because clouds can loom overhead when they appear large and threatening.",
+    "target_word": "looming"
+  },
+  {
+    "id": "eng-vocab-0059",
+    "type": "alternative_word",
+    "prompt": {
+      "sentence": "The coach gave prudent advice before the team made their final choice."
+    },
+    "question": "Which word could best replace \"prudent\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "careful",
+        "correct": true
+      },
+      {
+        "text": "reckless",
+        "correct": false
+      },
+      {
+        "text": "noisy",
+        "correct": false
+      },
+      {
+        "text": "hasty",
+        "correct": false
+      },
+      {
+        "text": "careless",
+        "correct": false
+      }
+    ],
+    "explanation": "Prudent means careful and sensible, especially when making decisions.",
+    "target_word": "prudent"
+  },
+  {
+    "id": "eng-vocab-0060",
+    "type": "part_of_speech",
+    "prompt": {
+      "sentence": "The scouts bivouacked beside the river before sunrise."
+    },
+    "question": "In this sentence, what part of speech is \"bivouacked\"?",
+    "choices": [
+      {
+        "text": "Noun",
+        "correct": false
+      },
+      {
+        "text": "Verb",
+        "correct": true
+      },
+      {
+        "text": "Adjective",
+        "correct": false
+      },
+      {
+        "text": "Adverb",
+        "correct": false
+      },
+      {
+        "text": "Preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "Bivouacked shows the action the scouts performed, so it is a verb.",
+    "target_word": "bivouacked"
+  },
+  {
+    "id": "eng-vocab-0061",
+    "type": "word_meaning",
+    "prompt": {},
+    "question": "What does \"irresolute\" mean?",
+    "choices": [
+      {
+        "text": "unable to decide firmly",
+        "correct": true
+      },
+      {
+        "text": "full of excitement",
+        "correct": false
+      },
+      {
+        "text": "very well organized",
+        "correct": false
+      },
+      {
+        "text": "extremely noisy",
+        "correct": false
+      },
+      {
+        "text": "friendly and open",
+        "correct": false
+      }
+    ],
+    "explanation": "Irresolute means unsure or not firm in making decisions.",
+    "target_word": "irresolute"
+  },
+  {
+    "id": "eng-vocab-0062",
+    "type": "reverse_meaning",
+    "prompt": {
+      "meaning": "A current of cool air moving through a room."
+    },
+    "question": "Which word matches the meaning given?",
+    "choices": [
+      {
+        "text": "draughts",
+        "correct": true
+      },
+      {
+        "text": "tidings",
+        "correct": false
+      },
+      {
+        "text": "stature",
+        "correct": false
+      },
+      {
+        "text": "prow",
+        "correct": false
+      },
+      {
+        "text": "coronet",
+        "correct": false
+      }
+    ],
+    "explanation": "Draughts means currents of cool air, often felt indoors.",
+    "target_word": "draughts"
+  },
+  {
+    "id": "eng-vocab-0063",
+    "type": "fill_in_blank",
+    "prompt": {
+      "sentence": "After hearing the good news, she smiled ______ and thanked everyone."
+    },
+    "question": "Which word best completes the sentence?",
+    "choices": [
+      {
+        "text": "sternly",
+        "correct": false
+      },
+      {
+        "text": "heartily",
+        "correct": true
+      },
+      {
+        "text": "grimly",
+        "correct": false
+      },
+      {
+        "text": "stealthily",
+        "correct": false
+      },
+      {
+        "text": "languidly",
+        "correct": false
+      }
+    ],
+    "explanation": "Heartily means warmly and with strong feeling, which matches a joyful response.",
+    "target_word": "heartily"
+  },
+  {
+    "id": "eng-vocab-0064",
+    "type": "alternative_word",
+    "prompt": {
+      "sentence": "The abandoned house looked dingy even in the afternoon light."
+    },
+    "question": "Which word could best replace \"dingy\" without changing the meaning?",
+    "choices": [
+      {
+        "text": "bright",
+        "correct": false
+      },
+      {
+        "text": "elegant",
+        "correct": false
+      },
+      {
+        "text": "gloomy",
+        "correct": true
+      },
+      {
+        "text": "spacious",
+        "correct": false
+      },
+      {
+        "text": "fresh",
+        "correct": false
+      }
+    ],
+    "explanation": "Dingy means dark, dull, and dirty-looking, so gloomy is the closest match.",
+    "target_word": "dingy"
+  },
+  {
+    "id": "eng-vocab-0065",
+    "type": "part_of_speech",
+    "prompt": {
+      "sentence": "The oarsman checked behind him and saw the island was astern."
+    },
+    "question": "In this sentence, what part of speech is \"astern\"?",
+    "choices": [
+      {
+        "text": "Conjunction",
+        "correct": false
+      },
+      {
+        "text": "Adjective",
+        "correct": false
+      },
+      {
+        "text": "Verb",
+        "correct": false
+      },
+      {
+        "text": "Preposition",
+        "correct": false
+      },
+      {
+        "text": "Adverb",
+        "correct": true
+      }
+    ],
+    "explanation": "Astern describes position (behind the boat) in relation to motion/location, functioning as an adverb here.",
+    "target_word": "astern"
   }
 ]
