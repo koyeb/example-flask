@@ -5,6 +5,15 @@
 
 - This rule applies to all future merges into `main`.
 
+
+## Destructive Edit Safeguard
+
+- If a request would delete or overwrite a large portion of a dataset file (for example, removing a broad ID range like "51 to end"), do not execute immediately.
+- First, restate the exact impact with concrete counts or ranges (for example, "this will delete questions eng-vocab-0051 through eng-vocab-0175").
+- Ask for explicit confirmation before applying the destructive change, unless the user has already confirmed after seeing that impact summary.
+- When the user goal is quality cleanup, prefer targeted removal of only the flagged or invalid items instead of bulk truncation.
+- After destructive edits, include a short post-change summary of what was removed and what remains.
+
 ## Octopus Endpoint Notes
 
 - The `/octopus` endpoint returns an HTML page (not JSON).
