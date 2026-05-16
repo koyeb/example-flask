@@ -10,6 +10,7 @@
         window.vocabAllowedCounts = {{ allowed_counts | tojson }};
         window.vocabSelectedCount = {{ selected_count | tojson }};
         window.vocabPageError = {{ page_error | tojson }};
+        window.vocabAllowedTypes = {{ allowed_types | tojson }};
     </script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
 </head>
@@ -35,6 +36,13 @@
                     value="{{ allowed_counts.index(selected_count) }}"
                     aria-label="Number of questions"
                 >
+                <label class="vocab-type-control" for="vocab-types">Question types
+                    <select id="vocab-types" class="vocab-type-select" multiple aria-label="Question types for regeneration">
+                        {% for question_type in allowed_types %}
+                        <option value="{{ question_type }}" selected>{{ question_type.replace("_", " ").title() }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
                 <button type="button" class="vocab-button vocab-button-secondary" id="vocab-regenerate">Regenerate</button>
             </div>
         </section>

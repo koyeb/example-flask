@@ -20,15 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const regenerateButton = document.getElementById('vocab-regenerate');
     const scoreElement = document.getElementById('vocab-score');
     const submitStatus = document.getElementById('vocab-submit-status');
+    const submitButton = document.getElementById('vocab-submit');
+    const typeSelect = document.getElementById('vocab-types');
 
-    if (!quiz || !questionList || !countInput || !countLabel || !regenerateButton || !scoreElement || !submitStatus) {
+    if (!quiz || !questionList || !countInput || !countLabel || !regenerateButton || !scoreElement || !submitStatus || !submitButton || !typeSelect) {
         return;
     }
 
     const allowedCounts = window.vocabAllowedCounts || [5, 10, 15, 20, 25, 30];
+    const allowedTypes = window.vocabAllowedTypes || [];
     let questions = window.vocabInitialQuestions || [];
 
     const getSelectedCount = () => allowedCounts[Number(countInput.value)] || 10;
+
+    const getSelectedTypes = () => Array.from(typeSelect.selectedOptions).map((option) => option.value);
+
+    const selectAllTypes = () => {
+        Array.from(typeSelect.options).forEach((option) => {
+            option.selected = true;
+        });
+    };
 
     // Submit feedback and score use separate labels so either can update alone.
     const setStatus = (message, tone = '') => {
@@ -126,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isCorrect = selectedChoice && selectedChoice.dataset.correct === 'true';
         const wasRetryCorrect = questionElement.classList.contains('is-retry-correct');
 
-        questionElement.classList.remove('is-correct', 'is-wrong', 'is-retry-correct');
+        questionElement.classList.remove('is-correct', 'is-wrong', 'is-retry-correct', 'is-retry-still-wrong');
 
         if (isCorrect) {
             if (mode === 'retry' || wasRetryCorrect) {
@@ -143,6 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         questionElement.classList.add('is-wrong');
         result.textContent = selectedChoice ? 'Try again' : 'No answer selected';
+
+        if (mode === 'retry' && selectedChoice) {
+            questionElement.classList.remove('is-retry-still-wrong');
+            void questionElement.offsetWidth;
+            questionElement.classList.add('is-retry-still-wrong');
+        }
         retryButton.hidden = false;
         return false;
     };
@@ -186,11 +203,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     regenerateButton.addEventListener('click', async () => {
         const count = getSelectedCount();
+        let selectedTypes = getSelectedTypes();
+
+        if (!selectedTypes.length) {
+            selectAllTypes();
+            selectedTypes = [...allowedTypes];
+        }
+
         regenerateButton.disabled = true;
+        submitButton.disabled = false;
         setStatus('Loading new questions...', 'pending');
 
         try {
-            const response = await fetch(`/vocab/questions?count=${count}`);
+            const typeQuery = encodeURIComponent(selectedTypes.join(','));
+            const response = await fetch(`/vocab/questions?count=${count}&types=${typeQuery}`);
             const data = await response.json();
 
             if (!response.ok) {
@@ -243,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setScore(correctCount, questionElements.length);
         sendFeedback(missedTargetWords);
+        submitButton.disabled = true;
     });
 
     renderQuestions();

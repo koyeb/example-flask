@@ -19,6 +19,13 @@ VOCAB_QUESTION_PATH = os.path.join(
     'questions.json',
 )
 VOCAB_ALLOWED_COUNTS = [5, 10, 15, 20, 25, 30]
+VOCAB_ALLOWED_TYPES = [
+    'word_meaning',
+    'reverse_meaning',
+    'fill_in_blank',
+    'alternative_word',
+    'part_of_speech',
+]
 
 
 @app.route('/')
@@ -140,6 +147,22 @@ def _get_vocab_count(default=10):
     return count
 
 
+def _get_vocab_types():
+    """Return supported question types parsed from a comma-separated query list."""
+    raw_types = request.args.get('types', default='', type=str)
+
+    if not raw_types:
+        return list(VOCAB_ALLOWED_TYPES)
+
+    requested_types = [question_type.strip() for question_type in raw_types.split(',') if question_type.strip()]
+    filtered_types = [question_type for question_type in requested_types if question_type in VOCAB_ALLOWED_TYPES]
+
+    if not filtered_types:
+        return list(VOCAB_ALLOWED_TYPES)
+
+    return filtered_types
+
+
 def _load_vocab_questions():
     """Load the vocabulary question bank and ensure it keeps the expected shape."""
     with open(VOCAB_QUESTION_PATH, encoding='utf-8') as question_file:
@@ -151,10 +174,14 @@ def _load_vocab_questions():
     return questions
 
 
-def _sample_vocab_questions(count):
+def _sample_vocab_questions(count, selected_types=None):
     """Pick random questions and shuffle each choice list before rendering."""
     questions = _load_vocab_questions()
-    selected_questions = random.sample(questions, min(count, len(questions)))
+
+    if selected_types:
+        questions = [question for question in questions if question.get('type') in selected_types]
+
+    selected_questions = random.sample(questions, min(count, len(questions))) if questions else []
 
     sampled_questions = []
     for question in selected_questions:
@@ -172,14 +199,17 @@ def vocab():
     """Render the vocabulary quiz page with an initial random question set."""
     count = _get_vocab_count()
 
+    selected_types = _get_vocab_types()
+
     try:
-        questions = _sample_vocab_questions(count)
+        questions = _sample_vocab_questions(count, selected_types)
     except (OSError, json.JSONDecodeError, ValueError) as error:
         return render_template(
             'vocab.html',
             questions=[],
             selected_count=count,
             allowed_counts=VOCAB_ALLOWED_COUNTS,
+            allowed_types=VOCAB_ALLOWED_TYPES,
             page_error=str(error),
         ), 500
 
@@ -188,6 +218,7 @@ def vocab():
         questions=questions,
         selected_count=count,
         allowed_counts=VOCAB_ALLOWED_COUNTS,
+        allowed_types=VOCAB_ALLOWED_TYPES,
         page_error=None,
     )
 
@@ -197,12 +228,14 @@ def vocab_questions():
     """Return a fresh question set for no-refresh quiz regeneration."""
     count = _get_vocab_count()
 
+    selected_types = _get_vocab_types()
+
     try:
-        questions = _sample_vocab_questions(count)
+        questions = _sample_vocab_questions(count, selected_types)
     except (OSError, json.JSONDecodeError, ValueError) as error:
         return jsonify(error=str(error)), 500
 
-    return jsonify(questions=questions, count=len(questions))
+    return jsonify(questions=questions, count=len(questions), selected_types=selected_types)
 
 
 @app.route('/vocab/feedback', methods=['POST'])

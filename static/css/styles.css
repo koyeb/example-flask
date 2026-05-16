@@ -408,6 +408,30 @@ footer {
     padding: 0.4rem 0.75rem;
 }
 
+.vocab-type-control {
+    display: grid;
+    gap: 0.3rem;
+    color: #5a6475;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.vocab-type-select {
+    min-width: 210px;
+    min-height: 2.5rem;
+    padding: 0.35rem;
+    border: 1px solid #c6d1de;
+    border-radius: 7px;
+    font: inherit;
+    color: #172033;
+    text-transform: none;
+    letter-spacing: 0;
+    background: #fff;
+}
+
+
 .vocab-alert,
 .vocab-empty {
     margin: 1rem 0;
@@ -444,6 +468,19 @@ footer {
     border-color: #dfb15b;
     background: #fff9ed;
 }
+
+.vocab-question.is-retry-still-wrong {
+    animation: vocab-shake 0.28s ease-in-out;
+}
+
+@keyframes vocab-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
 
 .vocab-question-head {
     display: flex;
