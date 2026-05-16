@@ -11,6 +11,25 @@
 - It shows the best (cheapest) continuous upcoming usage window for each supported appliance duration.
 - For each suggested window, the UI includes a collapsed-by-default expandable section with a mini table of half-hour slots and their tariff values in `p/kWh`.
 
+## Vocabulary Endpoint Notes
+
+- The `/vocab` endpoint returns an HTML practice page for `static/English/Vocabulary/questions.json`.
+- By default, `/vocab` shows 10 randomly sampled questions. Supported quiz sizes are `5`, `10`, `15`, `20`, `25`, and `30`.
+- If the requested quiz size is larger than the available question bank, show all available questions.
+- The server shuffles the selected question set and shuffles each question's choices before sending them to the page.
+- It is acceptable for the HTML document to carry answer metadata such as `correct` and `target_word`, but the page must not visibly display correct answers before marking.
+- The main `Submit` button marks the quiz in the browser. Unanswered questions count as wrong.
+- On submit, wrong questions should not reveal the correct answer. They should remain answerable and show a per-question `Retry` button until the student selects the correct option.
+- Retry marking is client-side only and does not send feedback to the server.
+- On submit, send the `target_word` values for questions missed on the first marking attempt to `POST /vocab/feedback` using this payload shape:
+  ```json
+  {
+    "missed_target_words": ["example"]
+  }
+  ```
+- Marking should not wait for feedback to complete. The page should show feedback status beside the submit button.
+- The `Regenerate` control should request a fresh random set without a full page reload when practical, using `GET /vocab/questions?count=<count>`.
+
 ## Study Question Storage
 
 - Store multiple choice study questions under `static/<Subject>/<Category>/questions.json`.

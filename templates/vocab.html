@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Practice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        window.vocabInitialQuestions = {{ questions | tojson }};
+        window.vocabAllowedCounts = {{ allowed_counts | tojson }};
+        window.vocabSelectedCount = {{ selected_count | tojson }};
+        window.vocabPageError = {{ page_error | tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</head>
+<body class="vocab-page">
+    <main class="vocab-layout">
+        <section class="vocab-header">
+            <div>
+                <p class="vocab-kicker">English Vocabulary</p>
+                <h1>Practice quiz</h1>
+            </div>
+            <div class="vocab-controls" aria-label="Quiz controls">
+                <label class="vocab-count-control" for="vocab-count">
+                    <span>Questions</span>
+                    <strong id="vocab-count-label">{{ selected_count }}</strong>
+                </label>
+                <input
+                    id="vocab-count"
+                    class="vocab-range"
+                    type="range"
+                    min="0"
+                    max="{{ allowed_counts|length - 1 }}"
+                    step="1"
+                    value="{{ allowed_counts.index(selected_count) }}"
+                    aria-label="Number of questions"
+                >
+                <button type="button" class="vocab-button vocab-button-secondary" id="vocab-regenerate">Regenerate</button>
+            </div>
+        </section>
+
+        {% if page_error %}
+        <section class="vocab-alert" role="alert">
+            {{ page_error }}
+        </section>
+        {% endif %}
+
+        <form class="vocab-quiz" id="vocab-quiz" novalidate>
+            <div class="vocab-question-list" id="vocab-question-list"></div>
+            <div class="vocab-submit-row">
+                <button type="submit" class="vocab-button" id="vocab-submit">Submit</button>
+                <span class="vocab-submit-status" id="vocab-submit-status" role="status" aria-live="polite"></span>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
