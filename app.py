@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, abort, send_from_directory, render_template
+from flask import Flask, jsonify, request, abort, send_from_directory, render_template, session
 from tariff_utils import calculate_start_time, get_best_tariff_windows
 import os
 import json
@@ -8,6 +8,7 @@ import random
 api_key = os.getenv("OCTOPUS_KEY")
 
 app = Flask(__name__)
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'dev-secret-key')
 
 # Vocabulary quiz settings are kept here because both the HTML page and
 # regenerate endpoint need the same source file and allowed count values.
@@ -26,6 +27,8 @@ VOCAB_ALLOWED_TYPES = [
     'alternative_word',
     'part_of_speech',
 ]
+VOCAB_RECENT_QUESTION_SESSION_KEY = 'recent_vocab_question_ids'
+VOCAB_RECENT_QUESTION_LIMIT = 40
 
 
 @app.route('/')
@@ -175,13 +178,42 @@ def _load_vocab_questions():
 
 
 def _sample_vocab_questions(count, selected_types=None):
-    """Pick random questions and shuffle each choice list before rendering."""
+    """Pick random questions, preferring IDs the current user has not just seen."""
     questions = _load_vocab_questions()
 
     if selected_types:
         questions = [question for question in questions if question.get('type') in selected_types]
 
-    selected_questions = random.sample(questions, min(count, len(questions))) if questions else []
+    sample_size = min(count, len(questions))
+    recent_question_ids = session.get(VOCAB_RECENT_QUESTION_SESSION_KEY, [])
+    recent_question_id_set = set(recent_question_ids)
+    fresh_questions = [
+        question for question in questions
+        if question.get('id') not in recent_question_id_set
+    ]
+
+    if sample_size and len(fresh_questions) >= sample_size:
+        selected_questions = random.sample(fresh_questions, sample_size)
+    elif sample_size:
+        selected_questions = list(fresh_questions)
+        selected_question_ids = {
+            question.get('id') for question in selected_questions
+            if question.get('id')
+        }
+        refill_questions = [
+            question for question in questions
+            if question.get('id') not in selected_question_ids
+        ]
+        remaining_count = sample_size - len(selected_questions)
+        selected_questions.extend(random.sample(refill_questions, remaining_count))
+        random.shuffle(selected_questions)
+    else:
+        selected_questions = []
+
+    selected_ids = [question.get('id') for question in selected_questions if question.get('id')]
+    session[VOCAB_RECENT_QUESTION_SESSION_KEY] = (
+        recent_question_ids + selected_ids
+    )[-VOCAB_RECENT_QUESTION_LIMIT:]
 
     sampled_questions = []
     for question in selected_questions:
