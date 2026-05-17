@@ -1894,5 +1894,637 @@
       }
     ],
     "explanation": "Looming modifies clouds, so it is acting as an adjective in this sentence."
+  },
+  {
+    "id": "eng-vocab-0061",
+    "type": "word_meaning",
+    "target_word": "abundant",
+    "prompt": {},
+    "question": "What is the best meaning for the word 'abundant'?",
+    "choices": [
+      {
+        "text": "Moving with high speed",
+        "correct": false
+      },
+      {
+        "text": "Creating a loud noise",
+        "correct": false
+      },
+      {
+        "text": "Present in great quantity",
+        "correct": true
+      },
+      {
+        "text": "Hard to find or rare",
+        "correct": false
+      },
+      {
+        "text": "Acting with great care",
+        "correct": false
+      }
+    ],
+    "explanation": "Great job! 'Abundant' means having plenty of something. If you have an abundant supply of snacks, you have a lot of them!"
+  },
+  {
+    "id": "eng-vocab-0062",
+    "type": "word_meaning",
+    "target_word": "inevitable",
+    "prompt": {},
+    "question": "Choose the correct definition for the word 'inevitable'.",
+    "choices": [
+      {
+        "text": "Certain to happen and unable to be avoided",
+        "correct": true
+      },
+      {
+        "text": "Completely invisible to the human eye",
+        "correct": false
+      },
+      {
+        "text": "Happening by random chance or luck",
+        "correct": false
+      },
+      {
+        "text": "Easily broken or damaged when dropped",
+        "correct": false
+      },
+      {
+        "text": "Requiring a lot of physical energy",
+        "correct": false
+      }
+    ],
+    "explanation": "Well done! 'Inevitable' means something is bound to happen and cannot be prevented, like the sun rising in the morning."
+  },
+  {
+    "id": "eng-vocab-0063",
+    "type": "word_meaning",
+    "target_word": "reluctant",
+    "prompt": {},
+    "question": "What does it mean if someone is 'reluctant'?",
+    "choices": [
+      {
+        "text": "They are famous for their musical talent",
+        "correct": false
+      },
+      {
+        "text": "They are very excited and eager to start",
+        "correct": false
+      },
+      {
+        "text": "They are highly skilled at solving problems",
+        "correct": false
+      },
+      {
+        "text": "They are unwilling and hesitant to do something",
+        "correct": true
+      },
+      {
+        "text": "They are known for being extremely polite",
+        "correct": false
+      }
+    ],
+    "explanation": "Spot on! Being 'reluctant' means you are hesitant or unwilling to do something, perhaps because you are nervous or unsure."
+  },
+  {
+    "id": "eng-vocab-0064",
+    "type": "word_meaning",
+    "target_word": "precise",
+    "prompt": {},
+    "question": "Which option best describes the meaning of 'precise'?",
+    "choices": [
+      {
+        "text": "Messy, disorganized, and thrown together",
+        "correct": false
+      },
+      {
+        "text": "Exact, accurate, and careful about details",
+        "correct": true
+      },
+      {
+        "text": "Sweet, sugary, and delicious to eat",
+        "correct": false
+      },
+      {
+        "text": "Very large, heavy, and difficult to lift",
+        "correct": false
+      },
+      {
+        "text": "Dark, cloudy, and hard to see through",
+        "correct": false
+      }
+    ],
+    "explanation": "Correct! 'Precise' means being exact and highly accurate, with no room for error."
+  },
+  {
+    "id": "eng-vocab-0065",
+    "type": "reverse_meaning",
+    "target_word": "ambiguous",
+    "prompt": {
+      "meaning": "Open to more than one interpretation; having a double meaning or being unclear."
+    },
+    "question": "Which word best matches this definition?",
+    "choices": [
+      {
+        "text": "obvious",
+        "correct": false
+      },
+      {
+        "text": "colorful",
+        "correct": false
+      },
+      {
+        "text": "harmless",
+        "correct": false
+      },
+      {
+        "text": "frequent",
+        "correct": false
+      },
+      {
+        "text": "ambiguous",
+        "correct": true
+      }
+    ],
+    "explanation": "Awesome! 'Ambiguous' means something is unclear or has more than one possible meaning, which can sometimes lead to confusion."
+  },
+  {
+    "id": "eng-vocab-0066",
+    "type": "reverse_meaning",
+    "target_word": "versatile",
+    "prompt": {
+      "meaning": "Able to adapt or be adapted to many different functions or activities."
+    },
+    "question": "What word is being described here?",
+    "choices": [
+      {
+        "text": "fragile",
+        "correct": false
+      },
+      {
+        "text": "stubborn",
+        "correct": false
+      },
+      {
+        "text": "versatile",
+        "correct": true
+      },
+      {
+        "text": "ignorant",
+        "correct": false
+      },
+      {
+        "text": "wealthy",
+        "correct": false
+      }
+    ],
+    "explanation": "Nice work! A 'versatile' person or tool can easily switch between different tasks and handle them well."
+  },
+  {
+    "id": "eng-vocab-0067",
+    "type": "reverse_meaning",
+    "target_word": "innovate",
+    "prompt": {
+      "meaning": "To make changes in something established, especially by introducing new methods, ideas, or products."
+    },
+    "question": "Which word correctly matches this definition?",
+    "choices": [
+      {
+        "text": "innovate",
+        "correct": true
+      },
+      {
+        "text": "destroy",
+        "correct": false
+      },
+      {
+        "text": "imitate",
+        "correct": false
+      },
+      {
+        "text": "hesitate",
+        "correct": false
+      },
+      {
+        "text": "decorate",
+        "correct": false
+      }
+    ],
+    "explanation": "Exactly! To 'innovate' means to invent or come up with fresh, creative ways of doing things."
+  },
+  {
+    "id": "eng-vocab-0068",
+    "type": "reverse_meaning",
+    "target_word": "sequence",
+    "prompt": {
+      "meaning": "A particular order in which related events, movements, or things follow each other."
+    },
+    "question": "Identify the word that fits this definition.",
+    "choices": [
+      {
+        "text": "disaster",
+        "correct": false
+      },
+      {
+        "text": "sequence",
+        "correct": true
+      },
+      {
+        "text": "fraction",
+        "correct": false
+      },
+      {
+        "text": "illusion",
+        "correct": false
+      },
+      {
+        "text": "argument",
+        "correct": false
+      }
+    ],
+    "explanation": "Brilliant! A 'sequence' is the specific order in which things happen or are arranged, like the numbers 1, 2, 3, 4."
+  },
+  {
+    "id": "eng-vocab-0069",
+    "type": "fill_in_blank",
+    "target_word": "evaluate",
+    "prompt": {
+      "sentence": "The teacher will ____ your final project based on your creativity and effort."
+    },
+    "question": "Which word correctly fills in the blank?",
+    "choices": [
+      {
+        "text": "confuse",
+        "correct": false
+      },
+      {
+        "text": "abandon",
+        "correct": false
+      },
+      {
+        "text": "pretend",
+        "correct": false
+      },
+      {
+        "text": "evaluate",
+        "correct": true
+      },
+      {
+        "text": "swallow",
+        "correct": false
+      }
+    ],
+    "explanation": "Perfect! To 'evaluate' is to judge or determine the value or quality of something. Teachers evaluate your work to see how well you did."
+  },
+  {
+    "id": "eng-vocab-0070",
+    "type": "fill_in_blank",
+    "target_word": "contrast",
+    "prompt": {
+      "sentence": "In her essay, Sarah tried to ____ the two different characters to show how opposite they were."
+    },
+    "question": "Select the best word to complete the sentence.",
+    "choices": [
+      {
+        "text": "combine",
+        "correct": false
+      },
+      {
+        "text": "forgive",
+        "correct": false
+      },
+      {
+        "text": "capture",
+        "correct": false
+      },
+      {
+        "text": "promise",
+        "correct": false
+      },
+      {
+        "text": "contrast",
+        "correct": true
+      }
+    ],
+    "explanation": "Spot on! To 'contrast' means to compare two things in order to show their differences."
+  },
+  {
+    "id": "eng-vocab-0071",
+    "type": "fill_in_blank",
+    "target_word": "chronological",
+    "prompt": {
+      "sentence": "The history textbook presents the events of the war in ____ order, starting from the first battle to the last."
+    },
+    "question": "Which word correctly fits the blank?",
+    "choices": [
+      {
+        "text": "alphabetical",
+        "correct": false
+      },
+      {
+        "text": "chronological",
+        "correct": true
+      },
+      {
+        "text": "ridiculous",
+        "correct": false
+      },
+      {
+        "text": "mysterious",
+        "correct": false
+      },
+      {
+        "text": "electrical",
+        "correct": false
+      }
+    ],
+    "explanation": "Excellent! 'Chronological' means arranging events in the exact order they occurred in time."
+  },
+  {
+    "id": "eng-vocab-0072",
+    "type": "fill_in_blank",
+    "target_word": "significant",
+    "prompt": {
+      "sentence": "Winning the regional championship was a very ____ achievement for the young team."
+    },
+    "question": "Choose the word that best completes the sentence.",
+    "choices": [
+      {
+        "text": "invisible",
+        "correct": false
+      },
+      {
+        "text": "temporary",
+        "correct": false
+      },
+      {
+        "text": "significant",
+        "correct": true
+      },
+      {
+        "text": "poisonous",
+        "correct": false
+      },
+      {
+        "text": "forgetful",
+        "correct": false
+      }
+    ],
+    "explanation": "Well done! 'Significant' means something is important, meaningful, or large enough to be noticed."
+  },
+  {
+    "id": "eng-vocab-0073",
+    "type": "alternative_word",
+    "target_word": "perspective",
+    "prompt": {
+      "sentence": "From the perspective of a bird flying high above, the sprawling city looks like a tiny, intricate maze."
+    },
+    "question": "Which word could replace 'perspective' without significantly changing the sentence's meaning?",
+    "choices": [
+      {
+        "text": "viewpoint",
+        "correct": true
+      },
+      {
+        "text": "location",
+        "correct": false
+      },
+      {
+        "text": "weather",
+        "correct": false
+      },
+      {
+        "text": "distance",
+        "correct": false
+      },
+      {
+        "text": "feathers",
+        "correct": false
+      }
+    ],
+    "explanation": "Fantastic! Your 'perspective' is your viewpoint, or the way you see and understand the things around you."
+  },
+  {
+    "id": "eng-vocab-0074",
+    "type": "alternative_word",
+    "target_word": "context",
+    "prompt": {
+      "sentence": "You shouldn't judge his confusing statement without understanding the context in which it was spoken."
+    },
+    "question": "Which word best replaces 'context' in this sentence?",
+    "choices": [
+      {
+        "text": "volume",
+        "correct": false
+      },
+      {
+        "text": "grammar",
+        "correct": false
+      },
+      {
+        "text": "clothing",
+        "correct": false
+      },
+      {
+        "text": "situation",
+        "correct": true
+      },
+      {
+        "text": "weather",
+        "correct": false
+      }
+    ],
+    "explanation": "Great job! 'Context' refers to the situation or background information that helps explain an event or statement."
+  },
+  {
+    "id": "eng-vocab-0075",
+    "type": "alternative_word",
+    "target_word": "isolate",
+    "prompt": {
+      "sentence": "The scientist needed to isolate the specific bacteria to study its effects on the plants."
+    },
+    "question": "Choose a word that could replace 'isolate' without changing the meaning.",
+    "choices": [
+      {
+        "text": "multiply",
+        "correct": false
+      },
+      {
+        "text": "destroy",
+        "correct": false
+      },
+      {
+        "text": "swallow",
+        "correct": false
+      },
+      {
+        "text": "combine",
+        "correct": false
+      },
+      {
+        "text": "separate",
+        "correct": true
+      }
+    ],
+    "explanation": "Perfect! To 'isolate' means to set apart or separate someone or something from others."
+  },
+  {
+    "id": "eng-vocab-0076",
+    "type": "alternative_word",
+    "target_word": "justify",
+    "prompt": {
+      "sentence": "The student tried to justify his late homework by explaining that his internet had unexpectedly stopped working."
+    },
+    "question": "Which word can replace 'justify' while keeping the meaning of the sentence?",
+    "choices": [
+      {
+        "text": "cancel",
+        "correct": false
+      },
+      {
+        "text": "defend",
+        "correct": true
+      },
+      {
+        "text": "forget",
+        "correct": false
+      },
+      {
+        "text": "punish",
+        "correct": false
+      },
+      {
+        "text": "ignore",
+        "correct": false
+      }
+    ],
+    "explanation": "Awesome! To 'justify' is to defend or show that an action or decision is right or reasonable."
+  },
+  {
+    "id": "eng-vocab-0077",
+    "type": "part_of_speech",
+    "target_word": "alternative",
+    "prompt": {
+      "sentence": "Since it was raining heavily, the teacher proposed an alternative plan for the school trip."
+    },
+    "question": "What part of speech is the word 'alternative' as used in this sentence?",
+    "choices": [
+      {
+        "text": "verb",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "adjective",
+        "correct": true
+      },
+      {
+        "text": "conjunction",
+        "correct": false
+      },
+      {
+        "text": "interjection",
+        "correct": false
+      }
+    ],
+    "explanation": "Correct! Here, 'alternative' is describing the noun 'plan', which means it functions as an adjective in this sentence."
+  },
+  {
+    "id": "eng-vocab-0078",
+    "type": "part_of_speech",
+    "target_word": "hypothesis",
+    "prompt": {
+      "sentence": "Before conducting the chemistry experiment, the students had to write down a hypothesis."
+    },
+    "question": "Identify the part of speech for the word 'hypothesis' in this sentence.",
+    "choices": [
+      {
+        "text": "verb",
+        "correct": false
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      },
+      {
+        "text": "noun",
+        "correct": true
+      },
+      {
+        "text": "pronoun",
+        "correct": false
+      }
+    ],
+    "explanation": "Spot on! A 'hypothesis' is a thing or a proposed idea, which makes it a noun."
+  },
+  {
+    "id": "eng-vocab-0079",
+    "type": "part_of_speech",
+    "target_word": "analyze",
+    "prompt": {
+      "sentence": "The detective had to carefully analyze the clues left at the scene to solve the mystery."
+    },
+    "question": "What is the part of speech of the word 'analyze' in this context?",
+    "choices": [
+      {
+        "text": "verb",
+        "correct": true
+      },
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "adverb",
+        "correct": false
+      },
+      {
+        "text": "preposition",
+        "correct": false
+      }
+    ],
+    "explanation": "Brilliant! 'Analyze' is the action the detective is performing, which means it functions as a verb."
+  },
+  {
+    "id": "eng-vocab-0080",
+    "type": "part_of_speech",
+    "target_word": "summarize",
+    "prompt": {
+      "sentence": "For tonight's homework, please read the first chapter and summarize it in one short paragraph."
+    },
+    "question": "What part of speech is the word 'summarize' in this sentence?",
+    "choices": [
+      {
+        "text": "noun",
+        "correct": false
+      },
+      {
+        "text": "adjective",
+        "correct": false
+      },
+      {
+        "text": "conjunction",
+        "correct": false
+      },
+      {
+        "text": "interjection",
+        "correct": false
+      },
+      {
+        "text": "verb",
+        "correct": true
+      }
+    ],
+    "explanation": "Excellent! 'Summarize' is an action word telling you what you need to do, so it is a verb."
   }
 ]
