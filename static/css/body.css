@@ -615,6 +615,9 @@
         align-items: center;
         padding-bottom: 2rem;
     }
+    .thumbnail > a {
+        flex-direction: column;
+    }
     .thumbnail img {
         width: 100%;
         height: auto;
