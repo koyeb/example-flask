@@ -20,15 +20,51 @@
 
 .t4sg-mockups {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     max-width: 900px;
     margin: 3rem auto;
 }
 
-.t4sg-mockups img {
-    width: 100%;
+.t4sg-mockups .lightboxable {
+    flex: 1 1 260px;
     max-width: 420px;
+}
+
+/* Feature rollout cubicles */
+.rollout-grid {
+    width: min(900px, 92vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--s-4);
+    align-items: stretch;
+}
+
+.rollout-card {
+    border: 1px solid var(--accent);
+    background: rgba(28, 165, 145, 0.06);
+    padding: var(--s-4) var(--s-5);
+    text-align: left;
+}
+
+.rollout-phase {
+    font-family: var(--font-serif);
+    font-size: var(--fs-1);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 var(--s-2) 0;
+}
+
+.rollout-card p {
+    margin: 0;
+    font-family: var(--font-serif);
+    color: var(--text-secondary);
+    font-size: var(--fs-2);
+    line-height: var(--lh);
+    text-align: left;
 }
 
 /* ---------- Design tokens ---------- */
@@ -303,6 +339,31 @@ html {
     transform: translateY(-2px);
 }
 
+.media-card--sm {
+    max-width: 420px;
+}
+
+.media-card--md {
+    max-width: 600px;
+}
+
+.media-card--lg {
+    max-width: 800px;
+}
+
+/* Shared treatment for every clickable case-study image (excludes homepage thumbnails) */
+.lightboxable {
+    cursor: zoom-in;
+    filter: grayscale(18%);
+    outline: 1px solid rgba(255, 255, 255, 0.08);
+    transition: filter 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+
+.lightboxable:hover {
+    filter: grayscale(0%);
+    transform: translateY(-2px);
+}
+
 .img-caption {
     font-family: var(--font-serif);
     color: var(--text-secondary);
@@ -321,6 +382,10 @@ html {
     grid-template-columns: 1.1fr 0.9fr;
     gap: var(--s-4);
     align-items: start;
+}
+
+.split>* {
+    min-width: 0;
 }
 
 @media screen and (max-width: 880px) {
@@ -604,14 +669,8 @@ html {
 .item img {
     display: block;
     width: 100%;
-    height: 20rem;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.item img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 .lightbox-overlay {
