@@ -25,9 +25,9 @@
 
         <div class="tag-row">
             <div class="tag">Role: Senior UX Designer</div>
-            <div class="tag">My scope: System Design && Settings Page </div>
+            <div class="tag">My scope: System Design + Settings Page </div>
             <div class="tag">Research: 6 Board Members from CommonSpirit Health</div>
-            <div class="tag">Constraint: Preserve data pipeline + "CommonSpirit" storytelling </div>
+            <div class="tag">Constraint: Storytelling + Data visualization + New tool </div>
         </div>
     </div>
 </div>
@@ -83,16 +83,33 @@
     <!-- ===================== REDESIGN ===================== -->
     <div class="bio-container reveal">
         <div class="bio-text" style="text-align:left; max-width:920px;">
-            <h2>The Redesign</h2>
-            <p style="color: var(--text-primary)"><strong>Four pages, one palette, and a navbar that had to earn
-                    its spot</strong></p>
-            <p>
-                Interview notes from board members and CIP staff kept surfacing the same tension: the tool needed
-                to support quick, visual comparisons across hospitals, regions, and time without turning into
-                another wall of text. We ran an impact-vs-effort pass on every feature idea that came out of
-                research — main KPI numbers, region maps, hospital comparison charts, batch upload, notes, and more
-                — and used it to decide what shipped first, and what we'd explicitly avoid building for now.
-            </p>
+            <h2>Ideation</h2>
+        </div>
+    </div>
+
+    <div class="bio-container reveal">
+        <div class="split">
+            <div class="media-card media-card--sm">
+                <img class="lightboxable" src="/static/asset/images/ux/commonspirit/impact-effort.png"
+                    alt="Impact x Effort prioritization board mapping feature ideas from research">
+            </div>
+            <div class="bio-container reveal">
+                <div class="bio-text" style="text-align:left; max-width:920px;">
+                    <p>
+                        Interview notes from board members and CIP staff kept surfacing the same tension: the tool
+                        needed to support quick, visual comparisons across hospitals, regions, and time without
+                        turning into another wall of text. We ran an impact-vs-effort pass on every feature idea
+                        that came out of research — main KPI numbers, region maps, hospital comparison charts,
+                        batch upload, notes, and more — and used it to decide what shipped first, and what we'd
+                        explicitly avoid building for now.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bio-container reveal">
+        <div class="bio-text" style="text-align:left; max-width:920px;">
             <p>
                 From there, we scoped the product down to four pages: <strong>Home</strong> for the top-line KPIs
                 staff check first, <strong>Regional</strong> because so many priorities turned out to be shared
@@ -106,6 +123,8 @@
                 brand palette instead of a generic dashboard theme, so the tool would read as unmistakably
                 "CommonSpirit" to the staff and board members using it.
             </p>
+            <h2>My contribution</h2>
+
             <p>
                 My part of this was the system design and the Account/Settings experience shown below. The legacy
                 settings page was a single dark-mode screen with a username, email, and bio field. I rebuilt it
@@ -118,20 +137,25 @@
     </div>
 
     <div class="bio-container reveal">
-        <div class="split">
-            <div class="media-card media-card--md">
-                <img class="lightboxable" src="/static/asset/images/ux/commonspirit/redes1.png"
-                    alt="CommonSpirit Health redesign — screen 1">
-            </div>
-            <div class="media-card media-card--md">
-                <img class="lightboxable" src="/static/asset/images/ux/commonspirit/redes2.png"
-                    alt="CommonSpirit Health redesign — screen 2">
-            </div>
+        <div class="media-card media-card--lg">
+            <img class="lightboxable" src="/static/asset/images/ux/commonspirit/redes1.png"
+                alt="CommonSpirit Health redesign — Preferences page">
         </div>
     </div>
     <p class="img-caption">
-        Legacy vs. redesign of the Account and Preferences pages — from a single bare-bones settings screen to a
-        structured profile, a Security & Privacy section, and granular chart/data preference controls.
+        Preferences — renamed from "General," since the page had grown into advanced settings (chart color mode,
+        contrast, sorting, default document sets, geography level) that "General" undersold.
+    </p>
+
+    <div class="bio-container reveal">
+        <div class="media-card media-card--lg">
+            <img class="lightboxable" src="/static/asset/images/ux/commonspirit/redes2.png"
+                alt="CommonSpirit Health redesign — Account page">
+        </div>
+    </div>
+    <p class="img-caption">
+        Account — accessible directly from the profile card, which is why it's the first settings screen staff
+        land on.
     </p>
 
     <!-- ===================== REFLECTION ===================== -->

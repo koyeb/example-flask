@@ -30,6 +30,7 @@
 .t4sg-mockups .lightboxable {
     flex: 1 1 260px;
     max-width: 420px;
+    min-width: 0;
 }
 
 /* Feature rollout cubicles */
@@ -392,6 +393,21 @@ html {
     .split {
         grid-template-columns: 1fr;
     }
+}
+
+/* Flow Breakdown: give the text column more room than the screenshot */
+.split-flow {
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+/* Iteration bridge: make the two callouts equal size */
+.split-equal {
+    grid-template-columns: 1fr 1fr;
+}
+
+.split-equal .callout {
+    max-width: none;
+    width: 100%;
 }
 
 /* =========================================================
