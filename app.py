@@ -1,10 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request
 import random
 
 app = Flask(__name__)
 app.secret_key = "change-this-to-a-long-random-string"  # required for sessions
-
-T4SG_PASSWORD = "chit4sgx2feetchi"
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -17,10 +15,9 @@ def home():
         collab_websites = ["highlander", "recit", "olympics", "gifafvs","cs171", "am111"]
         flat = ["about", "client", "collab", "personal"]
 
-        # ✅ If user types "t4sg" (or similar), send them to the password page
+        # ✅ If user types "t4sg" (or similar), send them to the t4sg page
         if finder in ["t4sg", "t4sg.html", "t4sg case study", "2feet", "t4sg x 2feet","2feet prosthetics", "tech 4 social good", "2ft"]:
-            # return render_template("t4sg.html")
-            return redirect(url_for("t4sg_gate"))
+            return render_template("t4sg.html")
 
         if finder in flat:
             return render_template(f"{finder}.html")
@@ -48,39 +45,9 @@ def home():
                 return render_template(f"{finder}.html")
 
 
-# ---------------------------
-# ✅ T4SG password gate
-# ---------------------------
-@app.route("/t4sg", methods=["GET", "POST"])
-def t4sg_gate():
-    # If already authenticated, go straight to page
-    if session.get("t4sg_authed"):
-        return redirect(url_for("t4sg_page"))
-
-    if request.method == "GET":
-        return render_template("t4sg_password.html")
-
-    # POST: check password
-    pw = request.form.get("password", "")
-    if pw == T4SG_PASSWORD:
-        session["t4sg_authed"] = True
-        return redirect(url_for("t4sg_page"))
-
-    # wrong password -> re-render with error
-    return render_template("t4sg_password.html", error="Wrong password.")
-
-
 @app.route("/t4sg")
 def t4sg():
-    # if not session.get("t4sg_authed"):
-    #     return redirect(url_for("t4sg_gate"))
     return render_template("t4sg.html")
-
-
-@app.route("/t4sg/logout")
-def t4sg_logout():
-    session.pop("t4sg_authed", None)
-    return redirect(url_for("t4sg_gate"))
 
 
 # ---- your existing routes ----
