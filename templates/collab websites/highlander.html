@@ -7,13 +7,15 @@
 
 {% block content %}
 <!--- Subnavigation page for displaying project --->
-<div class="bio-container">
-    <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/KaJjkarMH6c?si=5TBXyoeuciBl_YaP"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 100vw;"></iframe>
-    <div class="bio-text" style="text-align:left;">
-        <h2 style="text-align:left;">MATCHA</h2>
+<div class="media-split">
+    <div class="media-card">
+        <iframe src="https://www.youtube.com/embed/KaJjkarMH6c?si=5TBXyoeuciBl_YaP"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="bio-text">
+        <h2>MATCHA</h2>
         <p>“Yasssssss, I'm finally back bro. Ohh look at that booty, didn't expect it to be so big, my hair slays too.
             Wow, never happy to be a girl like now!”
         </p>
@@ -25,17 +27,17 @@
             propelling her to make up with him. Yet even after becoming reconciled, they encountered arbitrary and
             tragic occurrences that make their own existence at stake…</p>
     </div>
-
-    <div></div>
 </div>
-<div class="bio-container">
-    <div></div>
-    <image class="bio-image" style="filter:grayscale(0)" src="../static/asset/images/art direction/poster.jpg"></image>
-    <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/cqjCkyhlPkM?si=Y71W9A6Z8yVQtYVL"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 100vw;"></iframe>
-
+<div class="media-split">
+    <div class="media-card">
+        <img style="filter:grayscale(0)" src="../static/asset/images/art direction/poster.jpg" alt="Matcha poster">
+    </div>
+    <div class="media-card">
+        <iframe src="https://www.youtube.com/embed/cqjCkyhlPkM?si=Y71W9A6Z8yVQtYVL"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </div>
 
 {% endblock %}

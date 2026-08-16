@@ -173,6 +173,39 @@
     .split { grid-template-columns: 1fr; }
 }
 
+/* ========================================= Media + text, even 50/50 split ========================================= */
+.media-split {
+    width: min(1100px, 95vw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 880px) {
+    .media-split { grid-template-columns: 1fr; }
+}
+
+.media-split .media-card {
+    width: 100%;
+    margin: 0;
+}
+
+.media-split > .bio-text {
+    width: 100%;
+    text-align: left;
+}
+
+.media-card iframe,
+.media-card video {
+    width: 100%;
+    display: block;
+    border: 0;
+    border-radius: 12px;
+    aspect-ratio: 16 / 9;
+}
+
 /* Accordion receipts */
 .accordion {
     width: 100%;
@@ -615,6 +648,9 @@
         align-items: center;
         padding-bottom: 2rem;
     }
+    .thumbnail > a {
+        flex-direction: column;
+    }
     .thumbnail img {
         width: 100%;
         height: auto;
@@ -622,28 +658,6 @@
     .thumbnail-content {
         padding-left: 0;
         text-align: center;
-    }
-}
-
-.fb-video {
-    float: right;
-    height: auto;
-}
-
-.recit-image {
-    height: 35vh;
-    width: auto;
-}
-
-@media screen and (max-width: 600px) {
-    .fb-video {
-        float: none;
-        width: 100vw;
-        margin-left: 0;
-    }
-    .recit-image {
-        height: auto;
-        width: 100vw;
     }
 }
 
