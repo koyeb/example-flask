@@ -19,6 +19,9 @@ def home():
         if finder in ["t4sg", "t4sg.html", "t4sg case study", "2feet", "t4sg x 2feet","2feet prosthetics", "tech 4 social good", "2ft"]:
             return render_template("t4sg.html")
 
+        if finder in ["commonspirit", "common spirit", "commonspirit health", "common spirit health", "t4sg x commonspirit"]:
+            return render_template("commonspirit.html")
+
         if finder in flat:
             return render_template(f"{finder}.html")
         elif finder in personal_websites:
@@ -48,6 +51,11 @@ def home():
 @app.route("/t4sg")
 def t4sg():
     return render_template("t4sg.html")
+
+
+@app.route("/commonspirit")
+def commonspirit():
+    return render_template("commonspirit.html")
 
 
 # ---- your existing routes ----

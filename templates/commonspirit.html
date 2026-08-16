@@ -1,0 +1,216 @@
+{% extends "layout.html" %}
+
+{% block title %}| T4SG × CommonSpirit Health{% endblock %}
+
+{% block extra_css %}
+<link href="/static/css/ux.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<!-- Sticky progress bar -->
+<div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<div class="bio-container reveal">
+    <div class="case-hero">
+        <h1 class="case-title">T4SG × CommonSpirit Health</h1>
+        <p class="case-subtitle" style="font-size: var(--fs-1);">
+            A UX case study on redesigning CommonSpirit Health's internal Community Health Needs Assessment (CHNA)
+            analysis tool — turning scattered PDFs and a cluttered legacy dashboard into a system built around how
+            CIP staff actually investigate community health data.
+        </p>
+
+        <div class="tag-row">
+            <div class="tag">Role: Senior UX Designer</div>
+            <div class="tag">My scope: System Design && Settings Page </div>
+            <div class="tag">Research: 6 Board Members from CommonSpirit Health</div>
+            <div class="tag">Constraint: Preserve data pipeline + "CommonSpirit" storytelling </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== PREVIEW IMAGE (provided) ===================== -->
+<div class="bio-container reveal">
+    <div class="media-card">
+        <!-- Provided by you -->
+        <img src="/static/asset/images/ux/commonspirit/preview.png" alt="CommonSpirit Health redesign preview">
+    </div>
+</div>
+
+<!-- ===================== TL;DR ===================== -->
+<div class="bio-container reveal">
+    <div class="callout">
+        <h3 style="font-family: 'BHN Cinema';">TL;DR</h3>
+        <p>• CIP staff had to manually read through 50–60 CHNA PDFs a year and dig through a cluttered, color-dense
+            dashboard just to compare health priorities across hospitals, regions, and time.</p>
+        <p>• The legacy tool leaned on dense color-coding and text-heavy outputs that staff described as
+            "overwhelming," and it got noticeably less useful in the years between CHNA updates.</p>
+        <p>• I helped rebuild the system around four focused pages (Home, Regional, Compare, Trends) with
+            CommonSpirit's own brand palette, and owned the Account/Settings experience end-to-end.</p>
+    </div>
+</div>
+
+<div class="t4sg-page">
+    <!-- ===================== CONTEXT ===================== -->
+    <div class="bio-container reveal">
+        <div class="bio-text" style="text-align:left; max-width:920px;">
+            <h2>Context</h2>
+            <p style="color: var(--text-primary)"><strong>A health-equity investment tool that had outgrown its own
+                    interface</strong></p>
+            <p>
+                CommonSpirit Health is the largest nonprofit health system in the U.S., reaching more than 20 million
+                patients a year across 2,300+ clinics and 138 hospitals in 24 states. Its Community Investment
+                Program (CIP) puts capital — mostly below-market-rate loans — into organizations addressing the
+                social determinants of health in the communities CommonSpirit serves. Working with the CIP team
+                through Tech for Social Good (T4SG), I joined a 12-week project to improve the internal tool CIP
+                staff use to analyze community health needs assessment data — the evidence base behind where and how
+                the program invests.
+            </p>
+            <p>
+                A previous T4SG team had built the tool the year before, and while it worked, it hadn't kept pace
+                with how CIP staff actually needed to use it. Staff wanted to upload and manage data, cross-tabulate
+                results, and compare health indicators across time, sector, and geography — but the tool offered no
+                reporting dashboards, no way to surface correlations between data points, and little room to add
+                context around the numbers. That gap made it hard to turn raw needs-assessment data into the kind of
+                clear, comparative insight CIP staff needed to prioritize investments across 200+ communities.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===================== REDESIGN ===================== -->
+    <div class="bio-container reveal">
+        <div class="bio-text" style="text-align:left; max-width:920px;">
+            <h2>The Redesign</h2>
+            <p style="color: var(--text-primary)"><strong>Four pages, one palette, and a navbar that had to earn
+                    its spot</strong></p>
+            <p>
+                Interview notes from board members and CIP staff kept surfacing the same tension: the tool needed
+                to support quick, visual comparisons across hospitals, regions, and time without turning into
+                another wall of text. We ran an impact-vs-effort pass on every feature idea that came out of
+                research — main KPI numbers, region maps, hospital comparison charts, batch upload, notes, and more
+                — and used it to decide what shipped first, and what we'd explicitly avoid building for now.
+            </p>
+            <p>
+                From there, we scoped the product down to four pages: <strong>Home</strong> for the top-line KPIs
+                staff check first, <strong>Regional</strong> because so many priorities turned out to be shared
+                well beyond a single city or market, <strong>Compare</strong> because comparing hospitals was the
+                CIP team's original ask, and <strong>Trends</strong> because trend data over time was consistently
+                the most-praised part of the legacy tool for what's fundamentally an internal analytics product.
+            </p>
+            <p>
+                We also iterated on where the navbar lived — the legacy top nav didn't leave room for four sections
+                plus settings, so we moved it into a persistent left sidebar — and swapped in CommonSpirit's own
+                brand palette instead of a generic dashboard theme, so the tool would read as unmistakably
+                "CommonSpirit" to the staff and board members using it.
+            </p>
+            <p>
+                My part of this was the system design and the Account/Settings experience shown below. The legacy
+                settings page was a single dark-mode screen with a username, email, and bio field. I rebuilt it
+                into a proper Account + Preferences flow: structured profile fields with role and avatar, a
+                Security & Privacy section (password, 2FA, data export), and a Preferences page that lets staff set
+                defaults for chart color mode, contrast, sorting, default document sets, and geography level — so
+                the visualizations they see first match how they actually work.
+            </p>
+        </div>
+    </div>
+
+    <div class="bio-container reveal">
+        <div class="split">
+            <div class="media-card media-card--md">
+                <img class="lightboxable" src="/static/asset/images/ux/commonspirit/redes1.png"
+                    alt="CommonSpirit Health redesign — screen 1">
+            </div>
+            <div class="media-card media-card--md">
+                <img class="lightboxable" src="/static/asset/images/ux/commonspirit/redes2.png"
+                    alt="CommonSpirit Health redesign — screen 2">
+            </div>
+        </div>
+    </div>
+    <p class="img-caption">
+        Legacy vs. redesign of the Account and Preferences pages — from a single bare-bones settings screen to a
+        structured profile, a Security & Privacy section, and granular chart/data preference controls.
+    </p>
+
+    <!-- ===================== REFLECTION ===================== -->
+    <div class="bio-container reveal">
+        <div class="bio-text" style="text-align:left; max-width:920px;">
+            <h2>Reflection</h2>
+            <p style="color: var(--text-primary)"><strong>Palette and IA decisions carry more weight in an internal
+                    tool</strong></p>
+            <p>
+                The biggest lesson was that for an internal, repeat-use tool, small system decisions — where the
+                nav lives, how many clicks to a comparison chart, whether the palette feels "theirs" — matter as
+                much as any individual screen. Leaning on CommonSpirit's own palette made the tool feel adopted
+                rather than imposed by an outside team.
+            </p>
+            <p>
+                It's also the choice I'd want to pressure-test next: a palette built mostly around CommonSpirit's
+                magenta is a bold accessibility bet for a data-dense internal tool, especially since the comparison
+                charts already lean on color coding to separate series. Next time, I'd check contrast ratios and
+                colorblind-safe alternatives before rolling a brand palette this saturated into the actual data
+                visualizations, not just the chrome around them.
+            </p>
+        </div>
+    </div>
+
+    <!-- Lightbox overlay (your body.css already styles .lightbox-overlay / .close-btn) -->
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="close-btn" id="lightboxClose">&times;</div>
+        <img id="lightboxImg" src="" alt="Expanded image">
+    </div>
+</div>
+
+<script>
+    // ===== Scroll progress bar =====
+    (function () {
+        const bar = document.getElementById("progressBar");
+        function onScroll() {
+            const doc = document.documentElement;
+            const scrollTop = doc.scrollTop || document.body.scrollTop;
+            const scrollHeight = doc.scrollHeight - doc.clientHeight;
+            const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            bar.style.width = pct.toFixed(2) + "%";
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+    })();
+
+    // ===== Reveal on scroll =====
+    (function () {
+        const els = document.querySelectorAll(".reveal");
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add("show");
+            });
+        }, { threshold: 0.12 });
+        els.forEach(el => obs.observe(el));
+    })();
+
+    // ===== Lightbox for images =====
+    (function () {
+        const overlay = document.getElementById("lightbox");
+        const img = document.getElementById("lightboxImg");
+        const close = document.getElementById("lightboxClose");
+        const items = document.querySelectorAll(".lightboxable");
+
+        function open(src, alt) {
+            img.src = src;
+            img.alt = alt || "Expanded image";
+            overlay.style.display = "flex";
+        }
+        function shut() {
+            overlay.style.display = "none";
+            img.src = "";
+        }
+
+        items.forEach(i => i.addEventListener("click", () => open(i.src, i.alt)));
+        close.addEventListener("click", shut);
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) shut(); });
+        window.addEventListener("keydown", (e) => { if (e.key === "Escape") shut(); });
+    })();
+</script>
+
+{% endblock %}
