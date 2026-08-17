@@ -41,6 +41,53 @@ body {
     }
 }
 
+/* ===== Sticky Code/UI-UX tab (only shown once Projects is reached) ===== */
+.side-tabs{
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%);
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.side-tabs.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+
+.side-tab{
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: rgba(220,220,220,0.75);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(180,180,180,0.35);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0.6rem 1rem;
+  margin-bottom: 6px;
+  cursor: pointer;
+  text-align: left;
+  backdrop-filter: blur(2px);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.side-tab:hover{
+  color: rgba(255,255,255,0.95);
+}
+
+.side-tab.active{
+  color: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.6);
+}
+
 /* ===== Below-fold section (starts after 1 viewport) ===== */
 .below-fold{
   min-height: 65vh;
@@ -67,6 +114,19 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.project-thumb-placeholder{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px dashed rgba(200,200,200,0.35);
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  color: rgba(220,220,220,0.55);
 }
 
 .project-thumb-meta{

@@ -5,6 +5,12 @@
    - Accessible focus-visible states
    - Hover as enhancement (not required for meaning)
    ========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* ===== T4SG only ===== */
 .t4sg-page {
     width: min(860px, 92vw);
@@ -35,7 +41,8 @@
 
 /* Feature rollout cubicles */
 .rollout-grid {
-    width: min(900px, 92vw);
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -319,7 +326,8 @@ html {
 }
 
 .media-card {
-    width: min(750px, 85vw);
+    width: 100%;
+    max-width: 750px;
     margin: 0 auto;
     background: var(--bg-panel);
     box-shadow: var(--shadow);
@@ -377,7 +385,8 @@ html {
 
 /* Split layout */
 .split {
-    width: min(1100px, 95vw);
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -387,12 +396,6 @@ html {
 
 .split>* {
     min-width: 0;
-}
-
-@media screen and (max-width: 880px) {
-    .split {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Flow Breakdown: give the text column more room than the screenshot */
@@ -408,6 +411,14 @@ html {
 .split-equal .callout {
     max-width: none;
     width: 100%;
+}
+
+@media screen and (max-width: 880px) {
+    .split,
+    .split-flow,
+    .split-equal {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =========================================================

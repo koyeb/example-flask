@@ -1,18 +1,32 @@
 {% extends "layout.html" %}
 
-{% block title %}| Collaborations{% endblock %}
+{% block title %}| Design{% endblock %}
 {% block extra_css %}
 <link href="/static/css/body.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<!--- Navigation page for displaying collaborative work --->
-<h1 style="text-align: center; margin: 40px; font-family: 'BHN Cinema'; color: white; font-size: 4vw">Collaborations
+<!--- Navigation page for displaying collaborative work and commissions --->
+<h1 style="text-align: center; margin: 40px; font-family: 'BHN Cinema'; color: white; font-size: 4vw">Design
 </h1>
 <div class="thumbnail-container">
     <div class="thumbnail">
-        <a href="recit">
+        <a href="olympics">
+            <img src="../static/asset/images/client/olympics.png" alt="CNN Olympics">
+            <div class="thumbnail-content">
+                <div class="thumbnail-header">CNN Olympics</div>
+                <div class="thumbnail-description">
+                    Commissioned logos for CNN Hội Thao
+                </div>
+                <div class="thumbnail-description" style="color:#bbb;">
+                    Completed: Nov 2023 - Jan 2024
+                </div>
+            </div>
+        </a>
+    </div>
 
+    <div class="thumbnail">
+        <a href="recit">
             <img src="../static/asset/images/art direction/recit.jpg" alt="Recit" style="height: 300px;">
             <div class="thumbnail-content">
                 <div class="thumbnail-header" href="recit">Recít Film Studio
@@ -59,5 +73,36 @@
             </div>
         </a>
     </div>
+
+    <div class="thumbnail">
+        <img src="../static/asset/images/client/cec.png" alt="CEC">
+        <div class="thumbnail-content">
+            <div class="thumbnail-header">CNN English Club</div>
+            <div class="thumbnail-description">
+                Commissioned posters and tickets for CNN English Club
+            </div>
+            <div class="thumbnail-description" style="color:#bbb;">
+                Completed: 2023
+            </div>
+
+        </div>
+    </div>
+
+    <div class="thumbnail">
+        <img src="../static/asset/images/client/teddeah!.png" alt="TeddeAh!">
+        <div class="thumbnail-content">
+            <div class="thumbnail-header">CNN Dance Club - TeddeAh!</div>
+            <div class="thumbnail-description">
+                Commissioned logo for TeddeAh! - a competitive dance group from CNN Dance Club
+            </div>
+            <div class="thumbnail-description" style="color:#bbb;">
+                Completed: Jul 2022
+            </div>
+
+        </div>
+    </div>
 </div>
-    {% endblock %}
+{% endblock %}
+<!--- Additional footer detail --->
+{% block footer%} <a class="com-footer" style="text-decoration: none; color: #888" href="about">Commission me on
+    Instagram!</a> {%endblock%}

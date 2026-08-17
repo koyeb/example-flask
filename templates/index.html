@@ -28,9 +28,45 @@
             });
         }
 
+        function initSideTabs() {
+            var tabs = document.querySelectorAll(".side-tab");
+            var sections = document.querySelectorAll(".below-fold[data-category]");
+            var sideTabs = document.getElementById("sideTabs");
+            var portfolio = document.getElementById("portfolio");
+            // the padding-top on #portfolio pushes the actual card down, so track
+            // the card itself rather than the (taller) section box around it
+            var firstThumb = portfolio ? portfolio.querySelector(".project-thumb") : null;
+
+            function applyFilter(tab) {
+                sections.forEach(function (el) {
+                    el.style.display = (el.dataset.category === tab) ? "" : "none";
+                });
+            }
+
+            tabs.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    tabs.forEach(function (b) { b.classList.remove("active"); });
+                    btn.classList.add("active");
+                    applyFilter(btn.dataset.tab);
+                });
+            });
+
+            applyFilter("code");
+
+            function updateStickyVisibility() {
+                if (!firstThumb || !sideTabs) return;
+                var reached = firstThumb.getBoundingClientRect().top <= window.innerHeight * 0.85;
+                sideTabs.classList.toggle("show", reached);
+            }
+
+            window.addEventListener("scroll", updateStickyVisibility, { passive: true });
+            updateStickyVisibility();
+        }
+
         window.onload = function () {
             changePlaceholder();
             setupFormSubmit();
+            initSideTabs();
         };
     </script>
     <style>
@@ -43,10 +79,9 @@
     <nav>
         <div class="nav-item-big" align="center" text-align="right">
             <a class="nav-item" href="about"> About </a>
-            <a class="nav-item" href="collab"> Collaborative Work </a>
+            <a class="nav-item" href="collab"> Design </a>
             <a class="nav-item" href="personal"> Personal Work </a>
-            <a class="nav-item" href="client"> Commissions </a>
-            <a class="nav-item" href="#portfolio" id="portfolio_scroll"> Portfolio </a>
+            <a class="nav-item" href="#portfolio" id="portfolio_scroll"> Projects </a>
         </div>
     </nav>
 
@@ -62,14 +97,60 @@
 
     <!-- Landing footer stays visible on first screen -->
     <footer class="home-footer">
-        <div class="home-footer-meta">Chi (Tue) Le | Pirenily | Updated Jan 2026</div>
+        <div class="home-footer-meta">Chi (Tue) Le | Pirenily | Updated Aug 2026</div>
         <div class="home-footer-hint">Scroll down to see my portfolio</div>
-    </footer>
+    </footer>Rem
+
+    <!-- Sticky Code / UI-UX tab: only shown once you've scrolled into Projects -->
+    <div class="side-tabs" id="sideTabs">
+        <button type="button" class="side-tab active" data-tab="code">Code</button>
+        <button type="button" class="side-tab" data-tab="uiux">UI/UX</button>
+    </div>
 
     <!-- BELOW THE FOLD: thumbnail appears only when you scroll down -->
-    <main id="portfolio" class="below-fold">
+    <main id="portfolio" class="below-fold" data-category="code">
+        <!--
+            Finished: Ongoing, started Jul 2026
+            Tags: TypeScript, JavaScript, React, three.js, Vite, Supabase, Tailwind CSS
+            Description: A node-based pipeline where you generate or arrange shots using
+            modular nodes, then convert them into a shot list and storyboard.
+            No thumbnail or page yet — placeholder until one is ready.
+        -->
+        <div class="project-thumb" aria-label="CineNode (coming soon)">
+            <div class="project-thumb-img project-thumb-placeholder">Coming soon</div>
+
+            <div class="project-thumb-meta">
+                <div class="project-thumb-title">CineNode</div>
+            </div>
+        </div>
+    </main>
+
+
+    <main class="below-fold" data-category="code">
+        <!--
+            Finished: Apr–May 2026
+            Tags: Arduino, C++, Embedded Systems, FSR Sensors (Hardware)
+            Description: A gesture-based wearable synth — a glove that maps finger
+            pressure to pitch, built to sound more expensive than a piezo buzzer really is.
+            No thumbnail or page yet — placeholder until one is ready.
+        -->
+        <div class="project-thumb" aria-label="AeroTone (coming soon)">
+            <div class="project-thumb-img project-thumb-placeholder">Coming soon</div>
+
+            <div class="project-thumb-meta">
+                <div class="project-thumb-title">AeroTone</div>
+            </div>
+        </div>
+    </main>
+
+
+    <main class="below-fold" data-category="uiux">
+        <!--
+            Finished: Sep 2025 – Dec 2025
+            Tags: Figma
+            Description: Offline-first inventory system for T4SG × 2ft Prosthetics.
+        -->
         <a class="project-thumb" href="/t4sg" aria-label="Open T4SG × 2ft (Password)">
-            <!-- swap src to any thumbnail you want -->
             <img class="project-thumb-img"
                  src="/static/asset/images/ux/t4sg/preview.png"
                  alt="T4SG × 2ft inventory system preview">
@@ -82,9 +163,14 @@
     </main>
 
 
-    <main class="below-fold">
+    <main class="below-fold" data-category="uiux">
+        <!--
+            Finished: Feb 2026 – May 2026
+            Tags: Figma
+            Description: Redesigning patient resource access at scale for T4SG ×
+            CommonSpirit Health.
+        -->
         <a class="project-thumb" href="/commonspirit" aria-label="Open T4SG × CommonSpirit Health">
-            <!-- swap src to any thumbnail you want -->
             <img class="project-thumb-img"
                  src="/static/asset/images/ux/commonspirit/preview.png"
                  alt="T4SG × CommonSpirit Health redesign preview">
@@ -97,9 +183,15 @@
     </main>
 
 
-    <main class="below-fold">
+    <main class="below-fold" data-category="code">
+        <!--
+            Finished: Oct 2025 – Dec 2025
+            Tags: D3.js, JavaScript
+            Description: Final project for CS1710: Visualization, telling the history
+            of Unicode as an animated, scroll-driven essay.
+            Source: https://github.com/precideer/cs-1710-unicode
+        -->
         <a class="project-thumb" href="/cs1710" >
-            <!-- swap src to any thumbnail you want -->
             <img class="project-thumb-img"
                  src="/static/asset/images/ux/cs171/preview.gif"
                  alt="Visualization: A Unicode Story">
@@ -112,9 +204,15 @@
     </main>
 
 
-    <main class="below-fold">
+    <main class="below-fold" data-category="code">
+        <!--
+            Finished: Dec 2025
+            Tags: Python, LLM Training / Machine Learning
+            Description: Training a small language model from scratch for a
+            scientific computing final project (AM111).
+            Source: https://drive.google.com/file/d/1AQbjf6Tl89mz_BkEtFMzqODIJShruNFG/preview
+        -->
         <a class="project-thumb" href="/am111" >
-            <!-- swap src to any thumbnail you want -->
             <img class="project-thumb-img"
                  src="/static/asset/images/ux/chi111.png"
                  alt="Neural Reconstruction of Handwritten Curves">

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import random
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def home():
 
         personal_websites = ["afvs", "essays", "fysemr", "illustration", "portal", "street", "superface"]
         collab_websites = ["highlander", "recit", "olympics", "gifafvs","cs171", "am111"]
-        flat = ["about", "client", "collab", "personal"]
+        flat = ["about", "collab", "personal"]
 
         # ✅ If user types "t4sg" (or similar), send them to the t4sg page
         if finder in ["t4sg", "t4sg.html", "t4sg case study", "2feet", "t4sg x 2feet","2feet prosthetics", "tech 4 social good", "2ft"]:
@@ -31,9 +31,9 @@ def home():
 
         elif finder in ["chi", "pirenily", "me", "chi le", "emily", "iron pig", "chi bell", "myself", "i", "artist"]:
             return render_template("about.html")
-        elif finder in ["commission", "client work", "commissioned work", "commissions", "client"]:
-            return render_template("client.html")
-        elif finder in ["collaborative work", "collaborations", "collaboration", "member", "film", "direction", "director", "collab"]:
+        elif finder in ["commission", "client work", "commissioned work", "commissions", "client",
+                        "collaborative work", "collaborations", "collaboration", "member", "film",
+                        "direction", "director", "collab", "graphic design", "clubs", "club", "design"]:
             return render_template("collab.html")
         elif finder in ["personal work", "self", "person", "mine", "free", "journey"]:
             return render_template("personal.html")
@@ -65,7 +65,7 @@ def about():
 
 @app.route("/client")
 def client():
-    return render_template("client.html")
+    return redirect(url_for("collab"))
 
 @app.route("/personal")
 def personal():
