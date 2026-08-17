@@ -12,7 +12,7 @@ def home():
         finder = request.form.get("finder", "").strip().lower()
 
         personal_websites = ["afvs", "essays", "fysemr", "illustration", "portal", "street", "superface"]
-        collab_websites = ["highlander", "recit", "olympics", "gifafvs","cs171", "am111"]
+        collab_websites = ["highlander", "recit", "olympics", "gifafvs","cs171"]
         flat = ["about", "collab", "personal"]
 
         # ✅ If user types "t4sg" (or similar), send them to the t4sg page
@@ -122,10 +122,6 @@ def olympics():
 @app.route("/cs1710")
 def cs171():
     return render_template("cs171.html")
-
-# @app.route("/am111")
-# def am111():
-#     return render_template("am111.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
