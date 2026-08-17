@@ -80,7 +80,7 @@
         <div class="nav-item-big" align="center" text-align="right">
             <a class="nav-item" href="about"> About </a>
             <a class="nav-item" href="collab"> Design </a>
-            <a class="nav-item" href="personal"> Personal Work </a>
+            <a class="nav-item" href="personal"> Play </a>
             <a class="nav-item" href="#portfolio" id="portfolio_scroll"> Projects </a>
         </div>
     </nav>
@@ -99,7 +99,7 @@
     <footer class="home-footer">
         <div class="home-footer-meta">Chi (Tue) Le | Pirenily | Updated Aug 2026</div>
         <div class="home-footer-hint">Scroll down to see my portfolio</div>
-    </footer>Rem
+    </footer>
 
     <!-- Sticky Code / UI-UX tab: only shown once you've scrolled into Projects -->
     <div class="side-tabs" id="sideTabs">
@@ -108,118 +108,185 @@
     </div>
 
     <!-- BELOW THE FOLD: thumbnail appears only when you scroll down -->
+    <!-- Sorted newest → oldest by start date; Pirenily (Dec 2024) sits last. -->
     <main id="portfolio" class="below-fold" data-category="code">
-        <!--
-            Finished: Ongoing, started Jul 2026
-            Tags: TypeScript, JavaScript, React, three.js, Vite, Supabase, Tailwind CSS
-            Description: A node-based pipeline where you generate or arrange shots using
-            modular nodes, then convert them into a shot list and storyboard.
-            No thumbnail or page yet — placeholder until one is ready.
-        -->
+        <!-- no thumbnail or page yet — placeholder until one is ready -->
         <div class="project-thumb" aria-label="CineNode (coming soon)">
             <div class="project-thumb-img project-thumb-placeholder">Coming soon</div>
 
             <div class="project-thumb-meta">
-                <div class="project-thumb-title">CineNode</div>
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">CineNode</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">TypeScript</span>
+                        <span class="tag-chip">JavaScript</span>
+                        <span class="tag-chip">React</span>
+                        <span class="tag-chip">three.js</span>
+                        <span class="tag-chip">Vite</span>
+                        <span class="tag-chip">Supabase</span>
+                        <span class="tag-chip">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub">TekTrek</div>
+                    <div class="project-thumb-date">Jul 2026 - Ongoing</div>
+                </div>
+                <div class="project-thumb-desc">A node-based pipeline where you generate or arrange shots using modular nodes, then convert them into a shot list and storyboard.</div>
             </div>
         </div>
     </main>
 
 
     <main class="below-fold" data-category="code">
-        <!--
-            Finished: Apr–May 2026
-            Tags: Arduino, C++, Embedded Systems, FSR Sensors (Hardware)
-            Description: A gesture-based wearable synth — a glove that maps finger
-            pressure to pitch, built to sound more expensive than a piezo buzzer really is.
-            No thumbnail or page yet — placeholder until one is ready.
-        -->
+        <!-- no thumbnail or page yet — placeholder until one is ready -->
         <div class="project-thumb" aria-label="AeroTone (coming soon)">
             <div class="project-thumb-img project-thumb-placeholder">Coming soon</div>
 
             <div class="project-thumb-meta">
-                <div class="project-thumb-title">AeroTone</div>
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">AeroTone</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">Arduino</span>
+                        <span class="tag-chip">C++</span>
+                        <span class="tag-chip">Embedded Systems</span>
+                        <span class="tag-chip">FSR Sensors</span>
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub">Final Project for GenEd 1080: How Music Works: Engineering the Acoustical World</div>
+                    <div class="project-thumb-date">Apr–May 2026</div>
+                </div>
+                <div class="project-thumb-desc">A gesture-based wearable synth — a glove that maps finger pressure to pitch</div>
             </div>
         </div>
     </main>
 
 
     <main class="below-fold" data-category="uiux">
-        <!--
-            Finished: Sep 2025 – Dec 2025
-            Tags: Figma
-            Description: Offline-first inventory system for T4SG × 2ft Prosthetics.
-        -->
-        <a class="project-thumb" href="/t4sg" aria-label="Open T4SG × 2ft (Password)">
-            <img class="project-thumb-img"
-                 src="/static/asset/images/ux/t4sg/preview.png"
-                 alt="T4SG × 2ft inventory system preview">
-
-            <div class="project-thumb-meta">
-                <div class="project-thumb-title">T4SG × 2ft Prosthetics</div>
-                <div class="project-thumb-sub">Offline-first inventory system</div>
-            </div>
-        </a>
-    </main>
-
-
-    <main class="below-fold" data-category="uiux">
-        <!--
-            Finished: Feb 2026 – May 2026
-            Tags: Figma
-            Description: Redesigning patient resource access at scale for T4SG ×
-            CommonSpirit Health.
-        -->
         <a class="project-thumb" href="/commonspirit" aria-label="Open T4SG × CommonSpirit Health">
             <img class="project-thumb-img"
                  src="/static/asset/images/ux/commonspirit/preview.png"
                  alt="T4SG × CommonSpirit Health redesign preview">
 
             <div class="project-thumb-meta">
-                <div class="project-thumb-title">T4SG × CommonSpirit Health</div>
-                <div class="project-thumb-sub">Redesigning patient resource access at scale</div>
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">T4SG × CommonSpirit Health</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">Figma</span>
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub">Redesigning patient resource access at scale</div>
+                    <div class="project-thumb-date">Feb 2026 – May 2026</div>
+                </div>
+                <div class="project-thumb-desc">12-week T4SG project improving CommonSpirit's internal resource tool (CIP).</div>
             </div>
         </a>
     </main>
 
 
     <main class="below-fold" data-category="code">
-        <!--
-            Finished: Oct 2025 – Dec 2025
-            Tags: D3.js, JavaScript
-            Description: Final project for CS1710: Visualization, telling the history
-            of Unicode as an animated, scroll-driven essay.
-            Source: https://github.com/precideer/cs-1710-unicode
-        -->
-        <a class="project-thumb" href="/cs1710" >
-            <img class="project-thumb-img"
-                 src="/static/asset/images/ux/cs171/preview.gif"
-                 alt="Visualization: A Unicode Story">
-
-            <div class="project-thumb-meta">
-                <div class="project-thumb-title">Chi x Rain: An Essay on Unicode</div>
-                <div class="project-thumb-sub">Final Project for CS1710: Visualization</div>
-            </div>
-        </a>
-    </main>
-
-
-    <main class="below-fold" data-category="code">
-        <!--
-            Finished: Dec 2025
-            Tags: Python, LLM Training / Machine Learning
-            Description: Training a small language model from scratch for a
-            scientific computing final project (AM111).
-            Source: https://drive.google.com/file/d/1AQbjf6Tl89mz_BkEtFMzqODIJShruNFG/preview
-        -->
+        <!-- Source: https://drive.google.com/file/d/1AQbjf6Tl89mz_BkEtFMzqODIJShruNFG/preview -->
         <a class="project-thumb" href="/am111" >
             <img class="project-thumb-img"
                  src="/static/asset/images/ux/chi111.png"
                  alt="Neural Reconstruction of Handwritten Curves">
 
             <div class="project-thumb-meta">
-                <div class="project-thumb-title">Neural Reconstruction of Handwritten Curves</div>
-                <div class="project-thumb-sub">Final Project for AM111: Scientific Computing</div>
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">Neural Reconstruction of Handwritten Curves</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">Python</span>
+                        <span class="tag-chip">LLM Training</span>
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub">Final Project for AM111: Scientific Computing</div>
+                    <div class="project-thumb-date">Dec 2025</div>
+                </div>
+                <div class="project-thumb-desc">Training a small language model from scratch.</div>
+            </div>
+        </a>
+    </main>
+
+
+    <main class="below-fold" data-category="code">
+        <!-- Source: https://github.com/precideer/cs-1710-unicode -->
+        <a class="project-thumb" href="/cs1710" >
+            <img class="project-thumb-img"
+                 src="/static/asset/images/ux/cs171/preview.gif"
+                 alt="Visualization: A Unicode Story">
+
+            <div class="project-thumb-meta">
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">Chi x Rain: An Essay on Unicode</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">D3.js</span>
+                        <span class="tag-chip">JavaScript</span>
+                        <span class="tag-chip">HTML</span>
+                        <span class="tag-chip">CSS</span>
+
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub">Final Project for CS1710: Visualization</div>
+                    <div class="project-thumb-date">Oct 2025 – Dec 2025</div>
+                </div>
+                <div class="project-thumb-desc">Telling the history of Unicode as an animated, scroll-driven essay.</div>
+            </div>
+        </a>
+    </main>
+
+
+    <main class="below-fold" data-category="uiux">
+        <a class="project-thumb" href="/t4sg" aria-label="Open T4SG × 2ft (Password)">
+            <img class="project-thumb-img"
+                 src="/static/asset/images/ux/t4sg/preview.png"
+                 alt="T4SG × 2ft inventory system preview">
+
+            <div class="project-thumb-meta">
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">T4SG × 2ft Prosthetics</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">Figma</span>
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub">Offline-first inventory system</div>
+                    <div class="project-thumb-date">Sep 2025 – Dec 2025</div>
+                </div>
+                <div class="project-thumb-desc">Figma flows for volunteers, coordinators, and prosthetists working across time zones and unreliable connections.</div>
+            </div>
+        </a>
+    </main>
+
+
+    <main class="below-fold" data-category="code">
+        <!-- ISSUE: swap this placeholder for a photobooth-camera thumbnail (camera shutter button on the side) -->
+        <a class="project-thumb" href="/about" aria-label="Pirenily — this website">
+            <div class="project-thumb-img project-thumb-placeholder project-thumb-placeholder--blank"></div>
+
+            <div class="project-thumb-meta">
+                <div class="project-thumb-namebox">
+                    <div class="project-thumb-title">Pirenily</div>
+                    <div class="project-thumb-tags">
+                        <span class="tag-chip">Python</span>
+                        <span class="tag-chip">Flask</span>
+                        <span class="tag-chip">Jinja2</span>
+                        <span class="tag-chip">HTML</span>
+                        <span class="tag-chip">CSS</span>
+                        <span class="tag-chip">JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-thumb-subrow">
+                    <div class="project-thumb-sub"> Final project for CS50: Introduction to Computer Science.</div>
+                    
+                    <div class="project-thumb-date">December 2024</div>
+                    </div>
+                    
+                    <div class="project-thumb-desc">Fun fact: This website is hardcoded in continuous 42 hours without sleep.</div>
+
+                </div>
             </div>
         </a>
     </main>

@@ -129,8 +129,21 @@ body {
   color: rgba(220,220,220,0.55);
 }
 
+/* Pirenily's own thumb: solid black until the photobooth-camera image is ready */
+.project-thumb-placeholder--blank{
+  background: #000;
+  border-bottom: none;
+}
+
 .project-thumb-meta{
   padding: 0.9rem 1rem 1rem;
+}
+
+.project-thumb-namebox{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
 }
 
 .project-thumb-title{
@@ -140,12 +153,65 @@ body {
   color: rgba(240,240,240,0.95);
 }
 
+.project-thumb-tags{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.tag-chip{
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: rgba(220,220,220,0.85);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(180,180,180,0.35);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  white-space: nowrap;
+}
+
+.project-thumb-date{
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: rgba(200,200,200,0.55);
+  white-space: nowrap;
+}
+
+.project-thumb-subrow{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.project-thumb-subrow .project-thumb-sub{
+  margin-top: 0;
+}
+
+.project-thumb-subrow .project-thumb-date{
+  flex-shrink: 0;
+}
+
 .project-thumb-sub{
   margin-top: 0.25rem;
   font-family: "Crimson Text", serif;
   font-style: italic;
   font-size: 0.95rem;
   color: rgba(220,220,220,0.75);
+}
+
+.project-thumb-desc{
+  margin-top: 0.35rem;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: rgba(200,200,200,0.5);
 }
 
 .project-thumb:hover{

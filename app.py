@@ -35,7 +35,7 @@ def home():
                         "collaborative work", "collaborations", "collaboration", "member", "film",
                         "direction", "director", "collab", "graphic design", "clubs", "club", "design"]:
             return render_template("collab.html")
-        elif finder in ["personal work", "self", "person", "mine", "free", "journey"]:
+        elif finder in ["personal work", "self", "person", "mine", "free", "journey", "play"]:
             return render_template("personal.html")
 
         else:
