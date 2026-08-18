@@ -2,7 +2,7 @@
 
 {% block title %}| Personal{% endblock %}
 {% block extra_css %}
-<link href="/static/css/body.css" rel="stylesheet">
+<link href="/static/css/ux.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Reem+Kufi+Fun&display=swap" rel="stylesheet">
@@ -24,6 +24,12 @@
 {% endblock %}
 
 {% block content %}
+
+<!-- Sticky progress bar -->
+<div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
 <!--- Subnavigation page for displaying project --->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 
@@ -164,10 +170,12 @@
     </div>
 </div>
 
+<div class="case-page">
+
 <!-- ===== Project 1: A Pig's Death ===== -->
 <div class="bio-container reveal">
     <div class="media-card media-card--lg">
-        <img src="{{ img('afvs', 'p1-title.jpg') }}" alt="Pig's head sculpture projected onto a stairwell">
+        <img class="lightboxable" src="{{ img('afvs', 'p1-title.jpg') }}" alt="Pig's head sculpture projected onto a stairwell">
     </div>
 </div>
 
@@ -189,10 +197,10 @@
 <div class="bio-container reveal">
     <div class="split">
         <div class="media-card">
-            <img src="{{ img('afvs', 'p1-progress-1.jpg') }}" alt="Wireframe armature for the pig's head">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-progress-1.jpg') }}" alt="Wireframe armature for the pig's head">
         </div>
         <div class="media-card">
-            <img src="{{ img('afvs', 'p1-progress-2.jpg') }}" alt="Foil-wrapped head form in progress">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-progress-2.jpg') }}" alt="Foil-wrapped head form in progress">
         </div>
     </div>
 </div>
@@ -214,10 +222,10 @@
 <div class="bio-container reveal">
     <div class="split">
         <div class="media-card">
-            <img src="{{ img('afvs', 'p1-code-face.jpg') }}" alt="Draft distortion code next to a webcam test">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-code-face.jpg') }}" alt="Draft distortion code next to a webcam test">
         </div>
         <div class="media-card">
-            <img src="{{ img('afvs', 'p1-projection-test.jpg') }}" alt="Distorted face projected onto the stairwell">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-projection-test.jpg') }}" alt="Distorted face projected onto the stairwell">
         </div>
     </div>
 </div>
@@ -245,10 +253,10 @@
 <div class="bio-container reveal">
     <div class="split">
         <div class="media-card">
-            <img src="{{ img('afvs', 'p1-360-1.jpg') }}" alt="360-degree view of the finished sculpture at the studio">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-360-1.jpg') }}" alt="360-degree view of the finished sculpture at the studio">
         </div>
         <div class="media-card">
-            <img src="{{ img('afvs', 'p1-360-2.jpg') }}" alt="Another angle of the finished sculpture">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-360-2.jpg') }}" alt="Another angle of the finished sculpture">
         </div>
     </div>
 </div>
@@ -267,7 +275,7 @@
 
 <div class="bio-container reveal">
     <div class="media-card media-card--lg">
-        <img src="{{ img('afvs', 'p1-final.jpg') }}" alt="Finished sculpture projected at home">
+        <img class="lightboxable" src="{{ img('afvs', 'p1-final.jpg') }}" alt="Finished sculpture projected at home">
     </div>
 </div>
 <p class="img-caption">Sculpture at home with projection.</p>
@@ -275,7 +283,7 @@
 <!-- ===== Project 2: A Pig's Funeral ===== -->
 <div class="bio-container reveal">
     <div class="media-card media-card--lg">
-        <img src="{{ img('afvs', 'p2-lead.jpg') }}" alt="Netted sculpture suspended in the studio">
+        <img class="lightboxable" src="{{ img('afvs', 'p2-lead.jpg') }}" alt="Netted sculpture suspended in the studio">
     </div>
 </div>
 
@@ -298,16 +306,16 @@
 <div class="bio-container reveal">
     <div class="split">
         <div class="media-card">
-            <img src="{{ img('afvs', 'p2-state-empty.jpg') }}" alt="State: booth empty, projection alone">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-state-empty.jpg') }}" alt="State: booth empty, projection alone">
         </div>
         <div class="media-card">
-            <img src="{{ img('afvs', 'p2-state-silhouette.jpg') }}" alt="State: inside but not looking, dissolving into diary text">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-state-silhouette.jpg') }}" alt="State: inside but not looking, dissolving into diary text">
         </div>
     </div>
 </div>
 <div class="bio-container reveal">
     <div class="media-card">
-        <img src="{{ img('afvs', 'p2-state-look.jpg') }}" alt="State: someone inside the booth looking, face distorted">
+        <img class="lightboxable" src="{{ img('afvs', 'p2-state-look.jpg') }}" alt="State: someone inside the booth looking, face distorted">
     </div>
 </div>
 <p class="img-caption">Experiment with the code (Python + Processing) in another space &mdash; the booth's three states.</p>
@@ -338,10 +346,10 @@
 <div class="bio-container reveal">
     <div class="split">
         <div class="media-card">
-            <img src="{{ img('afvs', 'p2-booth-interior.jpg') }}" alt="Red fabric and netting booth interior">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-booth-interior.jpg') }}" alt="Red fabric and netting booth interior">
         </div>
         <div class="media-card">
-            <img src="{{ img('afvs', 'p2-installation-room.jpg') }}" alt="Booth and projected frame installed in the room">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-installation-room.jpg') }}" alt="Booth and projected frame installed in the room">
         </div>
     </div>
 </div>
@@ -369,8 +377,30 @@
     </div>
 </div>
 
+<!-- Lightbox overlay (ux.css already styles .lightbox-overlay / .close-btn) -->
+<div class="lightbox-overlay" id="lightbox">
+    <div class="close-btn" id="lightboxClose">&times;</div>
+    <img id="lightboxImg" src="" alt="Expanded image">
+</div>
+
+</div>
+
 <script>
-    // Reveal AFVS reflection sections on scroll
+    // ===== Scroll progress bar =====
+    (function () {
+        const bar = document.getElementById("progressBar");
+        function onScroll() {
+            const doc = document.documentElement;
+            const scrollTop = doc.scrollTop || document.body.scrollTop;
+            const scrollHeight = doc.scrollHeight - doc.clientHeight;
+            const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            bar.style.width = pct.toFixed(2) + "%";
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+    })();
+
+    // ===== Reveal on scroll =====
     (function () {
         const els = document.querySelectorAll(".reveal");
         const obs = new IntersectionObserver((entries) => {
@@ -379,6 +409,29 @@
             });
         }, { threshold: 0.12 });
         els.forEach(el => obs.observe(el));
+    })();
+
+    // ===== Lightbox for images =====
+    (function () {
+        const overlay = document.getElementById("lightbox");
+        const img = document.getElementById("lightboxImg");
+        const close = document.getElementById("lightboxClose");
+        const items = document.querySelectorAll(".lightboxable");
+
+        function open(src, alt) {
+            img.src = src;
+            img.alt = alt || "Expanded image";
+            overlay.style.display = "flex";
+        }
+        function shut() {
+            overlay.style.display = "none";
+            img.src = "";
+        }
+
+        items.forEach(i => i.addEventListener("click", () => open(i.src, i.alt)));
+        close.addEventListener("click", shut);
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) shut(); });
+        window.addEventListener("keydown", (e) => { if (e.key === "Escape") shut(); });
     })();
 </script>
 
