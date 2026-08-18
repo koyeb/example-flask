@@ -28,6 +28,14 @@ IMAGE_FOLDERS = {
 
 GALLERY_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
 
+# Templates that live under templates/Projects/ instead of at the templates
+# root, keyed by the short "finder" name used elsewhere in this file.
+PROJECT_TEMPLATES = {
+    "cs171": "Projects/cs171.html",
+    "t4sg": "Projects/2ft.html",
+    "commonspirit": "Projects/commonspirit.html",
+}
+
 
 def _date_sort_key(filename):
     # illustration/ files are named D.M.YY(YY).ext; sort newest first.
@@ -72,13 +80,13 @@ def home():
 
         # ✅ If user types "t4sg" (or similar), send them to the t4sg page
         if finder in ["t4sg", "t4sg.html", "t4sg case study", "2feet", "t4sg x 2feet","2feet prosthetics", "tech 4 social good", "2ft"]:
-            return render_template("t4sg.html")
+            return render_template(PROJECT_TEMPLATES["t4sg"])
 
         if finder in ["commonspirit", "common spirit", "commonspirit health", "common spirit health", "t4sg x commonspirit"]:
-            return render_template("commonspirit.html")
+            return render_template(PROJECT_TEMPLATES["commonspirit"])
 
         if finder in flat:
-            return render_template(f"{finder}.html")
+            return render_template(PROJECT_TEMPLATES.get(finder, f"{finder}.html"))
         elif finder in personal_websites:
             return render_template(f"personal websites/{finder}.html")
         elif finder in collab_websites:
@@ -100,17 +108,17 @@ def home():
             elif finder in collab_websites:
                 return render_template(f"collab websites/{finder}.html")
             else:
-                return render_template(f"{finder}.html")
+                return render_template(PROJECT_TEMPLATES.get(finder, f"{finder}.html"))
 
 
 @app.route("/t4sg")
 def t4sg():
-    return render_template("t4sg.html")
+    return render_template(PROJECT_TEMPLATES["t4sg"])
 
 
 @app.route("/commonspirit")
 def commonspirit():
-    return render_template("commonspirit.html")
+    return render_template(PROJECT_TEMPLATES["commonspirit"])
 
 
 # ---- your existing routes ----
@@ -176,7 +184,7 @@ def olympics():
 
 @app.route("/cs1710")
 def cs171():
-    return render_template("cs171.html")
+    return render_template(PROJECT_TEMPLATES["cs171"])
 
 if __name__ == "__main__":
     app.run(debug=True)
