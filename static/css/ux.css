@@ -272,6 +272,7 @@ html {
 .tag-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--s-2);
     margin-top: var(--s-3);
 }
@@ -364,6 +365,20 @@ html {
     max-width: 800px;
 }
 
+.media-card--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    background: transparent;
+    box-shadow: none;
+    color: var(--text-secondary);
+    font-family: var(--font-serif);
+    font-size: var(--fs-2);
+    font-style: italic;
+}
+
 /* Shared treatment for every clickable case-study image (excludes homepage thumbnails) */
 .lightboxable {
     cursor: zoom-in;
@@ -417,11 +432,29 @@ html {
     width: 100%;
 }
 
+/* Four-up row: e.g. all 360 angles on the same line */
+.split-quad {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Two-up row that must stay side-by-side on phone too (not collapsed below).
+   Compound selector so it outranks the .split mobile collapse rule below. */
+.split.split-pair {
+    grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 880px) {
     .split,
     .split-flow,
-    .split-equal {
+    .split-equal,
+    .split-quad {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .split-pair {
+        gap: var(--s-2);
     }
 }
 
