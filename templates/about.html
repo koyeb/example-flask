@@ -13,6 +13,8 @@
         const body = document.body;
 
         images.forEach(image => {
+            image.style.backgroundImage = `url('${image.dataset.src}')`;
+
             const MaxDisplacement = window.innerWidth > 600 ? 35 : 80;
             const MinDisplacement = window.innerWidth > 600 ? -5 : 0;
 
@@ -79,34 +81,33 @@
         <p></p>
         <p>
             My passion for film and installation art grows within my identity: <em>pirenily</em>. I use pirenily as a
-            vessel of self-expression: through graphic design, photography, and storyboards. My main interests lie in
+            vessel of self-expression through graphic design, photography, and storyboards. My main interests lie in
             the construction of interdependence: of time depiction through visual effects, of the existence of the
             multiverse through doors-and-paths-related design, and of myself as a locus of socialization. This also
             affects how I perceive selfhood and technology, and the human-computer interactions that shape modern life. 
             Every form of visual presentation on this website is mainly experimented, taken, edited, scripted, and modeled by me.
         </p>
         <p>
-            I am currently a sophomore at Harvard College, concentrating in <a href="https://seas.harvard.edu/computer-science">Computer Science</a>
+            I am currently a junior at Harvard College, concentrating in <a href="https://seas.harvard.edu/computer-science">Computer Science</a>
             and <a href="https://afvs.fas.harvard.edu/">Art, Film, and Visual Studies</a> with a secondary in <a href="https://www.math.harvard.edu/">Mathematics</a>.
-            I am currently part of the Harvard Project for Asian and International Relations (HPAIR) and Tech 4 Social Good (T4SG). I am also affiliated with the
-            Harvard Undergraduate Design Collectives (HUDC), Harvard Alternative Investments, and the Office for the Arts.
+            I am currently part of the Harvard Undergraduate Hackathon (HackHarvard) and Tech 4 Social Good (T4SG), and the Office for the Arts.
         </p>
     </div>
     <!-- Pictures on the right side -->
     <div class="image-container">
-        <div class="image" style="background-image: url('{{ img('about', 'declare.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'light.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'blackswan.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'salzburg.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'bridge.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'story.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'wow.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'ava.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'non.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'windmill.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'pose.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'beach.jpg') }}');"></div>
-        <div class="image" style="background-image: url('{{ img('about', 'cong.jpg') }}');"></div>
+        <div class="image" data-src="{{ img('about', 'declare.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'light.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'blackswan.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'salzburg.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'bridge.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'story.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'wow.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'ava.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'non.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'windmill.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'pose.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'beach.jpg') }}"></div>
+        <div class="image" data-src="{{ img('about', 'cong.jpg') }}"></div>
     </div>
 
 
