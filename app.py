@@ -1,18 +1,22 @@
 from flask import Flask, render_template, request, redirect, url_for
+import os
 import random
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = "change-this-to-a-long-random-string"  # required for sessions
 
 # Maps a stable logical name (used in templates) to the actual on-disk folder
-# under static/asset/images/. Rename a folder on disk, update it here once,
-# and every template that references it via img() keeps working.
+# under static/asset/images/. Rename or move a folder on disk, update it here
+# once, and every template that references it via img()/gallery_images()
+# keeps working.
 IMAGE_FOLDERS = {
     "about": "about",
     "art_direction": "art direction",
     "client": "client",
     "fish": "fish",
     "illustration": "illustration",
+    "olympics": "client/olympics",
     "other": "other",
     "portal": "portal",
     "processing": "processing",
@@ -22,6 +26,16 @@ IMAGE_FOLDERS = {
     "ux": "ux",
 }
 
+GALLERY_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
+
+
+def _date_sort_key(filename):
+    # illustration/ files are named D.M.YY(YY).ext; sort newest first.
+    day, month, year = (int(p) for p in os.path.splitext(filename)[0].split("."))
+    if year < 100:
+        year += 2000
+    return datetime(year, month, day)
+
 
 @app.context_processor
 def inject_image_helper():
@@ -30,7 +44,20 @@ def inject_image_helper():
         path = f"asset/images/{real_folder}/{filename}".rstrip("/")
         return url_for("static", filename=path)
 
-    return dict(img=img)
+    def gallery_images(folder, sort="name"):
+        real_folder = IMAGE_FOLDERS.get(folder, folder)
+        dir_path = os.path.join(app.static_folder, "asset", "images", real_folder)
+        if not os.path.isdir(dir_path):
+            return []
+        files = [
+            f for f in os.listdir(dir_path)
+            if os.path.splitext(f)[1].lower() in GALLERY_IMAGE_EXTENSIONS
+        ]
+        if sort == "date_desc":
+            return sorted(files, key=_date_sort_key, reverse=True)
+        return sorted(files)
+
+    return dict(img=img, gallery_images=gallery_images)
 
 @app.route("/", methods=["GET", "POST"])
 def home():

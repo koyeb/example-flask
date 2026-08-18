@@ -10,52 +10,13 @@
 <script src="{{ url_for('static', filename='clickimage.js') }}"></script>
 
 <div class="masonry">
-
+    {% for filename in gallery_images('illustration', sort='date_desc') %}
     <div class="item">
-        <a href="{{ img('illustration', '30.10.23.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '30.10.23.jpg') }}" alt="Image 1">
+        <a href="{{ img('illustration', filename) }}" class="lightbox">
+            <img src="{{ img('illustration', filename) }}" alt="Image">
         </a>
     </div>
-    <div class="item">
-        <a href="{{ img('illustration', '26.8.22.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '26.8.22.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '10.3.22.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '10.3.22.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '28.8.21.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '28.8.21.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '16.7.21.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '16.7.21.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '10.7.21.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '10.7.21.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '9.7.20.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '9.7.20.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '22.5.20.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '22.5.20.jpg') }}" alt="Image 1">
-        </a>
-    </div>
-    <div class="item">
-        <a href="{{ img('illustration', '15.4.20.jpg') }}" class="lightbox">
-            <img src="{{ img('illustration', '15.4.20.jpg') }}" alt="Image 1">
-        </a>
-    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
