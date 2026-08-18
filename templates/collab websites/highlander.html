@@ -30,7 +30,7 @@
 </div>
 <div class="media-split">
     <div class="media-card">
-        <img style="filter:grayscale(0)" src="../static/asset/images/art direction/poster.jpg" alt="Matcha poster">
+        <img style="filter:grayscale(0)" src="{{ img('art_direction', 'poster.jpg') }}" alt="Matcha poster">
     </div>
     <div class="media-card">
         <iframe src="https://www.youtube.com/embed/cqjCkyhlPkM?si=Y71W9A6Z8yVQtYVL"
@@ -43,10 +43,10 @@
 {% endblock %}
 {% block footer %}
 <a href="https://www.instagram.com/chuoichuoibuoibuoi/" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/ig.png" alt="Instagram" class="contact-logo">
+    <img src="{{ img('other', 'ig.png') }}" alt="Instagram" class="contact-logo">
 </a>
 
 <a href="mailto:nhomchuoicec@gmail.com" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/mail.png" alt="Gmail" class="contact-logo">
+    <img src="{{ img('other', 'mail.png') }}" alt="Gmail" class="contact-logo">
 </a>
 {% endblock %}

@@ -13,7 +13,7 @@
 
 <div class="media-split">
     <div class="media-card">
-        <img src="../static/asset/images/recit/recitbanner.jpg" alt="Recit Banner">
+        <img src="{{ img('recit', 'recitbanner.jpg') }}" alt="Recit Banner">
     </div>
     <div class="bio-text">
         <h2>RECÍT STUDIO</h2>
@@ -65,14 +65,14 @@
 {% block footer %}
 <!-- Contact information for the studio -->
 <a href="https://www.instagram.com/recit.stu/" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/ig.png" alt="Instagram" class="contact-logo">
+    <img src="{{ img('other', 'ig.png') }}" alt="Instagram" class="contact-logo">
 </a>
 
 <a href="mailto:recitfilmmaking@gmail.com" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/mail.png" alt="Gmail" class="contact-logo">
+    <img src="{{ img('other', 'mail.png') }}" alt="Gmail" class="contact-logo">
 </a>
 
 <a href="https://www.facebook.com/recit.stu" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/fb.png" alt="Facebok" class="contact-logo">
+    <img src="{{ img('other', 'fb.png') }}" alt="Facebok" class="contact-logo">
 </a>
 {% endblock %}

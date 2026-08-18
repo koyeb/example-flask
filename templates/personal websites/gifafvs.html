@@ -9,7 +9,7 @@
 <!--- Subnavigation page for displaying project --->
 <div class="bio-container" style="padding-top: 5vh;">
     
-    <img class="gif-image" src="../static/asset/images/processing/output.gif" alt="gif">
+    <img class="gif-image" src="{{ img('processing', 'output.gif') }}" alt="gif">
 
     <div class="bio-text" style="text-align:left; max-width: 100vw; padding-left: 5vw; padding-right: 5vw;">
         <h2>What Brings You Here</h2>
@@ -25,7 +25,7 @@
         </p>
     </div>
     <div></div>
-    <img class="gif-image" src="../static/asset/images/processing/output.gif" alt="gif" style="filter:grayscale(100%)">
+    <img class="gif-image" src="{{ img('processing', 'output.gif') }}" alt="gif" style="filter:grayscale(100%)">
 </div>
 
 
@@ -33,14 +33,14 @@
 {% block footer %}
 <!-- Contact information for the studio -->
 <a href="https://www.instagram.com/recit.stu/" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/ig.png" alt="Instagram" class="contact-logo">
+    <img src="{{ img('other', 'ig.png') }}" alt="Instagram" class="contact-logo">
 </a>
 
 <a href="mailto:recitfilmmaking@gmail.com" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/mail.png" alt="Gmail" class="contact-logo">
+    <img src="{{ img('other', 'mail.png') }}" alt="Gmail" class="contact-logo">
 </a>
 
 <a href="https://www.facebook.com/recit.stu" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/fb.png" alt="Facebok" class="contact-logo">
+    <img src="{{ img('other', 'fb.png') }}" alt="Facebok" class="contact-logo">
 </a>
 {% endblock %}

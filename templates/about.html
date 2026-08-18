@@ -72,7 +72,7 @@
 </script>
 <div class="bio-container">
     <!-- Picture on the left side -->
-    <img class="bio-image" src="../static/asset/images/other/Headshot_Chi Le.jpg" alt="biopic">
+    <img class="bio-image" src="{{ img('other', 'Headshot_Chi Le.jpg') }}" alt="biopic">
     <div class="bio-text">
         <h2>My name is Lê Tuệ Chi or Chi Le.</h2>
         <h2>I am a self-taught illustrator and designer, training to become a programmer, based in Cambridge, MA.</h2>
@@ -94,19 +94,19 @@
     </div>
     <!-- Pictures on the right side -->
     <div class="image-container">
-        <div class="image" style="background-image: url('../static/asset/images/about/declare.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/light.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/blackswan.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/salzburg.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/bridge.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/story.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/wow.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/ava.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/non.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/windmill.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/pose.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/beach.jpg');"></div>
-        <div class="image" style="background-image: url('../static/asset/images/about/cong.jpg');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'declare.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'light.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'blackswan.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'salzburg.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'bridge.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'story.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'wow.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'ava.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'non.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'windmill.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'pose.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'beach.jpg') }}');"></div>
+        <div class="image" style="background-image: url('{{ img('about', 'cong.jpg') }}');"></div>
     </div>
 
 
@@ -117,18 +117,18 @@
 {% block footer %}
 <!-- Contact information -->
 <a href="https://www.instagram.com/pju_irza/" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/ig.png" alt="Instagram" class="contact-logo">
+    <img src="{{ img('other', 'ig.png') }}" alt="Instagram" class="contact-logo">
 </a>
 
 <a href="mailto:letuechi.2006@gmail.com" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/mail.png" alt="Gmail" class="contact-logo">
+    <img src="{{ img('other', 'mail.png') }}" alt="Gmail" class="contact-logo">
 </a>
 
 <a href="https://www.linkedin.com/in/chi-tue-le-214705320/" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/linkedin.png" alt="Gmail" class="contact-logo">
+    <img src="{{ img('other', 'linkedin.png') }}" alt="Gmail" class="contact-logo">
 </a>
 
 <a href="https://github.com/tuechile" target="_blank" style="text-decoration: none">
-    <img src="../static/asset/images/other/github.webp" alt="GitHub" class="contact-logo">
+    <img src="{{ img('other', 'github.webp') }}" alt="GitHub" class="contact-logo">
 </a>
 {% endblock %}

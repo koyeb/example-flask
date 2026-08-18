@@ -4,6 +4,34 @@ import random
 app = Flask(__name__)
 app.secret_key = "change-this-to-a-long-random-string"  # required for sessions
 
+# Maps a stable logical name (used in templates) to the actual on-disk folder
+# under static/asset/images/. Rename a folder on disk, update it here once,
+# and every template that references it via img() keeps working.
+IMAGE_FOLDERS = {
+    "about": "about",
+    "art_direction": "art direction",
+    "client": "client",
+    "fish": "fish",
+    "illustration": "illustration",
+    "other": "other",
+    "portal": "portal",
+    "processing": "processing",
+    "recit": "recit",
+    "self": "self",
+    "street": "street",
+    "ux": "ux",
+}
+
+
+@app.context_processor
+def inject_image_helper():
+    def img(folder, filename=""):
+        real_folder = IMAGE_FOLDERS.get(folder, folder)
+        path = f"asset/images/{real_folder}/{filename}".rstrip("/")
+        return url_for("static", filename=path)
+
+    return dict(img=img)
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "GET":
@@ -11,9 +39,9 @@ def home():
     elif request.method == "POST":
         finder = request.form.get("finder", "").strip().lower()
 
-        personal_websites = ["afvs", "essays", "fysemr", "illustration", "portal", "street", "superface"]
-        collab_websites = ["highlander", "recit", "olympics", "gifafvs","cs171"]
-        flat = ["about", "collab", "personal"]
+        personal_websites = ["afvs", "essays", "fysemr", "gifafvs", "illustration", "portal", "street", "superface"]
+        collab_websites = ["highlander", "recit", "olympics"]
+        flat = ["about", "collab", "cs171", "personal"]
 
         # ✅ If user types "t4sg" (or similar), send them to the t4sg page
         if finder in ["t4sg", "t4sg.html", "t4sg case study", "2feet", "t4sg x 2feet","2feet prosthetics", "tech 4 social good", "2ft"]:

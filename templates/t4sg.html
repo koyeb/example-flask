@@ -34,7 +34,7 @@
 <div class="bio-container reveal">
     <div class="media-card">
         <!-- Provided by you -->
-        <img src="/static/asset/images/ux/t4sg/preview.png" alt="2ft inventory system preview">
+        <img src="{{ img('ux', 't4sg/preview.png') }}" alt="2ft inventory system preview">
     </div>
 </div>
 
@@ -75,7 +75,7 @@
     </div>
     <div class="media-card">
         <!-- Provided by you -->
-        <img src="/static/asset/images/ux/t4sg/redes.png" alt="2ft inventory system preview">
+        <img src="{{ img('ux', 't4sg/redes.png') }}" alt="2ft inventory system preview">
     </div>
 
     <!-- ===================== CURRENT PROBLEM ===================== -->
@@ -100,14 +100,14 @@
     <div class="bio-container reveal">
         <div class="masonry">
             <div class="item">
-                <img class="lightboxable" src="/static/asset/images/ux/t4sg/spreadsheets.png"
+                <img class="lightboxable" src="{{ img('ux', 't4sg/spreadsheets.png') }}"
                     alt="Placeholder: Spreadsheet General inventory view">
             </div>
             <div class="item">
-                <img class="lightboxable" src="/static/asset/images/ux/t4sg/sheet2.png" alt="Placeholder: Keep track">
+                <img class="lightboxable" src="{{ img('ux', 't4sg/sheet2.png') }}" alt="Placeholder: Keep track">
             </div>
             <div class="item">
-                <img class="lightboxable" src="/static/asset/images/ux/t4sg/sheet3.png"
+                <img class="lightboxable" src="{{ img('ux', 't4sg/sheet3.png') }}"
                     alt="Placeholder: Summary of Requested Components">
             </div>
         </div>
@@ -384,7 +384,7 @@
     <div class="bio-container reveal">
         <div class="split">
             <div class="media-card media-card--sm">
-                <img class="lightboxable" src="/static/asset/images/ux/t4sg/affmap.png" alt="Impact vs effort matrix">
+                <img class="lightboxable" src="{{ img('ux', 't4sg/affmap.png') }}" alt="Impact vs effort matrix">
             </div>
             <div class="bio-container reveal">
                 <div class="bio-text" style="text-align:left; max-width:920px;">
@@ -456,7 +456,7 @@
     <div class="bio-container reveal">
         <div class="split split-flow">
             <div class="media-card media-card--sm">
-                <img class="lightboxable" src="/static/asset/images/ux/t4sg/userflow.png"
+                <img class="lightboxable" src="{{ img('ux', 't4sg/userflow.png') }}"
                     alt="User flow: View Component">
             </div>
             <div class="bio-text" style="text-align:left;">
@@ -482,7 +482,7 @@
             <p style="color: var(--text-primary)"><strong>Stripping It Down Until It Made Sense</strong></p>
             <div class="media-card media-card--lg">
 
-                <img class="lightboxable" src="/static/asset/images/ux/t4sg/lofi up.png"
+                <img class="lightboxable" src="{{ img('ux', 't4sg/lofi up.png') }}"
                     alt="Placeholder: Lo-fi Ideation">
             </div>
             <p>
@@ -492,9 +492,9 @@
         </div>
     </div>
     <div class="t4sg-mockups">
-        <img class="lightboxable" src="/static/asset/images/ux/t4sg/lofi view.png"
+        <img class="lightboxable" src="{{ img('ux', 't4sg/lofi view.png') }}"
             alt="Placeholder: Lo-fi view component screen (B&W)">
-        <img class="lightboxable" src="/static/asset/images/ux/t4sg/lofi add.png"
+        <img class="lightboxable" src="{{ img('ux', 't4sg/lofi add.png') }}"
             alt="Placeholder: Lo-fi add component flow (B&W)">
     </div>
     <!-- ===================== ITERATION BRIDGE ===================== -->
@@ -550,11 +550,11 @@
     </div>
 
     <div class="t4sg-mockups">
-        <img class="lightboxable" src="/static/asset/images/ux/t4sg/hifi view.png"
+        <img class="lightboxable" src="{{ img('ux', 't4sg/hifi view.png') }}"
             alt="Placeholder: Hi-fi view component (blue/yellow)">
-        <img class="lightboxable" src="/static/asset/images/ux/t4sg/hifi edit.png"
+        <img class="lightboxable" src="{{ img('ux', 't4sg/hifi edit.png') }}"
             alt="Placeholder: Hi-fi edit component inline popup (blue/yellow)">
-        <img class="lightboxable" src="/static/asset/images/ux/t4sg/hifi add.png"
+        <img class="lightboxable" src="{{ img('ux', 't4sg/hifi add.png') }}"
             alt="Placeholder: Hi-fi history/comments (blue/yellow)">
     </div>
     <p class="img-caption">
@@ -603,7 +603,7 @@
             </p>
             <a href="https://www.figma.com/proto/dWSwmnPwX50N8TKSQIPS5S/Lo-fi---%3E-Hi-fi--Copy-?t=UO7WjHeEBFCJ3JlO-1"
                 target="_blank" class="cta-button">
-            <div class="video"><video src="/static/asset/images/ux/t4sg/preview.mp4" autoplay muted loop  playsinline></video>
+            <div class="video"><video src="{{ img('ux', 't4sg/preview.mp4') }}" autoplay muted loop  playsinline></video>
 
             </div>
             </a>
@@ -772,7 +772,7 @@
                 const img = document.getElementById("lightboxImg");
                 if (!overlay || !img) return;
 
-                img.src = "/static/asset/images/ux/t4sg/interview.png";
+                img.src = "{{ img('ux', 't4sg/interview.png') }}";
                 img.alt = "Affinity mapping board (raw notes)";
                 overlay.style.display = "flex";
             });
