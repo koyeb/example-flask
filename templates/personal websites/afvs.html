@@ -19,15 +19,21 @@
         width: 90%;
         height: auto;
         display: block;
+        background: #fff;
     }
 
     .sketch-note {
+        position: absolute;
+        bottom: 1vh;
+        left: 0;
+        width: 100%;
+        margin: 0;
         text-align: center;
         font-family: var(--font-serif);
         font-size: var(--fs-1);
-        color: var(--text-secondary);
+        color: rgba(0, 0, 0, 0.55);
         font-style: italic;
-        margin-top: var(--s-2);
+        pointer-events: none;
     }
 
     .case-subtitle {
@@ -61,7 +67,8 @@
         justify-content: center;
     }
 
-    .media-card img {
+    .media-card img,
+    .media-card video {
         max-height: 50vh;
         width: auto;
         max-width: 100%;
@@ -92,8 +99,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 
 <div id="sketch-container"
-    style="display: flex; justify-content: center; margin: auto; align-items: center; padding-top: 2.5vh;"></div>
-<p class="sketch-note">This is my first ever panel created in Processing.</p>
+    style="display: flex; justify-content: center; margin: auto; align-items: center; padding-top: 2.5vh;">
+    <p class="sketch-note">This is my first ever panel created in Processing.</p>
+</div>
 <!-- Import the script from Processing -->
 <script>
     let f;
@@ -237,7 +245,7 @@
     <!-- ===== Project 1: A Pig's Death ===== -->
     <div class="bio-container reveal">
         <div class="bio-text" style="text-align:center; max-width:700px; margin:0 auto;">
-            <p class="gradient-poem">
+            <p class="bio-text" style="text-align: center;">
                 Theme: A view of my world
             </p>
 
@@ -365,7 +373,7 @@
     <!-- ===== Project 2: A Pig's Funeral ===== -->
     <div class="bio-container reveal">
         <div class="bio-text" style="text-align:center; max-width:700px; margin:0 auto;">
-            <p class="gradient-poem">
+            <p class="bio-text" style="text-align: center;">
                 Theme: WhaT iF
             </p>
 
@@ -480,8 +488,8 @@
         target="_blank" rel="noopener noreferrer" style=" text-decoration:none; color:inherit;">
         <h1 class="case-title">Heart Room</h1>
         <p class="case-subtitle">
-            A project on intestine's devotion to the body, the body's devotion to consciousness for Conflux Winter
-            Residency
+            A project on intestine's devotion to the body, the body's devotion to consciousness, the conciousness's devotion to the intestines
+            for Conflux Winter Residency
         </p>
         <p class="hero-meta">Jan 2026</p>
         <div class="tag-row">

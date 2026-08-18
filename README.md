@@ -7,8 +7,7 @@ Pirenily is my personal portfolio site: a place to show off design work, side pr
 - **Design** — collaborative club work and commissioned pieces in one gallery.
 - **Play** — personal, non-commissioned projects.
 - **Projects** — coding and UI/UX work, filterable by a Code / UI-UX toggle, sorted newest first.
-- **About** — bio, self-photography, and contact links (Instagram, Gmail, LinkedIn, GitHub).
-- Lightbox viewing for image thumbnails, a loader animation between pages, and a responsive layout.
+- **About** — bio, self-photography, and contact links 
 
 ## Tech Stack
 
@@ -50,10 +49,8 @@ example-flask/
 │   ├── about.html
 │   ├── collab.html            # "Design" page (clubs + commissions)
 │   ├── personal.html          # "Play" page
-│   ├── t4sg.html / t4sg_password.html
-│   ├── commonspirit.html
-│   ├── cs171.html
 │   ├── collab websites/       # Sub-pages linked from Design
+│   ├── Project/               # Sub-pages linked from Projects
 │   └── personal websites/     # Sub-pages linked from Play
 └── static/
     ├── css/                   # styles.css, body.css, ux.css
@@ -62,7 +59,3 @@ example-flask/
         ├── fonts/
         └── images/
 ```
-
-## Video Walkthrough
-
-[Watch a walkthrough of the site](https://youtu.be/CZ2iPyw1jsA)
