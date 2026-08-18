@@ -11,13 +11,17 @@
     box-sizing: border-box;
 }
 
-/* ===== T4SG only ===== */
+/* ===== Shared case-study page wrapper ===== */
+.case-page,
 .t4sg-page {
     width: min(860px, 92vw);
     margin: 0 auto;
     padding: 0 1.25rem;
 }
 
+.case-page p,
+.case-page ul,
+.case-page ol,
 .t4sg-page p,
 .t4sg-page ul,
 .t4sg-page ol {

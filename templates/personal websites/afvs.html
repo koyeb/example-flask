@@ -2,7 +2,7 @@
 
 {% block title %}| Personal{% endblock %}
 {% block extra_css %}
-<link href="/static/css/body.css" rel="stylesheet">
+<link href="/static/css/ux.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Reem+Kufi+Fun&display=swap" rel="stylesheet">
@@ -24,6 +24,12 @@
 {% endblock %}
 
 {% block content %}
+
+<!-- Sticky progress bar -->
+<div class="progress-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
 <!--- Subnavigation page for displaying project --->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
 
@@ -146,6 +152,287 @@
         text("MIND\nOTHERS'\nBUSINESS", 70 * scaleX, 400 * scaleY);
     }
 
+</script>
+
+<!--- AFVS 97 project reflections --->
+<div class="bio-container reveal">
+    <div class="case-hero">
+        <h1 class="case-title">AFVS 97: A Pig's Death &amp; A Pig's Funeral</h1>
+        <p class="case-subtitle">
+            Two linked studio projects on gaze, identity, and code — built with wireframe, clay, and projected
+            distortion running through Processing and p5.js.
+        </p>
+        <div class="tag-row">
+            <div class="tag">Course: AFVS 97</div>
+            <div class="tag">Media: Sculpture + facial-tracking projection</div>
+            <div class="tag">Tools: Processing, p5.js, Python</div>
+        </div>
+    </div>
+</div>
+
+<div class="case-page">
+
+<!-- ===== Project 1: A Pig's Death ===== -->
+<div class="bio-container reveal">
+    <div class="media-card media-card--lg">
+        <img class="lightboxable" src="{{ img('afvs', 'p1-title.jpg') }}" alt="Pig's head sculpture projected onto a stairwell">
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="bio-text" style="text-align:left; max-width:920px;">
+        <h2>Project 1 — A Pig's Death</h2>
+        <p>
+            I have always been interested in the general themes of rebirth, death, gaze, and the grotesque, and the
+            intertwining play of execution. This project set out to be more personal and exploratory as I tried to
+            grasp all of my past identities, beliefs, and hobbies and put them on display like a public execution —
+            <em>I was called a pig (non-offensively), I am a STEM major, I like drag and dramatic make-up, et cetera
+            et cetera.</em> As I tried to learn more about myself, I wanted to try out new media: wireframe and clay,
+            plus a mix of discarded materials I was able to find. There are two big sections of this piece: the head
+            and the projection.
+        </p>
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="split">
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-progress-1.jpg') }}" alt="Wireframe armature for the pig's head">
+        </div>
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-progress-2.jpg') }}" alt="Foil-wrapped head form in progress">
+        </div>
+    </div>
+</div>
+<p class="img-caption">Snapshots of the pig's head in progress — wireframe, foil, then paint and discarded materials.</p>
+
+<div class="bio-container reveal">
+    <div class="bio-text" style="text-align:left; max-width:920px;">
+        <p>
+            I started out very interested in performance art and the uncanny, almost anonymously voyeuristic feeling
+            of public execution. Attacking the theme of <em>a view of</em> not <em>my</em> world taught me a lot
+            about logistics and physics to build a back-facing headpiece, which naturally led to my decision not to
+            use the sculpture on a moving body. Going into this project either without any expectation or with too
+            ambitious ones, I learned to navigate the trade-offs between a medium and its implied values — there were
+            times I didn't like how a medium turned out and had to reverse-engineer everything.
+        </p>
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="split">
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-code-face.jpg') }}" alt="Draft distortion code next to a webcam test">
+        </div>
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-projection-test.jpg') }}" alt="Distorted face projected onto the stairwell">
+        </div>
+    </div>
+</div>
+<p class="img-caption">Draft code &rarr; actual projection.</p>
+
+<div class="bio-container reveal">
+    <div class="bio-text" style="text-align:left; max-width:920px;">
+        <p>
+            Besides the struggle of experimenting with a new medium, my biggest challenge was how to approach mixed
+            media without "doing too much" or losing the desired effect. I got lucky without needing multiple
+            prototypes and still landed the <em>face distortion</em> effect I wanted, but the hesitation around it
+            was a real mental barrier — most of this project's friction came from not being able to move past my own
+            <em>what-ifs.</em>
+        </p>
+        <p>
+            I actually regretted that this project couldn't be exhibited as a moving piece — not for technical
+            reasons, but because I couldn't figure out how to keep it stable on a moving body, and a lot of the
+            head's components were wobbly enough to fall off mid-motion. A more visual-striking, moving sculpture is
+            my biggest "what if" for this piece — though it would have lost the layer of altered reality and identity
+            reconstruction that only works as a static projected sculpture.
+        </p>
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="split">
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-360-1.jpg') }}" alt="360-degree view of the finished sculpture at the studio">
+        </div>
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p1-360-2.jpg') }}" alt="Another angle of the finished sculpture">
+        </div>
+    </div>
+</div>
+<p class="img-caption">360&deg; sculpture at studio.</p>
+
+<div class="bio-container reveal">
+    <div class="callout">
+        <h3>What I'd still ask</h3>
+        <p>My original idea was to figure out the dynamics of the gazed and the gazer, as I embrace myself as the
+            gazed: <em>I cannot see the world — the world is seeing what I cannot see — what I cannot see is seeing
+            the world.</em> How do I strengthen that relationship further? How many questions and references can a
+            project hold before it becomes too saturated? Should I have left out the feminine skin/hair as a
+            reference to the male gaze, since it might draw attention away?</p>
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="media-card media-card--lg">
+        <img class="lightboxable" src="{{ img('afvs', 'p1-final.jpg') }}" alt="Finished sculpture projected at home">
+    </div>
+</div>
+<p class="img-caption">Sculpture at home with projection.</p>
+
+<!-- ===== Project 2: A Pig's Funeral ===== -->
+<div class="bio-container reveal">
+    <div class="media-card media-card--lg">
+        <img class="lightboxable" src="{{ img('afvs', 'p2-lead.jpg') }}" alt="Netted sculpture suspended in the studio">
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="bio-text" style="text-align:left; max-width:920px;">
+        <h2>Project 2 — A Pig's Funeral</h2>
+        <p>
+            This project is guided by an ongoing question that began in <em>A Pig's Death</em>: what does it mean to
+            be seen? What is an unstable gaze, a partial gaze, or an absent gaze? For this second project, I expanded
+            that into a spatial and participatory system — building an enclosed booth that separates the viewer
+            (outside) from the viewed (inside), using red fabric, netting, and a suspended structure that references
+            both a body and an interior organ. I let the material stay visibly constructed and unstable, embracing
+            the "wobbly," fragmented quality I'd previously resisted.
+        </p>
+        <p>The installation runs through three states: when someone is inside the booth looking, when they're inside
+            but not looking, and when the booth is empty.</p>
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="split">
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-state-empty.jpg') }}" alt="State: booth empty, projection alone">
+        </div>
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-state-silhouette.jpg') }}" alt="State: inside but not looking, dissolving into diary text">
+        </div>
+    </div>
+</div>
+<div class="bio-container reveal">
+    <div class="media-card">
+        <img class="lightboxable" src="{{ img('afvs', 'p2-state-look.jpg') }}" alt="State: someone inside the booth looking, face distorted">
+    </div>
+</div>
+<p class="img-caption">Experiment with the code (Python + Processing) in another space &mdash; the booth's three states.</p>
+
+<div class="bio-container reveal">
+    <div class="bio-text" style="text-align:left; max-width:920px;">
+        <p>
+            Early experiments focused on facial tracking and distortion, similar to the projection in the pig's
+            head, but simply distorting the face felt too literal. A key shift happened when I tested what occurs
+            when no eyes are detected — that became the second state, where the body dissolves into a negative
+            space filled with text from my queer diaries. Closing my eyes meant seeing neither myself nor any color,
+            so I leaned into the inner thoughts instead, translating them into text so identity could be replaced
+            with memory and interiority. The third state, when no one is present, extends the first project's "what
+            if" about autonomy — the system keeps running as a kind of memory capsule, suggesting identity persists
+            even without a viewer.
+        </p>
+        <p>
+            One of the most important developments was the booth itself. What started as a neutral, mechanically
+            difficult photo booth turned into a womb-like structure, referencing gynecological imagery and the idea
+            of the gaze as a forceful birth. Its openings invite outside viewers to look in, yet the orientation of
+            the viewed's posture prevents any direct eye contact — the same misalignment I explored in <em>A Pig's
+            Death</em>. The pig's head, reframed within a "funeral," becomes both a remnant and a continuation,
+            linking death to distortion to a sense of rebirth.
+        </p>
+    </div>
+</div>
+
+<div class="bio-container reveal">
+    <div class="split">
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-booth-interior.jpg') }}" alt="Red fabric and netting booth interior">
+        </div>
+        <div class="media-card">
+            <img class="lightboxable" src="{{ img('afvs', 'p2-installation-room.jpg') }}" alt="Booth and projected frame installed in the room">
+        </div>
+    </div>
+</div>
+<p class="img-caption">Position of the projected frame vs. the booth.</p>
+
+<div class="bio-container reveal">
+    <div class="callout">
+        <h3>The frame as trigger</h3>
+        <p>
+            Another important component is the projection onto the frame. The frame functions less as a neutral
+            display device and more as a conceptual trigger: it signals to participants that what appears within it
+            is meant to be looked at, evaluated, treated as "art." Placing the live projection of the person inside
+            the booth within a framed boundary intentionally collapses the distinction between subject and artwork —
+            entering the booth already asks for a level of commitment, and the frame intensifies that awareness.
+            Even before stepping inside, participants understand their presence will be translated, distorted, and
+            displayed to an outside audience. In that sense, the frame quietly asks: are you willing to be seen like
+            this?
+        </p>
+        <p>
+            I'm still questioning whether the work invites genuine self-reflection, or if the mix of overstimulating
+            elements overrides that possibility — a tension between being seen, seeing oneself, and existing without
+            either, and a question of the gaze's technological moment now versus what it becomes further down the
+            human timeline.
+        </p>
+    </div>
+</div>
+
+<!-- Lightbox overlay (ux.css already styles .lightbox-overlay / .close-btn) -->
+<div class="lightbox-overlay" id="lightbox">
+    <div class="close-btn" id="lightboxClose">&times;</div>
+    <img id="lightboxImg" src="" alt="Expanded image">
+</div>
+
+</div>
+
+<script>
+    // ===== Scroll progress bar =====
+    (function () {
+        const bar = document.getElementById("progressBar");
+        function onScroll() {
+            const doc = document.documentElement;
+            const scrollTop = doc.scrollTop || document.body.scrollTop;
+            const scrollHeight = doc.scrollHeight - doc.clientHeight;
+            const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            bar.style.width = pct.toFixed(2) + "%";
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+    })();
+
+    // ===== Reveal on scroll =====
+    (function () {
+        const els = document.querySelectorAll(".reveal");
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add("show");
+            });
+        }, { threshold: 0.12 });
+        els.forEach(el => obs.observe(el));
+    })();
+
+    // ===== Lightbox for images =====
+    (function () {
+        const overlay = document.getElementById("lightbox");
+        const img = document.getElementById("lightboxImg");
+        const close = document.getElementById("lightboxClose");
+        const items = document.querySelectorAll(".lightboxable");
+
+        function open(src, alt) {
+            img.src = src;
+            img.alt = alt || "Expanded image";
+            overlay.style.display = "flex";
+        }
+        function shut() {
+            overlay.style.display = "none";
+            img.src = "";
+        }
+
+        items.forEach(i => i.addEventListener("click", () => open(i.src, i.alt)));
+        close.addEventListener("click", shut);
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) shut(); });
+        window.addEventListener("keydown", (e) => { if (e.key === "Escape") shut(); });
+    })();
 </script>
 
 <!--- Spacer to maintain page length --->

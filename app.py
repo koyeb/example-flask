@@ -12,6 +12,7 @@ app.secret_key = "change-this-to-a-long-random-string"  # required for sessions
 # keeps working.
 IMAGE_FOLDERS = {
     "about": "about",
+    "afvs": "afvs",
     "art_direction": "art direction",
     "client": "client",
     "fish": "fish",
