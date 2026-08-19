@@ -402,9 +402,39 @@
     /* Disable pointer interactions */
 }
 
+.bio-side {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    max-width: 300px;
+    margin-left: 1vw;
+}
+
+.bio-name {
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    color: #ccc;
+    text-align: center;
+    margin: 0;
+}
+
+.bio-contact-text {
+    font-family: 'Crimson Text', serif;
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+    margin: 0;
+}
+
+.bio-contact-logos {
+    display: flex;
+    justify-content: center;
+}
+
 .bio-image {
     flex: 0 0 auto;
-    margin-left: 1vw;
     /* Ensures the image stays its natural size */
     max-width: 300px;
     /* Limit image width */

@@ -73,12 +73,33 @@
 
 </script>
 <div class="bio-container">
-    <!-- Picture on the left side -->
-    <img class="bio-image" src="{{ img('other', 'Headshot_Chi Le.jpg') }}" alt="biopic">
+    <!-- Picture, name, and contact info on the left side -->
+    <div class="bio-side">
+        <img class="bio-image" src="{{ img('other', 'Headshot_Chi Le.jpg') }}" alt="biopic">
+        <h2 class="bio-name">My name is Chi Le or Lê Tuệ Chi.</h2>
+        <p class="bio-contact-text">Feel free to reach out to me via Instagram or email!</p>
+        <div class="bio-contact-logos">
+            <a href="https://www.instagram.com/pju_irza/" target="_blank" style="text-decoration: none">
+                <img src="{{ img('other', 'ig.png') }}" alt="Instagram" class="contact-logo">
+            </a>
+            <a href="mailto:letuechi.2006@gmail.com" target="_blank" style="text-decoration: none">
+                <img src="{{ img('other', 'mail.png') }}" alt="Gmail" class="contact-logo">
+            </a>
+            <a href="https://www.linkedin.com/in/chi-tue-le-214705320/" target="_blank" style="text-decoration: none">
+                <img src="{{ img('other', 'linkedin.png') }}" alt="LinkedIn" class="contact-logo">
+            </a>
+            <a href="https://github.com/tuechile" target="_blank" style="text-decoration: none">
+                <img src="{{ img('other', 'github.webp') }}" alt="GitHub" class="contact-logo">
+            </a>
+        </div>
+    </div>
     <div class="bio-text">
-        <h2>My name is Chi Le or Lê Tuệ Chi.</h2>
-        <p>I am a self-taught graphic designer and a student in computer science based in Cambridge, MA or Hanoi, Vietnam.</p>
-        <p></p>
+        <p>
+            I am currently a junior at Harvard College, concentrating in <a href="https://seas.harvard.edu/computer-science">Computer Science</a>
+            and <a href="https://afvs.fas.harvard.edu/">Art, Film, and Visual Studies</a> with a secondary in <a href="https://www.math.harvard.edu/">Mathematics</a>.
+            I am currently part of the Harvard Undergraduate Hackathon (HackHarvard), Tech 4 Social Good (T4SG), and the Office for the Arts.
+        </p>
+        <p></p> <p></p>
         <p>
             My passion for film and installation art grows within my identity: <em>pirenily</em>. I use pirenily as a
             vessel of self-expression through graphic design, photography, and storyboards. My main interests lie in
@@ -87,14 +108,6 @@
             affects how I perceive selfhood and technology. <a href = "/afvs"> Recently, something I have been thinking about is the voyeuristic 
             gaze deconstructed in the digital age and the grotesqueness of personhood as a public repo. </a>
             Every form of visual presentation on this website is mainly experimented, taken, edited, scripted, and modeled by me.
-        </p>
-        <p>
-            I am currently a junior at Harvard College, concentrating in <a href="https://seas.harvard.edu/computer-science">Computer Science</a>
-            and <a href="https://afvs.fas.harvard.edu/">Art, Film, and Visual Studies</a> with a secondary in <a href="https://www.math.harvard.edu/">Mathematics</a>.
-            I am currently part of the Harvard Undergraduate Hackathon (HackHarvard), Tech 4 Social Good (T4SG), and the Office for the Arts.
-        </p>
-        <p>
-            Feel free to reach out to me via Instagram or email!
         </p>
     </div>
     <!-- Pictures on the right side -->
@@ -117,23 +130,4 @@
 
 </div>
 
-{% endblock %}
-
-{% block footer %}
-<!-- Contact information -->
-<a href="https://www.instagram.com/pju_irza/" target="_blank" style="text-decoration: none">
-    <img src="{{ img('other', 'ig.png') }}" alt="Instagram" class="contact-logo">
-</a>
-
-<a href="mailto:letuechi.2006@gmail.com" target="_blank" style="text-decoration: none">
-    <img src="{{ img('other', 'mail.png') }}" alt="Gmail" class="contact-logo">
-</a>
-
-<a href="https://www.linkedin.com/in/chi-tue-le-214705320/" target="_blank" style="text-decoration: none">
-    <img src="{{ img('other', 'linkedin.png') }}" alt="Gmail" class="contact-logo">
-</a>
-
-<a href="https://github.com/tuechile" target="_blank" style="text-decoration: none">
-    <img src="{{ img('other', 'github.webp') }}" alt="GitHub" class="contact-logo">
-</a>
 {% endblock %}
