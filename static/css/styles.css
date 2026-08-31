@@ -29,6 +29,30 @@ body {
     animation: fadeInOut 5s infinite;
 }
 
+.home-footer-contacts {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.contact-logo {
+    text-decoration: none;
+    color: white;
+    height: 1.5rem;
+    width: auto;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    filter: grayscale(100%);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    -webkit-filter: grayscale(100%);
+}
+
+.contact-logo:hover {
+    filter: blur(1px) grayscale(100%);
+    opacity: 0.8;
+}
+
 @keyframes fadeInOut {
     0%, 100% {
         opacity: 0.75;
